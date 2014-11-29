@@ -1,0 +1,71 @@
+
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> INPUT ADDON
+\*------------------------------------*/
+// Example:
+/*  
+
+    // Add overlaying the input and to the left.
+    <div class="addon-group addon-group--inside addon-group--inside--left">
+        <input type="text" class="text-input addon-group--inside__input">
+        <button type="submit" class="addon-group--inside__addon">S</button>
+    </div>
+
+
+
+    Addon outside and to the right of the input element
+
+    <div class="addon-group addon-group--outside addon-group--outside--right">
+        <input type="text" class="text-input addon-group--outside__input">
+        <button type="submit" class="addon-group--outside__addon">S</button>
+    </div>
+
+
+ */
+
+@if ($options__use-input-addon) {
+    .addon-group {
+        display: inline-block;
+        &--inside {
+            position: relative;
+            &__addon {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+            &--right {
+                .addon-group--inside__addon {
+                    right: 0;
+                }
+            }
+            &--left {
+                .addon-group--inside__addon {
+                    left: 0;
+                }
+            }
+        }
+        &--outside {
+            display: table;
+            &__addon {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            &__addon,
+            &__input {
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+            }
+            &--left {
+                .addon-group--outside__input {
+                    float: right;
+                }
+            }
+            &--right {
+                .addon-group--outside__input {
+                    float: left;
+                }
+            }
+        }
+    }
+}

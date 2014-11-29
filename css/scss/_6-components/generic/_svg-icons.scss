@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> SVG ICONS
+\*------------------------------------*/
+
+.svg-icon {
+    position: relative;
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+/*
+    &__magnifying-glass {
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        fill: $beta-color;
+        margin-top: -6px;
+        margin-left: -6px;
+        &--alpha {
+            fill: white;
+        }
+    }
+
+*/
+
+
+}
+

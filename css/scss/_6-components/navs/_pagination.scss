@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #COMPONENTS -> NAVS -> PAGINATION
+\*------------------------------------*/
+/**
+ *
+ * Pagination object, extends nav
+ * some funky commenting is required to remove whitespace from
+ * around the inline-blocks.
+ *
+	<div class="text-center">
+		<ol class="nav nav--pagination">
+			<li class="pagination__first"><a href="#">First</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li class="pagination__last"><a href="#">Last</a></li>
+		</ol>
+	</div>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-pagination) {
+	.nav--pagination {
+		@extend %clearfix;
+		text-align: center;
+		display: inline-block;
+		> li {
+			float: left;
+			padding: $pagination-padding-width;
+			> a {
+				display: inline-block;
+				margin: -$pagination-padding-width;
+				padding: $pagination-padding-width;
+			}
+		}
+	}
+	.pagination__first a:before {
+	  content: "\00AB" "\00A0";
+	}
+	.pagination__last a:after {
+	  content: "\00A0" "\00BB";
+	}
+}

@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #TOOLS -> MIXINS -> COLUMNS
+\*------------------------------------*/
+@mixin columns($number) {
+	column-gap: $column-gap;
+	column-count: $number;
+	&--screen-sm {
+		@media (max-width: $screen-sm) {
+			column-count: $number;
+		}
+	}
+	&--screen-xs {
+		@media (max-width: $screen-xs) {
+			column-count: $number;
+		}
+	}
+}

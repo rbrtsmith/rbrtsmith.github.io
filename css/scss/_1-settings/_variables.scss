@@ -1,0 +1,156 @@
+/*------------------------------------*\
+    #SETTINGS -> VARIABLES
+    Global variables
+\*------------------------------------*/
+
+
+
+/**
+ * Colors
+ */
+$brand-color:   #f00;
+$alpha-color:   #bbb;
+$beta-color:    #000;
+$gamma-color:   #00f;
+$delta-color:   #fff;
+$epsilon-color: #fff;
+$zeta-color:    #fff;
+
+
+
+/**
+ * Font sizes (1 == 10px && 1rem)
+ */
+$txt-xxl:   4;
+$txt-xl:    3;
+$txt-lg:    2.6;
+$txt-md:    2;
+$txt-sm:    1.6;
+$txt-xs:    1.4;
+$txt-xxs:   1.2;
+
+
+
+
+/**
+ * Line height
+ */
+$site-line-height: 1.428;
+
+
+
+/**
+ * Grid & Architecture
+ */
+$site-wrap-width:               980px;
+$grid-gutter-width:             30px;
+$site-padding-width: ($grid-gutter-width / 2);
+$grid-gutter-width-screen-xs:   10px; // gutter width on ultra small screens.
+$grid-column-count:             12;
+$section-padding:				40px; // amount of padding top & bottom on .sections
+
+
+
+
+
+/**
+ *  Helpers - functions found in _helpers.scss
+ * 
+ */
+ // widths for push / soft helper classes
+$base-margin-width: round($grid-gutter-width / 2); //defaults maintain symmetry with grid.
+$base-padding-width: round($grid-gutter-width / 2);
+
+
+
+
+
+/**
+ *  Objects - functions found in _objects.scss
+ *
+ */
+
+
+ 	// border-radius
+ 	$rounded-radius: 5px;
+
+
+
+ 	//spaced list
+ 	$list-spacing: round($grid-gutter-width / 3); //defaults maintain symmetry with grid
+
+
+
+ 	//inline list spaced
+ 	$inline-list-spacing: round($grid-gutter-width / 3);
+
+
+
+ 	//ui list
+ 	$ui-list-spacing: round($grid-gutter-width / 3); //defaults maintain symmetry with grid
+	$ui-list-border-color: $brand-color;
+
+
+
+	//island
+	$island-padding-width: $grid-gutter-width; //defaults maintain symmetry with grid
+	$island-spacing: $grid-gutter-width;
+
+
+
+	// pagination
+	$pagination-padding-width: round($grid-gutter-width / 3);
+
+
+
+	// Columns
+	$column-gap: $grid-gutter-width;
+
+
+
+
+	// Navbar
+	/*---Architecture---*/
+	$navbar-item-spacing: 15px;
+	$navbar-line-height: 80px;
+	$navbar-collapsed-line-height: 45px;
+		// Sub nav
+		$sub-menu-line-height: 40px;
+
+	/*---Colors---*/
+	$navbar-background-color: #eee;
+		// Collapsed
+		$burgers-color: #151515;
+		$collapsed-items-color: #400;
+
+
+
+
+
+		/**
+		 * Forms
+		 */
+		$input-border-color: $alpha-color;
+		$text-input-height: 30px;
+		$lg-text-input-height: 40px;
+		$text-input-textarea-height: 120px;
+		
+		
+		// Form validation
+		$form-dirty: red;
+		$form-valid: green;
+
+
+/**
+ * Breakpoints
+ */
+$screen-xxs: 400px;
+$screen-xs:  480px;
+$screen-sm:  768px;
+$screen-md:  992px;
+$screen-lg:  1200px;
+
+
+
+
+

@@ -1,0 +1,27 @@
+
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> TOUCH FRIENDLY LINK LIST
+\*------------------------------------*/
+/**
+ * Adds vertical spacing between link lists 
+ 	(or other classed items) on small screens.
+ 
+	<ul class="bare-list touch-friendly">
+		<li><a href="">...</a></li>
+		<li><a href="">...</a></li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-touch-friendly-link-list) {
+	.touch-friendly {
+		@media (max-width: $screen-sm) {
+			li {
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> DISPLAY TABLE
+\*------------------------------------*/
+/**
+ *
+ * The display table object is used for vertically
+ * aligning content like text to the center of
+ * the parent block
+ *
+
+
+	<div class="table--block">
+		<div class="table__cell">
+			...
+		</div>
+	</div>
+
+
+
+	 where we want a fluid column and a fixed column, fluid takes up remaining space
+	 left over from fixed width column.
+	 
+	<div class="table--block">
+		<div class="table__cell table__cell--full">
+			<input type="email" placeholder="E-post">
+		</div>
+		<div class="table__cell">
+			<button type="submit" class="btn">Skicka</button>
+		</div>
+	</div>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-display-table) {
+	.table {
+		display: table;
+		height: 100%;
+		width: 100%;
+		&--block {
+			table-layout: fixed;
+		}
+		&__cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		&__cell--full {
+			width: 100%;
+		}
+	}
+}

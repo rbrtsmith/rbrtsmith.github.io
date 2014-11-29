@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV STACKED
+\*------------------------------------*/
+/**
+ *
+ * Throws the nav into vertical mode.
+ *
+	<ul class="nav nav--stacked">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-nav-stacked) {
+	.nav--stacked {
+		> li {
+			float: none;
+		}
+		&--spaced {
+			>li {
+				margin-top: $list-spacing;
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}

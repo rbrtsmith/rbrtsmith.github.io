@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV
+\*------------------------------------*/
+/**
+ *
+ * Throws the list into horizontal alignment,
+ * extends inline-list.
+ *
+	<ul class="nav">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+	if you want a nav with zero whitespace between elements
+	<ul class="nav nav--block">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-nav) {
+	.nav,
+	%nav {
+		@extend %inline-list;
+		> li > a {
+			display: inline-block;
+		}
+		&--spaced {
+			>li {
+				margin-left: $list-spacing;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+		&--blocks {
+			@extend %clearfix;
+			>li {
+				display: block;
+				float: left;
+			}
+		}
+	}
+}

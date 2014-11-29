@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    #SETTINGS -> OPTIONS
+    Global options & config switches
+\*------------------------------------*/
+
+/*  Site wide options to turn on various functionality, modules and functons,
+  NOTE - Turning on all functions will result in more bloated code.
+  		You should only set those you plan to use to a t-rue value.
+*/
+
+
+
+/**
+ * Grid
+ */
+$options__use-grid: false;
+	// grid $screen-lg is rarely used so by default is f-alse.
+	$options__grid__large-grid: false;
+
+	/* the classes below, are useful, however they result in large 
+	code so set to t-rue ONLY if they are in use!
+	*/
+	$options__grid__push-classes: false;
+	$options__grid__pull-classes: false;
+	$options__grid__offset-classes: false;
+
+
+
+
+
+
+
+
+/**
+ *  Objects - functions found in _objects.scss
+ *
+ */
+$options__use-article: false;
+$options__use-border-radius: false;
+$options__use-columns: false;
+$options__use-display-table: false;
+$options__use-fake-link: false;
+$options__use-flyouts: false;
+$options__use-flyouts-click: false;
+$options__use-flag: false;
+$options__use-island: false;
+$options__use-media-block: false;
+$options__use-paragraph-group: false;
+$options__use-section: false;
+$options__use-site-modules: false;
+$options__use-split: false;
+$options__use-sprites: false;
+$options__use-stepper-box: false;
+	//lists
+	$options__use-bare-list: false; // the list objects below are dependant on this.
+	$options__use-inline-list: false;
+	$options__use-touch-friendly-link-list: false;
+	$options__use-ui-list: false;
+	//Navs
+	$options__use-breadcrumbs: false;
+	$options__use-nav: false;
+	$options__use-nav-stacked: false;
+	$options__use-nav-fit: false;
+	$options__use-nav-center: false;
+	$options__use-pagination: false;
+	//navbar
+	$options__use-navbar: false;
+	$options__use-subnav: false;
+
+	// forms
+	$options__use-file-upload: false;
+	$options__use-input-addon: false;
+	$options__use-placeholder-control: false;
+	$options__use-styled-select: false;
+	$options__use-validation: false;
+	$options__use-check-list: false;
+
+
+/**
+ * Helpers - functions found in _helpers.scss
+ */
+$options__use-helpers: false;
+// text alignment & floats at breakpoints
+$options__text-align-and-float-classes--by-screen-size: false;
+// push & soft classes at breakpoints
+$options__push-and-soft-classes--by-screen-size: false;
+// push-half and soft-half
+$options__push-and-soft-classes--half: false;
+// visibility by minimum screen-width
+$options__visibility-by-min-width: false;

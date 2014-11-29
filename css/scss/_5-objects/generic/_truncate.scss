@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> TRUNCATION
+\*------------------------------------*/
+/**
+ *
+ *
+ *	Truncates a single line of text so text that would otherwise overflow is replaced 
+ *	with elipsis at the point of overflow
+
+ *	Example: 
+  <div class="tuncate">
+	...
+  </div>
+ */
+.truncate,
+%truncate {
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+

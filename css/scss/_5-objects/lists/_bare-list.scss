@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> BARE LIST
+\*------------------------------------*/
+/**
+ *
+ * Removes all margins, padding and list styling from a list.
+ *
+	<ul class="bare-list">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+
+@if ($options__use-bare-list) {
+	.bare-list,
+	%bare-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.bare-list--spaced {
+		>li {
+			margin-top: $list-spacing;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}

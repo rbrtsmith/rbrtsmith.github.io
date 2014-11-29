@@ -1,0 +1,41 @@
+
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> BORDER_RADIUS
+\*------------------------------------*/
+
+/**
+ * Used to add a border-radius to elements.
+ *
+ 
+	<div class="circle">
+		...
+	</div>
+
+	<div class="rounded">
+		...
+	</div>
+
+	<div class="rounded--lg">
+		...
+	</div>
+
+ */
+
+@if ($options__use-border-radius) {
+	.circle,
+	%circle,
+	input.circle {
+		/* makes any element into a circle
+		 * requires a matching width and height.
+		*/
+		border-radius: 1000px;
+	}
+	.rounded,
+	%rounded {
+		// gives an element rounded corners.
+		border-radius: $rounded-radius;
+		&--lg {
+			border-radius: $rounded-radius * 2;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> PARAGRAPH GROUP
+\*------------------------------------*/
+
+/**
+ * removes margin bottom for last paragraph in the group.
+ *
+
+	<div class="paragraph-group">
+		<p>...</p>
+		<p>...</p>
+	</div>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-paragraph-group) {
+	.paragraph-group {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

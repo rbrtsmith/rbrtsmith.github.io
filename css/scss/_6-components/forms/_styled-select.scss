@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> STYLED SELECT
+\*------------------------------------*/
+/*
+   Allow for a select box to appear visually styled by styling an underlying label and setting the opacity of the
+   select box to zero.  Requires class of .js-select on parent element to pass the selected value into the label.
+   Example:
+    <div class="select-wrap js-select">
+        <label class="select-wrap__label"></label>
+        <select class="select-wrap__select">
+            <option selected disabled>select option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+    </div>
+*/
+
+@if ($options__use-styled-select) {
+    .select-wrap {
+        @extend %position-relative;
+        height: 40px;
+        &__select,
+        &__label {
+            @extend %position-absolute;            
+            @extend %top-0;
+            @extend %right-0;
+            @extend %bottom-0;
+            @extend %left-0;
+        }
+        &__select {
+            opacity: 0;
+        }
+        &__label {
+            border: 1px solid #ddd;
+            border-radius: $rounded-radius;
+            line-height: 40px;
+            padding: 0 10px;
+            color: #888;
+            &:before {
+                @extend %position-absolute;
+                top: 50%;
+                right: 10px;
+                margin-top: -3px;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid #888;
+                @extend %content-none;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> TEXT INPUT
+\*------------------------------------*/
+/**
+ * Should be used on any kind of input that the user
+ * enters textual data, this is used instead of type 
+ * selector.
+    
+    <form action="" method="">
+        <input type="text" class="text-input" name="">
+        <textarea name="message" class="text-input text-input--textarea"></textarea>
+    </form>
+
+*
+* Extend these objects in scss/custom
+*/
+
+.text-input {
+	height: $text-input-height;
+	max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid $input-border-color;
+    &--lg {
+    	height: $lg-text-input-height;
+    }
+    &--textarea {
+    	padding-top: 10px;
+    	height: $text-input-textarea-height;
+    }
+}

@@ -1,0 +1,60 @@
+
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> INLINE LIST
+\*------------------------------------*/
+/**
+ *
+ * Throws a list inline, extends bare-list.
+ *
+
+	<ul class="inline-list">
+		<li>...</li>
+		<li>...</li>
+	</ul>
+
+
+	if you want some whitespace between the blocks
+	<ul class="inline-list inline-list--spaced">
+		<li>...</li>
+		<li>...</li>
+	</ul>
+
+
+	if you require zero whitespace then use the block-modifier
+	<ul class="inline-list inline-list--blocks">
+		<li>...</li>
+		<li>...</li>
+	</ul>
+
+
+
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-inline-list) {
+	.inline-list,
+	%inline-list {
+		@extend %bare-list;
+		>li {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&--spaced {
+			>li {
+				margin-left: $list-spacing;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+		&--blocks {
+			@extend %clearfix;
+			>li {
+				display: block;
+				float: left;
+			}
+		}
+	}
+}

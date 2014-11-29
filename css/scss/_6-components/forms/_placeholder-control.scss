@@ -1,0 +1,61 @@
+
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> PLACEHOLDER CONTROL
+\*------------------------------------*/
+
+
+/**
+ * Gives an informative placeholder even while the user is focused and typing within the input field.
+ *
+
+    <form action="contact-thanks" method="post">
+        <ul class="bare-list bare-list--spaced">
+            <li class="placeholder-control js-placeholder-control">
+                <input type="text" class="text-input placeholder-control__input" name="name" id="name" placeholder="Namn">
+                <label class="placeholder-control__label" for="name">Namn</label>
+            </li>
+            <li class="placeholder-control js-placeholder-control">
+                <input type="email" class="text-input placeholder-control__input" name="email" id="email" placeholder="E-post">
+                <label class="placeholder-control__label" for="email">E.post</label>
+            </li>
+        </ul>
+    </form>
+ *
+ * Extend these objects in scss/custom
+ */
+@if ($options__use-placeholder-control) {
+    .placeholder-control {
+        backface-visibility: hidden;
+        position: relative;
+        ::-webkit-input-placeholder {
+            -webkit-transition: color 0.0s linear;
+        }
+        ::-moz-input-placeholder {
+            -moz-transition: color 0.0s linear;
+        }
+        ::-ms-input-placeholder {
+            -ms-transition: color 0.0s linear;
+        }
+        .placeholder-control__label {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            font-style: italic;
+            transition: transform 0.1s, opacity 0.12s;
+            cursor: text;
+            color: #bbb;
+            transform: translateY(5px);
+        }
+        .placeholder-control__input:focus,
+        .placeholder-control__textarea:focus {
+            padding-top: 15px;
+            &+ .placeholder-control__label {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                transform: translateY(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV FIT
+\*------------------------------------*/
+/**
+ *
+ * forces the nav to fit the width of the container,
+ * dividing each item equally.
+ *
+	<ul class="nav nav--fit">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+	if nav contains bare-links
+
+	ul class="nav nav--fit nav--fit--bare-links">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-nav-fit) {
+	.nav--fit {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		> li {
+			display: table-cell;
+			float: none;
+			> a {
+				display: block;
+				text-align: center;
+			}
+		}
+		&--bare-links a {
+			@extend %bare-link;
+		}
+	}
+}

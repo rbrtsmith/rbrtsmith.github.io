@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> BARE LINK
+\*------------------------------------*/
+/**
+ * Used to remove default styling of link, inherits
+ * it's parent's text color and on hover adds an underline.
+ 
+	<a href="#" class="bare-link">...</a>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+.bare-link,
+%bare-link {
+	@extend %ui-link;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+.bare-links a {
+	@extend %bare-link;
+}

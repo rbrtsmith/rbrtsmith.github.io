@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> CHECK LIST
+\*------------------------------------*/
+/**
+ * Group checkboxes and radio buttons neatly
+ *
+	
+    <ul class="check-list">
+        <li>
+            <input type="checkbox" id="chk1"> 
+            <label for="chk1">Chk1</label>
+        </li>
+        <li>
+            <input type="checkbox" id="chk2"> 
+            <label for="chk2">Chk2</label>
+        </li>
+        <li>
+            <input type="checkbox" id="chk3"> 
+            <label for="chk3">Chk3</label>
+        </li>
+    </ul>
+
+*
+* Extend these objects in scss/custom
+*/
+@if ($options__use-check-list) {
+    .check-list {
+    	@extend %bare-list;
+    	label {
+    		display: inline-block;
+    	}
+    }
+}

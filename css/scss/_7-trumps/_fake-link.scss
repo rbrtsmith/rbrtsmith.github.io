@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #TRUMPS -> FAKE LINK
+\*------------------------------------*/
+/**
+ * iOS seems to like the idea of automatically adding links to numbers it
+  thinks are telephone numbers, which will of course is undesireable.  This will
+  make the 'link' look and act like default text and prevent apple adding a link around it.
+
+	<a href="#" onclick="return false;" class="fake-link">55 66 40-75 72</a>
+*/
+
+
+@if ($options__use-fake-link) {
+	.fake-link {
+		cursor: text;
+		color: inherit !important;
+		text-decoration: none !important;
+	}
+}

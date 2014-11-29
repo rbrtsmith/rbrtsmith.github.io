@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> ARTICLE
+\*------------------------------------*/
+
+/**
+ * Used on large(ish) articles where you get an image either to the left
+ * or the right that is 50% wide then you have text that wraps around the image
+ * at medium screen sizes.
+
+	<article class="article clearfix">
+		<figure class="article__img article__img--left lazy-load-wrap">
+			<img class="js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+				data-lazy-src="http://placehold.it/570x400"
+				width="570" height="400">
+		</figure>
+		<div class="article__body">
+			<header>
+				<h1 class="flush--top">Om oss</h1>
+			</header>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue neque sed fringilla condimentum. Ut adipiscing lectus pretium mattis ornare. Sed eu sagittis sem, ut aliquet tellus. Cras vestibulum libero enim, sed tempor quam aliquet a. Praesent dictum congue rhoncus. </p>
+			<p>Ut bibendum viverra turpis cursus varius. Ut sit amet tempor lectus. Aliquam quis eleifend justo, sed tincidunt purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget blandit ipsum. In risus ante, venenatis eget auctor eget, ultrices ut enim. Pellentesque ac ante a dolor laoreet aliquet.</p>
+		</div>
+	</article>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-article) {
+	.article {
+		//padding-bottom: round($section-padding - ($grid-gutter-width / 4));
+		margin-left: -($grid-gutter-width / 2);
+		margin-right: -($grid-gutter-width / 2);
+		&__img,
+		&__body {
+			padding-left: $grid-gutter-width / 2;
+			padding-right: $grid-gutter-width / 2;
+		}
+		@media (max-width: $screen-xxs) {
+			margin-left: -$grid-gutter-width-screen-xs;
+			margin-right: -$grid-gutter-width-screen-xs;
+			&__img,
+			&__body {
+				padding-left: $grid-gutter-width-screen-xs;
+				padding-right: $grid-gutter-width-screen-xs;
+			}
+		}
+		&__img {
+			margin-bottom: round($grid-gutter-width / 4);
+			@media (min-width: 600px) {
+				float: right;
+				width: 50%;
+				&--left {
+					float: left;
+				}
+			}
+		}
+		@media (min-width: $screen-md+1) {
+			&__body {
+				overflow: hidden;
+			}
+		}
+	}
+}

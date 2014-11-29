@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> FILE UPLOAD
+\*------------------------------------*/
+
+
+/*Allows for styling of file upload element by visually hiding the input and styling the label
+ to appear as though that is the input.
+ Example:
+ 
+<div class="file-upload">
+    <input type="file" class="file-upload__file js-file-upload__file">
+    <label class="file-upload__label js-file-upload__label">
+</div>
+ */
+
+@if ($options__use-file-upload) {
+    .file-upload {
+        &__file {
+            @extend %position-absolute;
+            left: -99999px;
+        }
+        &__label {
+            @extend %display-inline-block;
+            padding: 2px 15px;
+            background-image: linear-gradient(#f8f8f8, #ddd);
+            border: 1px solid #aaa;
+            cursor: pointer;
+            &:hover,
+            &:focus {
+                background-image: linear-gradient(#ddd, #f8f8f8);
+            }
+        }
+    }
+}

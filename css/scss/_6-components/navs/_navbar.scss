@@ -1,0 +1,440 @@
+/*------------------------------------*\
+    #COMPONENTS -> NAVS -> NAVBAR
+\*------------------------------------*/
+
+/*
+ * The navbar is a full width bar that contains navigation,
+ * It relies on the jQuery file navbar.js located in js/source/scripts/components
+ * Extends the nav object,
+ * Auto collapses when the items inside are too wide of the the container,
+ * Supports sub navs in both expanded and collapsed state.
+
+
+
+
+	---- EXAMPLES ----
+
+
+	Navbar containing nav only, when collapsed a bar appears
+	that allows the user to toggle it's visibility 
+
+	<div class="navbar-wrap js-navbar-wrap">
+		<nav class="navbar clearfix js-navbar js-nav-parent">
+			<div class="site-wrap">
+				<div class=" navbar__toggle navbar__toggle--block js-toggle-nav">
+					NAVIGATION
+				</div>
+				<ul class="navbar__nav float-right js-navbar__nav">
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item5</a></li>
+					<li><a href="#">item5</a></li>
+				</ul>
+				
+			</div>
+		</nav>
+	</div>
+
+
+
+
+	Navbar that can also contain non-nav items, when collapsed 
+	a toggle button appears.
+
+	<div class="navbar-wrap js-navbar-wrap">
+		<nav class="navbar clearfix js-navbar js-nav-parent>
+			<div class="site-wrap">
+				<div class=" navbar__toggle navbar__toggle--btn js-toggle-nav">
+					<span class="burger burger-top"></span>
+                    <span class="burger burger-middle"></span>
+                    <span class="burger burger-bottom"></span>
+				</div>
+				<div class="navbar__non-nav-content navbar__non-nav-content--first js-non-nav-content">
+					Logo
+				</div>
+				
+				<ul class="navbar__nav float-right js-navbar__nav">
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item5</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+
+
+
+	Navbar that can also contain non-nav items, when collapsed 
+	a toggle button appears.  This example also contains a sub nav.
+
+	<div class="navbar-wrap js-navbar-wrap js-sticky-parent">
+		<nav class="navbar clearfix js-navbar js-nav-parent js-sticky" data-sticky-offset="45">
+			<div class="site-wrap">
+				<div class=" navbar__toggle navbar__toggle--btn js-toggle-nav">
+					<span class="burger burger-top"></span>
+                    <span class="burger burger-middle"></span>
+                    <span class="burger burger-bottom"></span>
+				</div>
+				<div class="navbar__non-nav-content navbar__non-nav-content--first js-non-nav-content">
+					Logo
+				</div>
+				
+				<ul class="navbar__nav float-right js-navbar__nav">
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li class="menu-item-has-children flyout js-nav-parent">
+						<a href="#">item4
+						</a>
+						<ul class="sub-menu">
+							<li><a href="#">item155</a></li>
+							<li><a href="#">item255</a></li>
+							<li><a href="#">item355</a></li>
+						</ul>
+					</li>
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item5</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+
+
+
+ * Extend this module in objects.scss (or header.scss if 
+ 	navbar is in the sites header)
+
+
+
+*/
+@if ($options__use-navbar) {
+	
+	.navbar-wrap,
+	.navbar {
+		height: $navbar-line-height;
+		line-height: $navbar-line-height;
+		transition: height 0.2s, line-height 0.2s;
+	}
+	.site-header-collapsed {
+		.navbar-wrap,
+		.navbar {
+			transition: none;
+		}
+	}
+	.navbar-wrap {
+		position: relative;
+		&.navbar-child-collapsed {
+			height: $navbar-collapsed-line-height;
+		}
+	}
+	.navbar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		padding-left: $site-padding-width;
+		padding-right: $site-padding-width;
+		background: $navbar-background-color;
+		&.fixed {
+			position: fixed;
+		}
+		.site-wrap {
+			height: 100%;
+		}
+		&__nav {
+			@extend %nav;
+			@extend %nav--blocks;
+			>li {
+				vertical-align: top;
+				a {
+					display: block;
+					padding: 0 $navbar-item-spacing;
+				}
+				&:first-child a {
+					padding-left: 0;
+				}
+			}
+			&.float-right >li {
+				&:first-child a {
+					padding-left: $navbar-item-spacing;
+				}
+				&:last-child a {
+					padding-right: 0;
+				}
+			}
+		}
+		&__non-nav-content {
+			//line-height: $navbar-line-height;
+		}
+		.navbar__toggle,
+		&__hidden-expanded {
+			position: absolute;
+			left: -999999px;
+		}
+		&__non-nav-content {
+			display: inline-block;
+		}
+
+
+		/*------------------------------------*\
+		    sub nav
+		\*------------------------------------*/
+		@if ($options__use-subnav) {
+			.menu-item-has-children {
+				a {
+					position: relative;
+					padding-right: 25px;
+				}
+			}
+				
+			.navbar__sub-menu-toggle {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				width: 25px;
+				cursor: pointer;
+				background: inherit;
+				&:before,
+				&:after {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin-top: -3px;
+					content: " ";
+				}
+				&:before {
+					margin-left: -6px;
+					border-right: 6px solid transparent;
+					border-left: 6px solid transparent;
+					border-top: 6px solid $brand-color;
+				}
+				&:after {
+					margin-left: -4px;
+					border-left: 4px solid transparent;
+					border-right: 4px solid transparent;
+					border-top: 4px solid $navbar-background-color;
+				}
+			}
+
+			.sub-menu {
+				min-width: 120px;
+				line-height: $sub-menu-line-height;
+				background: $navbar-background-color;
+				white-space: nowrap;
+			}
+		}
+
+
+
+		/*------------------------------------*\
+		    NAVBAR COLLAPSED
+		\*------------------------------------*/
+		&.collapse {
+			padding: 0;
+			height: $navbar-collapsed-line-height;
+			line-height: $navbar-collapsed-line-height;
+			.navbar__non-nav-content {
+				//line-height: $navbar-collapsed-line-height;
+				user-select: none;
+				&--first {
+					margin-left: $site-padding-width;
+				}
+			}
+			.navbar__hidden-expanded {
+				position: static;
+			}
+			.navbar__nav {
+				overflow: hidden;
+				width: 100%;
+				height: 0;
+				padding: 0;
+				background: $collapsed-items-color;
+				li {
+					width: 100%;
+					border-top: 1px solid lighten($collapsed-items-color, 10%);
+				}
+				a {
+					color: white;
+					padding: 0 $site-padding-width !important;
+					line-height: $navbar-collapsed-line-height;
+					opacity: 0;
+					transition: opacity 0.2s linear;
+					&:hover {
+						background: lighten($collapsed-items-color, 10%);
+					}	
+				}
+
+				
+				/*------------------------------------*\
+				    Sub nav
+				\*------------------------------------*/
+				@if ($options__use-subnav) {
+
+					.navbar__sub-menu-toggle  {
+						width: $navbar-collapsed-line-height + 5;
+						border-left: 1px solid lighten($collapsed-items-color, 10%);
+						background: $collapsed-items-color;
+						&:before {
+							border-top-color: white;
+						}
+						&:after {
+							border-top-color: $collapsed-items-color;
+						}
+						&:hover {
+							background: lighten($collapsed-items-color, 15%);
+							&:after {
+								border-top-color: lighten($collapsed-items-color, 15%);
+							}
+						}	
+					}
+					.sub-menu {
+						width: 100%;
+						display: none;
+						position: static;
+						opacity: 0;
+						transition: opacity 0.3s linear;
+						a {
+							padding-left: 25px;
+						}
+					}
+					.open { // Sub nav open
+						background: lighten($collapsed-items-color, 5%);
+						.navbar__sub-menu-toggle {
+							&:before {
+								border-bottom: 6px solid white;
+								border-top: 0;
+							}
+							&:after {
+								margin-top: -1px;
+								border-bottom: 4px solid lighten($collapsed-items-color, 5%);
+								border-top: 0;
+							}
+							&:hover {
+								background: lighten($collapsed-items-color, 20%);
+								&:after {
+									border-bottom-color: lighten($collapsed-items-color, 20%);
+								}
+							}
+						}
+						.sub-menu {
+							display: block;
+							opacity: 1;
+						}
+						.navbar__sub-menu-toggle,
+						.sub-menu {
+							background: lighten($collapsed-items-color, 5%);
+							a:hover {
+								background: lighten($collapsed-items-color, 20%);
+							}
+						}
+					}
+				}
+			}
+			
+
+			.navbar__toggle {
+				line-height: $navbar-collapsed-line-height;
+				height: $navbar-collapsed-line-height;
+				&--block {
+					position: static;
+					padding: 0 $site-padding-width;
+					cursor: pointer;
+					&:before,
+					&:after {
+						position: absolute;
+						top: 50%;
+						right: 15px;
+						margin-top: -3px;
+						content: " ";
+					}
+					&:before {
+						border-right: 6px solid transparent;
+						border-left: 6px solid transparent;
+						border-top: 6px solid $burgers-color;
+					}
+					&:after {
+						margin-right: 2px;
+						border-left: 4px solid transparent;
+						border-right: 4px solid transparent;
+						border-top: 4px solid $navbar-background-color;
+					}
+				}
+				&--btn {
+					$pt: $navbar-collapsed-line-height / 2;
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: auto;
+					height: $navbar-collapsed-line-height;
+					width: 50px;
+					padding-top: round($pt - 9);
+					cursor: pointer;
+				}
+				.burger {
+					position: relative;
+					display: block;
+					width: 20px;
+					height: 3px;
+					background: $burgers-color;
+					margin: 0 auto 3px; 
+					text-indent: -60px;
+					transition: transform 0.3s, opacity 0.3s;
+					user-select: none;
+				}
+			}
+		}
+		&.open {
+			.navbar__nav {
+				height: auto;
+				a {
+					opacity: 1;
+				}
+			}
+			.burger {
+				&.burger-middle {
+					opacity: 0;
+				}
+				&.burger-top {
+					top: 6px;
+				}
+				&.burger-top,
+				&.burger-middle {
+					transform: rotate(45deg);
+				}
+				&.burger-bottom {
+					top: -6px;
+					transform: rotate(-45deg);
+				}
+			}
+			.navbar__toggle--block {
+				&:before {
+					border-top: 0;
+					border-bottom: 6px solid $burgers-color;
+				}
+				&:after {
+					margin-top: -1px;
+					border-top: 0;
+					border-bottom: 4px solid $navbar-background-color;
+				}
+			}
+		}
+	}
+}

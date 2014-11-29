@@ -1,0 +1,27 @@
+
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> UI LINK
+\*------------------------------------*/
+/*
+ * removes all link styling including hover 
+ * states, useful for linked blocks of elements
+  where the block changes state rather than the text.
+
+	<a href="#" class="ui-link">
+		<article>
+			<h1>...</h1>
+			<p>...</p>
+		</article>
+	</a>
+
+ /*
+  * Extend these objects in scss/custom
+  */
+
+.ui-link,
+%ui-link {
+	color: inherit;
+	&:hover {
+		color: inherit;
+	}
+}

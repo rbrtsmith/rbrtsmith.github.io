@@ -1,0 +1,26 @@
+
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> LAZY-LOAD
+\*------------------------------------*/
+
+// Puts a slight background on the lazy-loading image as it's loading in.
+
+
+.lazy-load-wrap > img {
+    border: 1px solid rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.025);
+}
+
+.lazy-load-wrap {
+    display: inline-block;
+	background-image: url('img/build/media/ajax-load.gif') !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: 40px !important;
+}
+
+img.loaded {
+    border: 0;
+    height: auto;
+    background: transparent;
+}

@@ -260,8 +260,8 @@ module.exports = function(grunt) {
     // Create favicons          :: Run 'grunt icons'
     // -----------------------------------------
 
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'imagemin', 'svgstore', 'jshint', 'watch']);
-    grunt.registerTask('dev', ['concat', 'sass', 'autoprefixer', 'imagemin', 'svgstore', 'jshint', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'imagemin', 'svgstore', 'jshint', 'shell:jekyllBuild', 'watch']);
+    grunt.registerTask('dev', ['concat', 'sass', 'autoprefixer', 'imagemin', 'svgstore', 'jshint', 'shell:jekyllBuild', 'watch']);
     grunt.registerTask('icons', ['favicons']);
     grunt.registerTask('serve', ['shell']);
 

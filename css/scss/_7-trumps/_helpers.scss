@@ -1,0 +1,456 @@
+/*------------------------------------*\
+    #TRUMPS -> HELPERS
+\*------------------------------------*/
+
+// Helper classes go here, any typogaphy helpers are found in typography.less
+
+
+/* 	Most of these have !important added, being helpers 
+	they should almost always ovveride any other conflicting styling.
+*/
+
+
+@if ($options__use-helpers) {
+	
+	/*------------------------------------*\
+	    #Font-size
+	\*------------------------------------*/
+
+	.txt-xxl {
+		@include font-size-important($txt-xxl);
+	}
+	.txt-xl {
+		@include font-size-important($txt-xl);
+	}
+	.txt-lg {
+		@include font-size-important($txt-lg);
+	}
+	.txt-md {
+		@include font-size-important($txt-md);
+	}
+	.txt-sm {
+		@include font-size-important($txt-sm);
+	}
+	.txt-xs {
+		@include font-size-important($txt-xs);
+	}
+	.txt-xxs {
+		@include font-size-important($txt-xxs);
+	}
+
+
+
+
+	/*------------------------------------*\
+	    #TEXT ALIGNMENT
+	\*------------------------------------*/
+	/**
+	 *	Align text left right or center for all
+	 * viewports or for set veiwport widths.
+
+	 * Operates at:
+	 * $screen-xs
+	 * $screen-sm
+	 * $screen-md
+	 *  
+	 	Text align right
+	 	<div class="text-right">
+	 		...
+	 	</div>
+
+	 	Text align center viewports larger than $screen-md
+		<div class="text-center--min-screen-md">
+			...
+		</div>
+
+		Text align left at viewports smaller than $screen-sm
+		<div class="text-left--screen-sm">
+			...
+		</div>
+
+	 */
+
+	/* .text-left,
+	%text-left {
+		@include align-float(text-align, left);
+	} */
+	.text-right,
+	%text-right {
+		@include align-float(text-align, right);
+	}
+	.text-center,
+	%text-center {
+		@include align-float(text-align, center);
+	}
+
+
+
+
+
+	/*------------------------------------*\
+	    #FLOATS
+	\*------------------------------------*/
+	/**
+	/**
+	 *	Float elements left, right or none for
+	 * viewports or for set veiwport widths.
+
+	 * Operates at:
+	 * $screen-xs
+	 * $screen-sm
+	 * $screen-md
+	 *  
+	 	Float right
+	 	<div class="float-right">
+	 		...
+	 	</div>
+
+	 	Float right at viewports larger than $screen-md
+		<div class="float-right--min-screen-md">
+			...
+		</div>
+
+		float none at viewports smaller than $screen-sm
+		<div class="float-none--screen-sm">
+			...
+		</div>
+
+	 */
+	.float-left,
+	%float-left {
+		@include align-float(float, left);
+	}
+	.float-right,
+	%float-right {
+		@include align-float(float, right);
+	}
+	/* .float-none,
+	%float-none {
+		@include align-float(float, none);
+	} */
+
+
+
+
+
+
+	/*------------------------------------*\
+	    #MARGINS
+	\*------------------------------------*/
+	/**
+	 *
+	 *
+	 * 	add margin
+
+	 * This operates for breakpoints
+	 * $screen-xs
+	 * $screen-sm
+
+	 * margin on all sides
+		<div class="push">
+			...
+		</div>
+
+	*	margin on top
+		<div class="push--top">
+			...
+		</div>
+
+	 * half margin top
+		<div class="push-half--top">
+			...
+		</div>
+
+	 * margin on both sides
+		<div class="push--sides">
+			...
+		</div>
+
+	* margin on both top and bottom
+		<div class="push--ends">
+			...
+		</div>
+
+	* margin on both top and bottom at viewports smaller than $screen-sm
+		<div class="push--ends--screen-sm">
+			...
+		</div>
+
+	* half margin on both sides at viewports greater than $screen-sm
+		<div class="push-half--sides--min-screen-sm">
+			...
+		</div>
+
+	 *  Can apply margins to screens larger than $screen-sm:
+	   <div class="push--screen-sm--top"></div>
+	 */
+	.push,
+	%push {
+		@include element-boundaries(margin, $base-margin-width);
+	}
+
+
+	/**
+	 *-Remove margin,
+	 *
+	 * This operates for breakpoints
+	 * $screen-xs
+	 * $screen-sm
+	 *
+	 * 
+	  Remove margin-top
+	  <div class="flush--top">
+	  	...
+	  </div>  
+
+		Remove margin on all sides
+	  <div class="flush">
+	  	...
+	  </div>
+
+	  Remove margin-bottom on viewports smaller than $screen-sm
+	  <div class="flush--bottom--screen-sm">
+	  	...
+	  </div>
+
+	  Remove margin-left on viewports larger than $screen-sm
+	  <div class="flush--left--min-screen-sm">
+	  	...
+	  </div>
+	 */
+	.flush,
+	%flush {
+		@include element-boundaries(margin, 0);
+	}
+
+
+
+
+
+
+
+
+	/*------------------------------------*\
+	    #PADDING
+	\*------------------------------------*/
+	/**
+	 *
+	 *
+	 * 	add padding
+
+	 * This operates for breakpoints
+	 * $screen-xs
+	 * $screen-sm
+
+	 * Padding on all sides
+		<div class="soft">
+			...
+		</div>
+
+	*	Padding on top
+		<div class="soft--top">
+			...
+		</div>
+
+	 * half padding top
+		<div class="soft-half--top">
+			...
+		</div>
+
+	 * padding on both sides
+		<div class="soft--sides">
+			...
+		</div>
+
+	* padding on both top and bottom
+		<div class="soft--ends">
+			...
+		</div>
+
+	* padding on both top and bottom at viewports smaller than $screen-sm
+		<div class="soft--ends--screen-sm">
+			...
+		</div>
+
+	* half padding on both sides at viewports greater than $screen-sm
+		<div class="soft-half--sides--min-screen-sm">
+			...
+		</div>
+
+	 */
+	.soft,
+	%soft {
+		@include element-boundaries(padding, $base-padding-width);
+	}
+
+
+	/**
+	 *-Remove padding,
+	 *
+	 * This operates for breakpoints
+	 * $screen-xs
+	 * $screen-sm
+	 *
+	 * 
+	  Remove padding-top
+	  <div class="hard--top">
+	  	...
+	  </div>  
+
+		Remove padding on all sides
+	  <div class="hard">
+	  	...
+	  </div>
+
+	  Remove padding-bottom on viewports smaller than $screen-sm
+	  <div class="hard--bottom--screen-sm">
+	  	...
+	  </div>
+
+	  Remove padding-left on viewports larger than $screen-sm
+	  <div class="hard--left--min-screen-sm">
+	  	...
+	  </div>
+	 */
+	.hard,
+	%hard {
+		@include element-boundaries(padding, 0);
+	}
+
+
+
+
+
+
+
+	/*------------------------------------*\
+	    #VISIBILITY
+	\*------------------------------------*/
+	/*
+	 *
+	 * Toggle element visibility, 
+
+	 * This operates for breakpoints
+	 * $screen-xs
+	 * $screen-sm
+	 * $screen-md
+	 * $screen-lg
+
+	 *uses absolute-positioning
+	 * to position the element out of view but still visibile to
+	 * screen readers.
+
+	 *  To remove visibility for all devices use
+
+	 	<div class="hidden--hard">
+	 		...
+	 	</div>
+
+	  hidden at screen-sm and below
+	  <div class="hidden--screem-sm">
+	  	...
+	  </div>
+
+	  hidden at screen-sm and above
+	  <div class="hidden--min-screem-sm">
+	  	...
+	  </div>
+	 *	
+	 */
+	@include visibility();
+
+	.hidden-sr {
+		postition: absolute !important;
+		left: -9999999999999px !important;
+	}
+
+
+
+
+
+	/*------------------------------------*\
+	    #BACKGROUND COLORS
+	\*------------------------------------*/
+	/**
+	 *
+	 *
+	 *	Add background colors based on the colors declared in _variables.scss
+	 *	
+	 	Set the background color to $brand-color
+		<div class="bg-brand">
+			...
+		</div>
+	 */
+	@include set-color(bg, background);
+
+
+
+
+
+	/*------------------------------------*\
+	    #TEXT COLORS
+	\*------------------------------------*/
+	/*
+	 *-text-colors
+	 *
+	 *	Add text colors based on the colors declared in _variables.scss
+	 *	
+	 	Set the text color to $brand-color
+	 	<div class="txt-brand">
+	 		...
+	 	</div> 
+
+	 */
+	@include set-color(txt, color);
+
+
+
+
+
+
+	/*------------------------------------*\
+	    #BORDERS
+	\*------------------------------------*/
+	 /*
+	 * REMOVE BORDERS
+
+	 * Operates at breakpoints 
+	 * $screen-xs 
+	 * $screen-sm
+
+	 *  remove border-bottom 
+	 	 <div class="clean--bottom">
+	 	 	...
+	 	 </div>
+
+	 * remove border-left on viewports smaller than $screen-sm 
+	 		<div class="clean--left--screen-sm">
+	 			...
+	 		</div>
+
+	  * remove border on viewports larger than $screen-sm 
+	 		<div class="clean--min-screen-sm">
+	 			...
+	 		</div>
+	 */
+	 .clean,
+	 %clean {
+		border: 0 !important;
+	}
+	.clean--top {
+		border-top: 0 !important;
+	}
+	.clean--right {
+		border-right: 0 !important;
+	}
+	.clean--bottom {
+		border-bottom: 0 !important;
+	}
+	.clean--left {
+		border-left: 0 !important;
+	}
+}
+
+
+
+

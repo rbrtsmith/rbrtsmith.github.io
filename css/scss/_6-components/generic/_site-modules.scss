@@ -1,0 +1,203 @@
+
+
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> SITE MODULE
+\*------------------------------------*/
+/**
+ *
+ * Site modules are goups of modules that are characterised
+ * by an image at the top and some textual content underneath.
+ * 
+ *
+ *
+
+	Generic site modules
+	<div class="site-modules">
+		<div class="row">
+			<?php for ($i=0; $i<8; $i++) : ?>
+				<div class="col-sm-3 col-xs-6 col-xxs-12">
+					<div class="site-modules__module">
+						<div class="site-modules__img lazy-load-wrap">
+							<img class="js-multi-img-src js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+								data-lg-src="http://placehold.it/270x270"
+								data-md-src="http://placehold.it/270x270"
+								data-sm-src="http://placehold.it/100x100"
+								width="270" height="270"
+								>
+						</div>
+						<div class="site-modules__content">
+							Foo
+						</div>
+					</div>
+				</div>
+			<?php endfor; ?>
+		</div>
+		<div class="text-center site-modules__btn">
+			<a href="#" class="btn btn--brand btn--md">Läs in fler</a>
+		</div>
+	</div>
+
+
+	Site modules that get thrown into horizontal mode
+	on viewports less than $screen-xs.
+
+	<div class="site-modules site-modules--horizontal--screen-xs">
+		<div class="row">
+			<?php for ($i=0; $i<8; $i++) : ?>
+				<div class="col-sm-3 col-xs-6 col-xxs-12">
+					<div class="site-modules__module site-modules--horizontal--screen-xs__module">
+						<div class="site-modules__img site-modules--horizontal--screen-xs__img lazy-load-wrap">
+							<img class="js-multi-img-src js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+								data-lg-src="http://placehold.it/270x270"
+								data-md-src="http://placehold.it/270x270"
+								data-sm-src="http://placehold.it/100x100"
+								width="270" height="270"
+								>
+						</div>
+						<div class="site-modules__content site-modules--horizontal--screen-xs__content">
+							Foo
+						</div>
+					</div>
+				</div>
+			<?php endfor; ?>
+		</div>
+		<div class="text-center site-modules__btn">
+			<a href="#" class="btn btn--brand btn--md">Läs in fler</a>
+		</div>
+	</div>
+
+
+	Site modules that get thrown into horizontal mode
+	on viewports less than $screen-sm
+
+	<div class="site-modules site-modules--horizontal--screen-sm">
+		<div class="row">
+			<?php for ($i=0; $i<3; $i++) : ?>
+				<div class="col-sm-4 col-xs-12">
+					<div class="site-modules__module site-modules--horizontal--screen-sm__module">
+						<div class="site-modules__img site-modules--horizontal--screen-sm__img lazy-load-wrap">
+							<img class="js-multi-img-src js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+								data-lg-src="http://placehold.it/270x270"
+								data-md-src="http://placehold.it/150x150"
+								data-sm-src="http://placehold.it/100x100"
+								width="270" height="270"
+								>
+						</div>
+						<div class="site-modules__content site-modules--horizontal--screen-sm__content">
+							Foo
+						</div>
+					</div>
+				</div>
+			<?php endfor; ?>
+		</div>
+		<div class="text-center site-modules__btn">
+			<a href="#" class="btn btn--brand btn--md">Läs in fler</a>
+		</div>
+	</div>
+
+
+
+
+ * Can change mobile text vertical alignment from the default (center) to
+ * the top by appending the class "site-modules__content--top" to the
+ * "site-modules__content" element.
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-site-modules) {
+	.site-modules {
+		margin-bottom: -$grid-gutter-width;
+		&__module,
+		&__btn {
+			display: block;
+			margin-bottom: $grid-gutter-width;
+		}
+		&__module,
+		&__img img {
+			width: 100%;
+		}
+		&__module {
+			@extend %ui-link;
+		}
+		&__content {
+			vertical-align: middle;
+		}
+		&--horizontal--screen-xs {
+			@media (max-width: $screen-xs) {
+				margin-bottom: -($grid-gutter-width / 2);
+				&__module {
+					display: table;
+					table-layout: fixed;
+					margin-bottom: $grid-gutter-width / 2;
+				}
+				&__img,
+				&__content {
+					display: table-cell;
+				}
+				&__img {
+					width: 100px;
+				}
+				img {
+					width: 100px;
+					height: 100px;
+				}
+				&__content {
+					padding-left: 5px;
+					&--top {
+						vertical-align: top;
+					}
+				}
+			}
+			@media (max-width: $screen-xxs) {
+				margin-bottom: -$grid-gutter-width-screen-xs;
+				&__module {
+					margin-bottom: $grid-gutter-width-screen-xs;
+				}
+			}
+		}
+		&--horizontal--screen-sm {
+			@media (max-width: $screen-sm) {
+				margin-bottom: -($grid-gutter-width / 2);
+				&__module {
+					display: table;
+					table-layout: fixed;
+					margin-bottom: $grid-gutter-width / 2;
+				}
+				&__img,
+				&__content {
+					display: table-cell;
+				}
+				img {
+					width: 150px;
+					height: 150px;
+				}
+				&__img {
+					width: 150px;
+				}
+				&__content {
+					padding-left: 5px;
+					&--top {
+						vertical-align: top;
+					}
+				}
+			}
+			@media (max-width: $screen-xs) {
+				img {
+					width: 100px;
+					height: 100px;
+				}
+				&__img {
+					width: 100px;
+				}
+			}
+			@media (max-width: $screen-xxs) {
+				margin-bottom: -$grid-gutter-width-screen-xs;
+				&__module {
+					margin-bottom: $grid-gutter-width-screen-xs;
+				}
+			}
+		}
+	}
+}

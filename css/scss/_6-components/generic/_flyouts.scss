@@ -1,0 +1,164 @@
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> FLYOUTS
+\*------------------------------------*/
+
+%flyout-base {
+	position: relative;
+}
+%flyout-base__content {
+	position: absolute;
+	left: -999999px;
+	z-index: 2;
+}
+%flyout-base__content--top {
+	left: 0;
+	bottom: 100%;
+}
+%flyout-base__content--right {
+	top: 0;
+	left: 100%;
+}
+%flyout-base__content--bottom {
+	left: 0;
+	top: 100%;
+}
+%flyout-base__content--left {
+	left: auto;
+	top: 0;
+	right: 100%;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #FLYOUT HOVER
+\*------------------------------------*/
+/**
+ * Flyout is a piece of content that wil flyout when its parent 
+ * element is hovered.
+ *
+ * You can specify where the flyout appears in relation to
+ * it's parent, the exmaple below positions the flyout at the
+ * bottom of it's parent.
+
+ <div class="flyout">
+	Parent
+	<div class="flyout__content flyout__content--bottom">
+		child
+	</div>
+</div>
+
+
+
+Bottom right::
+
+<div class="flyout">
+	Parent
+	<div class="flyout__content flyout__content--bottom--right">
+		child
+	</div>
+</div>
+
+
+*/
+@if ($options__use-flyouts) {
+	.flyout {
+		@extend %flyout-base;
+		&__content {
+			@extend %flyout-base__content;
+		}
+		&:hover {
+			> .flyout__content {
+				//left: auto;
+				&--left {
+					@extend %flyout-base__content--left;
+				}
+				&--right {
+					@extend %flyout-base__content--right;
+				}
+				&--top {
+					@extend %flyout-base__content--top;
+				}
+				&--bottom {
+					@extend %flyout-base__content--bottom;
+				}
+				&--bottom--right {
+					@extend %flyout-base__content--bottom;
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/*------------------------------------*\
+    #FLYOUT CLICK
+\*------------------------------------*/
+/**
+ * Flyout click is a piece of content that flyout when a sibling 
+ * toggle element is clicked.
+ *
+
+ * REQUIRES JAVASCRIPT:
+ 		the js- prefixed classes on the example below
+ 		are required for the flyout to work on the click event,
+ 		clicking any part of the document besides the flyout will
+ 		force the flyout to close.
+ 		
+ 		NOTE -- the number at the endo of
+ 		js-ui-popup-wrap[] is the unique index of the flyout on the page.
+ 		if you add more than one click enabled flyout you need to increase
+ 		this index. -- make not of any others that may already be in the project
+ 		by doing a search within the .php / .html files.
+ *		
+
+
+<div class="flyout-click js-ui-popup-wrap0"> 
+	<div class="flyout__toggle js-ui-popup-toggle">
+		toggle_text
+	</div>
+	<div class="flyout__content flyout__content--bottom">
+		...
+	</div>
+</div>
+
+
+*/
+
+@if ($options__use-flyouts-click) {
+	.flyout-click {
+		@extend %flyout-base;
+		&__content {
+			@extend %flyout-base__content;
+		}
+	}
+	.open {
+		> .flyout__content {
+			left: auto;
+			&--left {
+				@extend %flyout-base__content--left;
+			}
+			&--right {
+				@extend %flyout-base__content--right;
+			}
+			&--top {
+				@extend %flyout-base__content--top;
+			}
+			&--bottom {
+				@extend %flyout-base__content--bottom;
+			}
+			&--bottom--right {
+				@extend %flyout-base__content--bottom;
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+}

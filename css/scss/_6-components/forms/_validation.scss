@@ -1,0 +1,75 @@
+
+
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> REAL TIME VALIDATION
+\*------------------------------------*/
+
+/**
+ * Gives realtime validation as the user fills in the form, you need to ensure
+ * that js-reatime-validate.js has been activated for this to work.
+ *
+
+    <form action="contact-thanks" class="js-realtime-validate" autocomplete="off">
+        <input type="date" class="text-input" data-min-length="10" name="name">
+        <input type="email" class="text-input" data-min-length="10" name="email" required>
+        <input type="tel" class="text-input" name="telephone">
+        <select class="js-input-text">
+            <option value="" selected disabled></option>
+            <option value="1">1</option>
+            <option value="1">1</option>
+            <option value="1">1</option>
+        </select>
+        <textarea name="message" class="js-input-text text-input"></textarea>
+        <button type="submit" class="btn btn--brand btn--lg">Skicka</button>
+    </form>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-validation) {
+    .realtime-validate {
+        .text-input {
+            padding-right: 35px;
+            transition: background-image 0.4s linear, border-color 0.4s linear;
+            background: white no-repeat right center;
+            background-image: url('img/build/media/blank.png');
+            background-size: 35px 17px;
+        }
+        .text-input.valid {
+            border-color: green;
+            background-image: url('img/build/media/tick.png');
+        }
+        select.valid {
+            border-color: green;
+        }
+        .text-input.invalid,
+        select.invalid {
+            border-color: red;
+        }
+    }
+    // input.clean,
+    // textarea.clean,
+    // select.clean {
+    //     padding-right: 35px;
+    //     transition: background-image 0.4s linear, border-color 0.4s linear;
+    //     background: white no-repeat right center;
+    //     background-image: url('img/build/media/blank.png');
+    //     background-size: 35px 17px; // sizr of tick.png
+    //     &.dirty {
+    //         //border-color: $form-dirty;
+    //         &.valid {
+    //             border-color: $form-valid;
+    //             background-image: url('img/build/media/tick.png');
+    //         }
+    //     }
+    // }
+    // .attempted-submit {
+    //     .dirty {
+    //         border-color: $form-dirty;
+    //     }
+    // }
+    // .js-realtime-validate input:-webkit-autofill {
+    //      -webkit-box-shadow: 0 0 0px 1000px white inset;
+    // }
+}

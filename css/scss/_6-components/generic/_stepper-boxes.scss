@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> STEPPER BOX
+\*------------------------------------*/
+
+/* NOTE This is to be used in conjunction with stepper-control.js
+
+    Consists of a text-box with 2 controls to increment or decrement
+    the number in the text-box.
+
+    <ul class="inline-list js-stepper-qty-wrap">
+        <li class="stepper-box">
+            <input type="number" class="stepper-box__text-input js-stepper-qty-total" value="1">
+        </li>
+        <li class="stepper-box stepper-box--alpha js-stepper-qty-increase">+</li>
+        <li class="stepper-box stepper-box--alpha js-stepper-qty-decrease">-</li>
+    </ul>
+
+*/
+
+
+@if ($options__use-stepper-box) {
+    .stepper-box {
+        width: 30px;
+        line-height: 26px;
+        border: 3px solid $alpha-color;
+        @extend %text-center;
+        user-select: none;
+        &--alpha {
+            background: $alpha-color;
+            color: $zeta-color;
+            cursor: pointer;
+        }
+        &__text-input {
+            max-width: 100%;
+            border: 0;
+            @extend %text-center;
+        }
+    }
+}

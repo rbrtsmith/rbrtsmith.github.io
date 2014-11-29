@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> SECTION
+\*------------------------------------*/
+
+/**
+ * Adds padding top and bottom to give some breathing space
+ * between sections -- usually used on the section tag but can be
+ * any block element such as a div.
+
+ <section class="section">
+ 	...
+ </section>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-section) {
+	.section {
+		padding-top: $section-padding;
+		padding-bottom: $section-padding;
+	}
+}

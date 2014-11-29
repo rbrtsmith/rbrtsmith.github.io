@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> BREADCRUMBS
+\*------------------------------------*/
+/**
+ *
+ * Breadcrumbs object, extends nav
+ * 
+	<ol class="nav nav--breadcrumb">
+		<li><a href="#">Foo</a></li>
+		<li><a href="#">Bar</a></li>
+		<li><a href="#">Baz</a></li>
+	</ol>
+
+
+
+ /**
+  *
+  * Custom breadcrumbs
+
+	<ol class="nav nav--breadcrumb">
+		<li><a href="#">Foo</a></li>
+		<li data-breadcrumb="/"><a href="#">Bar</a></li>
+		<li data-breadcrumb="/"><a href="#">Baz</a></li>
+	</ol>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-breadcrumbs) {
+	.nav--breadcrumb {
+		> li + li {
+		 	padding-left: 5px;
+		 	&:before {
+				content: " \00BB" "\00A0";
+		 	}
+		}
+		> li + li[data-breadcrumb]:before {
+			content: attr(data-breadcrumb) "\00A0";
+		}
+	}
+}

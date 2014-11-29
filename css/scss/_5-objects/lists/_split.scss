@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> SPLIT
+\*------------------------------------*/
+/**
+ * Simple split item for creating two elements floated 
+   away from one another, on left one right.  Often used on
+   definition lists.
+
+	<dl class="split">
+		<dt class="split__title">
+			...
+		</dt>
+		<dd>
+			...
+		</dd>
+	</dl>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+
+@if ($options__use-split) {
+	.split {
+		overflow: hidden;
+		text-align: right;
+		@extend %bare-list;
+		&__title {
+			float: left;
+			clear: left;
+			text-align: left;
+		}
+	}
+}

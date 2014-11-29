@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> ISLAND
+\*------------------------------------*/
+/**
+ * Defines an area of boxed off content with padding, the full-bleed modifier that can be added to children
+ * use negative margin to make them occupy the full width of the island.
+ * The half modifier creates boxed off content with half of the padding.
+	
+	<div class="island">
+		...
+	</div>
+
+
+	<div class="island island--half">
+		...
+	</div>
+
+
+	<div class="island">
+		<div class="island__full-bleed">
+			...
+		</div>
+	</div>
+
+
+	<div class="island island--half">
+		<div class="island--half__full-bleed">
+			...
+		</div>
+	</div>
+
+
+
+*/
+
+@if ($options__use-island) {
+	.island {
+		display: block;
+		padding: $island-padding-width;
+		&__full-bleed {
+			margin-left: -$island-padding-width;
+			margin-right: -$island-padding-width;
+		}
+		&--half {
+			padding: ($island-padding-width / 2);
+			&__full-bleed {
+				margin-left: -($island-padding-width / 2);
+				margin-right: -($island-padding-width / 2);
+			}
+		}
+		&:last-child {
+			//margin-bottom: 0; 
+		}
+	}
+}

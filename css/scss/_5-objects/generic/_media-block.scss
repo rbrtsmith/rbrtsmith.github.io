@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> MEDIA BLOCK
+\*------------------------------------*/
+/*
+ * Place any image like content- and text-like content side-by-side
+
+	<div class="media-block">
+		<div class="media-block__component">
+			...
+		</div>
+		<div class="media-block__body">
+			...
+		</div>
+	</div>
+
+
+
+	Component to the right:
+
+	<div class="media-block">
+		<div class="media-block__component--right">
+			...
+		</div>
+		<div class="media-block__body">
+			...
+		</div>
+	</div>
+	
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-media-block) {
+	.media-block {
+		overflow: hidden;
+		&__component {
+			float: left;
+			&--right {
+				float: right;
+			}
+		}
+		&__body {
+			overflow: hidden;
+		}
+	}
+}
+

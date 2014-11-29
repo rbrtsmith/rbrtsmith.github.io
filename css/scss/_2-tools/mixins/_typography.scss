@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #TOOLS -> MIXINS -> TYPOGRAPHY
+\*------------------------------------*/
+
+@mixin font-size($size) {
+	font-size: ($size * 10) + px;
+	font-size: $size + rem;
+}
+
+
+@mixin font-size-important($size) {
+	font-size: ($size * 10) + px !important;
+	font-size: $size + rem !important;
+}

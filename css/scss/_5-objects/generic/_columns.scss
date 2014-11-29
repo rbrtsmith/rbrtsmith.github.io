@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> COLUMNS
+\*------------------------------------*/
+/**
+ * Used to create newspaper like columns where
+ * the text flows from one columns to another.
+	
+  <div class="cols--two">
+      ...
+  </div>
+
+  <div class="four-cols two-cols--screen-sm one-col--screen-xs">
+  	...
+  </div>§
+
+*
+* Extend these objects in scss/custom
+*/
+
+@if ($options__use-columns) {
+	.four-cols {
+		@include columns(4);
+	}
+
+	.three-cols {
+		@include columns(3);
+	}
+
+	.two-cols {
+		@include columns(2);
+	}
+
+	.one-col {
+		@include columns(1);
+	}
+}

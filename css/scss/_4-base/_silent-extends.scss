@@ -1,0 +1,39 @@
+
+/*------------------------------------*\
+    #BASE -> SILENT EXTENDS
+\*------------------------------------*/
+
+
+%position-absolute-full {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+// typography
+%txt-xxl {
+	@include font-size($txt-xxl);
+}
+%txt-xl {
+	@include font-size($txt-xl);
+}
+%txt-lg {
+	@include font-size($txt-lg);
+}
+%txt-md {
+	@include font-size($txt-md);
+}
+%txt-sm {
+	@include font-size($txt-sm);
+}
+%txt-xs {
+	@include font-size($txt-xs);
+}
+%txt-xxs {
+	@include font-size($txt-xxs);
+}
+

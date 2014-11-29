@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> BLOCK FORM
+\*------------------------------------*/
+
+/**
+ * Makes form elements full width of their containers.
+ *
+
+	<form class="block-form" action="contact-thanks" method="post">
+		<input type="text" class="text-input" name="" placeholder="">
+		<button type="submit" class="button-input">skicka</button>
+	</form>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+.block-form {
+	.text-input,
+	select,
+	textarea,
+	.button-input {
+		width: 100%;
+	}
+}

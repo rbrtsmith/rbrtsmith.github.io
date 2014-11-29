@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    #BASE -> TYPOGRAPHY
+    element, attribute & psuedo selectors
+\*------------------------------------*/
+
+html {
+	font-size: 62.5%;
+	// Root font size, allows use to convert from px to REM easily.
+	@media (max-width: $screen-md) {
+		font-size: 60%;
+	}
+	@media (max-width: $screen-sm) {
+		font-size: 56%;
+	}
+	@media (max-width: $screen-xs) {
+		font-size: 52%;
+	}
+	@media (max-width: $screen-xxs) {
+		font-size: 48%;
+	}
+}
+
+
+body {
+	line-height: $site-line-height;
+	font-family: 'Source Sans Pro', arial, sans-serif;
+	@include font-size($txt-xs);
+}
+
+h1, h2, h3 {
+	margin: 15px 0;	
+}
+h1 {
+	@include font-size($txt-xl);
+}
+h2 {
+	@include font-size($txt-lg);
+}
+h3 {
+	@include font-size($txt-md);
+}
+
+
+
+
+p {
+	margin-top: 0;
+}
+
+a {
+	color: $brand-color;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: darken($brand-color, 15%);
+		text-decoration: none;
+	}
+	&:active {
+		outline: none;
+	}
+}
+
+
+
+
+

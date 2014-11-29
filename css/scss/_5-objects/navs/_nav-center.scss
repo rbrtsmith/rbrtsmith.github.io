@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV CENTER
+\*------------------------------------*/
+/**
+ *
+ * centers the nav horizontally.
+ *
+	<ul class="nav nav--center">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+
+@if ($options__use-nav-center) {
+	.nav--center {
+		text-align: center;
+		> li {
+			float: none;
+			display: block;
+		}
+	}
+}
