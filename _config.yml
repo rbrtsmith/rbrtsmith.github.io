@@ -1,0 +1,12 @@
+# site settings
+title: rbrtsmith
+email: robert@rbrtsmith.com
+description: "I write about Front End Development"
+baseurl: ""
+#uel: "http//rbrtsmith.com"
+timezone: Europe/Stockholm
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:title
+paginate: 10
