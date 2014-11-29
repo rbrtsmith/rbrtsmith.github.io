@@ -10,3 +10,5 @@ timezone: Europe/Stockholm
 markdown: kramdown
 permalink: /:year/:month/:title
 paginate: 10
+
+exclude: ["package.json", "Gruntfile.js", "node_modules", "js/source", "img/source"]
