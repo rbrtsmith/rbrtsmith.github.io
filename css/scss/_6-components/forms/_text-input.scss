@@ -15,17 +15,19 @@
 * Extend these objects in scss/custom
 */
 
-.text-input {
-	height: $text-input-height;
-	max-width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid $input-border-color;
-    &--lg {
-    	height: $lg-text-input-height;
-    }
-    &--textarea {
-    	padding-top: 10px;
-    	height: $text-input-textarea-height;
+@if ($options__use-text-input) {
+    .text-input {
+    	height: $text-input-height;
+    	max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid $input-border-color;
+        &--lg {
+        	height: $lg-text-input-height;
+        }
+        &--textarea {
+        	padding-top: 10px;
+        	height: $text-input-textarea-height;
+        }
     }
 }

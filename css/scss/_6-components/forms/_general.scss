@@ -5,17 +5,3 @@
     a particular component.
 \*------------------------------------*/
 
-
-.site-header__search {
-    &__btn {
-        top: 50%;
-        width: 30px;
-        height: 30px;
-        margin-top: -15px;
-        background: transparent;
-    }
-    .text-input {
-        height: 30px;
-        padding-right: 30px;
-    }
-}

@@ -12,11 +12,14 @@
 	...
   </div>
  */
-.truncate,
-%truncate {
-	max-width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
+
+ @if ($options__use-truncate) {
+	.truncate,
+	%truncate {
+		max-width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+ }
 

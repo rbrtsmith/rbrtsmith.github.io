@@ -7,102 +7,105 @@
 
 
 
+@if ($options__use-scaffolding) {
 
-.site-wrap {
-	max-width: $site-wrap-width;
-	margin: 0 auto;
-}
-.site-wrap.site-padding { // add to .site-wrap where padding on small screens is required.
-	max-width: $site-wrap-width+($site-padding-width * 2);
-	padding: 0 $site-padding-width; 
-	@media (max-width: $screen-xxs) { 
-		padding: 0 $grid-gutter-width-screen-xs; 
-	}
-}
+	
 
+	// THE GRID
 
+	@if $options__use-grid == true {
+		.row {
+			@include make-row();
+		}
+		ul.row,
+		ol.row {
+			list-style: none;
+			padding-left: 0;
+		}
 
-.clearfix:after,
-%clearfix:after {
-	content: "";
-  	display: table;
- 	clear: both;
-}
+		@include make-grid-columns();
 
+		// Ultra small grid
+		@if ($options__grid__screen-xxs) {
+			.col-xxs-6 {
+				float: left;
+				width: percentage((6 / $grid-column-count));
+			}
+		}
 
+		// Extra small grid
+		@if ($options__grid__screen-xs) {
+			@media (min-width: $screen-xs+1) {
+				@include make-grid(xs);
+			}
+		}
 
+		// Small grid
+		@if ($options__grid__screen-sm) {
+			@media (min-width: $screen-sm+1) {
+				@include make-grid(sm);
+			}
+		}
 
+		// Medium grid
+		@if ($options__grid__screen-md) {
+			@media (min-width: $screen-md+1) {
+				@include make-grid(md);
+			}
+		}
 
-
-// THE GRID
-
-@if $options__use-grid == true {
-	.row {
-		@include make-row();
-	}
-	ul.row,
-	ol.row {
-		list-style: none;
-		padding-left: 0;
-	}
-
-	@include make-grid-columns();
-
-	// Ultra small grid
-	.col-xxs-6 {
-		float: left;
-		width: percentage((6 / $grid-column-count));
-	}
-	//.col-xxs-12 { width: 100%; }
-
-	// Extra small grid
-	@media (min-width: $screen-xs+1) {
-		@include make-grid(xs);
-	}
-
-	// Small grid
-	@media (min-width: $screen-sm+1) {
-		@include make-grid(sm);
-	}
-
-	// Medium grid
-	@media (min-width: $screen-md+1) {
-		@include make-grid(md);
-	}
-
-	// Large grid
-	@if $options__grid__large-grid == true {
-		@media (min-width: $screen-lg+1) {
-			@include make-grid(lg);
+		// Large grid
+		@if ($options__grid__screen-lg) {
+			@media (min-width: $screen-lg+1) {
+				@include make-grid(lg);
+			}
 		}
 	}
-}
 
 
-
-
-.img {
-    border: 0;
-    height: auto;
-}
-
-
-
-.show-bp {
-	// allow javascript to detect accurate media querys.
-	@media (min-width: (($screen-lg)-1)) {
-		display: none;
+	@if ($options__use-sitewrap) {
+		.site-wrap {
+			max-width: $site-wrap-width;
+			margin: 0 auto;
+		}
+		.site-wrap.site-padding { // add to .site-wrap where padding on small screens is required.
+			max-width: $site-wrap-width+($site-padding-width * 2);
+			padding: 0 $site-padding-width; 
+			@media (max-width: $screen-xxs) { 
+				padding: 0 $grid-gutter-width-screen-xs; 
+			}
+		}
 	}
-	@media (max-width: (($screen-lg)-1)) {
-		display: inline-block;
+
+
+	@if ($options__use-clearfix) {
+		.clearfix:after,
+		%clearfix:after {
+			content: "";
+		  	display: table;
+		 	clear: both;
+		}
 	}
-	@media (max-width: (($screen-md)-1)) {
-		display: table;
-	}
-	@media (max-width: (($screen-sm)-1)) {
-		display: block;
-	}
-	@media (max-width: (($screen-xs)-1)) {
-		display: inline;
+
+
+	@if ($options__use-show-breakpoints) {
+		.show-bp {
+			// allow javascript to detect accurate media querys.
+			@media (min-width: (($screen-lg)-1)) {
+				display: none;
+			}
+			@media (max-width: (($screen-lg)-1)) {
+				display: inline-block;
+			}
+			@media (max-width: (($screen-md)-1)) {
+				display: table;
+			}
+			@media (max-width: (($screen-sm)-1)) {
+				display: block;
+			}
+			@media (max-width: (($screen-xs)-1)) {
+				display: inline;
+			}
+		}
 	}
 }

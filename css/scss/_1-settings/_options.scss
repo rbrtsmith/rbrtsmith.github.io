@@ -5,86 +5,217 @@
 
 /*  Site wide options to turn on various functionality, modules and functons,
   NOTE - Turning on all functions will result in more bloated code.
-  		You should only set those you plan to use to a t-rue value.
+  		You should only set those you plan to use to a true value.
 */
 
 
 
-/**
- * Grid
- */
-$options__use-grid: false;
-	// grid $screen-lg is rarely used so by default is f-alse.
-	$options__grid__large-grid: false;
-
-	/* the classes below, are useful, however they result in large 
-	code so set to t-rue ONLY if they are in use!
-	*/
-	$options__grid__push-classes: false;
-	$options__grid__pull-classes: false;
-	$options__grid__offset-classes: false;
+/*------------------------------------*\
+    #RESETS
+\*------------------------------------*/
+	$options__use-reset: true;
 
 
 
 
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
+	// SCAFFOLDING
+	$options__use-scaffolding: true;
+
+		// SCAFFOLDING -> GRID
+		$options__use-grid: false;
+			$options__grid__screen-xxs: false;
+			$options__grid__screen-xs: false;
+			$options__grid__screen-sm: false;
+			$options__grid__screen-md: false;
+			$options__grid__screen-lg: false;
+
+			$options__grid__push-classes: false;
+			$options__grid__pull-classes: false;
+			$options__grid__offset-classes: false;
+		
+		//SCAFFOLDING -> CLEARFIX
+		$options__use-clearfix: false;
+
+		//SCAFFOLDING -> SITE-WRAP
+		$options__use-sitewrap: true;
+
+		//SCAFFOLDING -> SITE-WRAP (show breakpoints, used in javascripts).
+		$options__use-show-breakpoints: false;
 
 
 
 
-/**
- *  Objects - functions found in _objects.scss
- *
- */
-$options__use-article: false;
-$options__use-border-radius: false;
-$options__use-columns: false;
-$options__use-display-table: false;
-$options__use-fake-link: false;
-$options__use-flyouts: false;
-$options__use-flyouts-click: false;
-$options__use-flag: false;
-$options__use-island: false;
-$options__use-media-block: false;
-$options__use-paragraph-group: false;
-$options__use-section: false;
-$options__use-site-modules: false;
-$options__use-split: false;
-$options__use-sprites: false;
-$options__use-stepper-box: false;
-	//lists
-	$options__use-bare-list: false; // the list objects below are dependant on this.
-	$options__use-inline-list: false;
-	$options__use-touch-friendly-link-list: false;
-	$options__use-ui-list: false;
-	//Navs
-	$options__use-breadcrumbs: false;
-	$options__use-nav: false;
-	$options__use-nav-stacked: false;
-	$options__use-nav-fit: false;
-	$options__use-nav-center: false;
-	$options__use-pagination: false;
-	//navbar
-	$options__use-navbar: false;
-	$options__use-subnav: false;
 
-	// forms
-	$options__use-file-upload: false;
-	$options__use-input-addon: false;
-	$options__use-placeholder-control: false;
-	$options__use-styled-select: false;
-	$options__use-validation: false;
-	$options__use-check-list: false;
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+
+	//LISTS
+
+		//LISTS -> BARE-LIST
+		$options__use-bare-list: false;
+
+		//LISTS -> INLINE-LIST
+		$options__use-inline-list: false; // D-(bare-list)
+		
+		//LISTS -> SPLIT
+		$options__use-split: false;
+		
+		//LISTS -> TOUCH FRIENDLY LINK LIST
+		$options__use-touch-friendly-link-list: false; // D-(bare-list)
+
+		//LISTS -> UI-LIST
+		$options__use-ui-list: false; // // D-(bare-list)
 
 
-/**
- * Helpers - functions found in _helpers.scss
- */
-$options__use-helpers: false;
-// text alignment & floats at breakpoints
-$options__text-align-and-float-classes--by-screen-size: false;
-// push & soft classes at breakpoints
-$options__push-and-soft-classes--by-screen-size: false;
-// push-half and soft-half
-$options__push-and-soft-classes--half: false;
-// visibility by minimum screen-width
-$options__visibility-by-min-width: false;
+	//NAVS
+
+		//NAVS -> BREADCRUMBS
+		$options__use-breadcrumbs: false;
+
+		//NAVS -> NAV-CENTER
+		$options__use-nav-center: false;
+
+		//NAVS -> NAV-FIT
+		$options__use-nav-fit: false;
+
+		//NAVS -> NAV STACKED
+		$options__use-nav-stacked: false;
+
+		//NAVS -> NAV
+		$options__use-nav: false;
+
+
+	//GENERIC
+
+		//GENERIC -> ARTICLE
+		$options__use-article: false;
+		
+		//GENERIC -> BARE-LINK
+		$options__use-bare-link: false;
+
+		//GENERIC -> BORDER-RADIUS
+		$options__use-border-radius: false;
+
+		//GENERIC -> COLUMNS
+		$options__use-columns: false;
+		
+		//GENERIC -> DISPLAY-TABLE
+		$options__use-display-table: false;
+
+		//GENERIC -> FLAG
+		$options__use-flag: false;
+
+		//GENERIC -> ISLAND
+		$options__use-island: false;
+		
+		//GENERIC -> MEDIA-BLOCK
+		$options__use-media-block: false;
+		
+		//GENERIC -> PARAGRAPH-GROUP
+		$options__use-paragraph-group: false;
+
+		//GENERIC -> SECTION
+		$options__use-section: false;
+
+		//GENERIC -> TRUNCATE
+		$options__use-truncate: false;
+
+		//GENERIC -> UI-LINK
+		$options__use-ui-link: false;
+
+		//GENERIC -> VIDEO-WRAPPER
+		$options__use-video-wrapper: false;
+
+
+
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+
+	//FORMS
+
+		//FORMS -> BLOCK-FORM
+		$options__use-block-form: false;
+
+		//FORMS -> CHECKBOX-LIST
+		$options__use-check-list: false;
+
+		//FORMS -> FILE-UPLOAD
+		$options__use-file-upload: false;
+		
+		//FORMS -> FORM-RESET (General reset for forms)
+		$options__use-form-reset: false;
+
+		//FORMS -> INPUT-ADDON
+		$options__use-input-addon: false;
+		
+		//FORMS -> PLACEHOLDER-CONTROL
+		$options__use-placeholder-control: false;
+
+		//FORMS -> STYLED-SELECT
+		$options__use-styled-select: false;
+
+		//FORMS -> TEXT-INPUT
+		$options__use-text-input: false;
+
+		//FORMS -> VALIDATION-FEEDBACK
+		$options__use-validation: false;
+
+
+	//NAVS
+
+		//NAVS -> NAVBAR
+		$options__use-navbar: false;
+			$options__use-subnav: false;
+
+		//NAVS -> PAGINATION
+		$options__use-pagination: false;
+		
+
+	//GENERIC
+
+		//GENERIC -> BUTTONS
+		$options__use-buttons: false;
+
+
+		//GENERIC -> FLYOUTS
+		$options__use-flyouts: false;
+			$options__use-flyouts-click: false;
+
+		//GENERIC -> LAZY-LOAD
+		$options__use-lazy-load: false;
+
+		//GENERIC -> SITE-MODULES
+		$options__use-site-modules: false;
+
+		//GENERIC -> STEPPER-BOXES
+		$options__use-stepper-box: false;
+		
+		//GENERIC -> SVG-ICONS
+		$options__use-svg-icons: false;
+
+
+
+
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+
+	//FAKE-LINK
+	$options__use-fake-link: false;
+
+	//HELPERS
+	$options__use-helpers: false;
+		// text alignment & floats at breakpoints
+		$options__text-align-and-float-classes--by-screen-size: false;
+		// push & soft classes at breakpoints
+		$options__push-and-soft-classes--by-screen-size: false;
+		// push-half and soft-half
+		$options__push-and-soft-classes--half: false;
+		// visibility by minimum screen-width
+		$options__visibility-by-min-width: false;

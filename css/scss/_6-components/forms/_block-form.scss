@@ -15,11 +15,13 @@
  * Extend these objects in scss/custom
  */
 
-.block-form {
-	.text-input,
-	select,
-	textarea,
-	.button-input {
-		width: 100%;
+@if ($options__use-block-form) {
+	.block-form {
+		.text-input,
+		select,
+		textarea,
+		.button-input {
+			width: 100%;
+		}
 	}
 }

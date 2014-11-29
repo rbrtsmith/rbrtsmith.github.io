@@ -11,15 +11,17 @@
  * Extend these objects in scss/custom
  */
 
-.bare-link,
-%bare-link {
-	@extend %ui-link;
-	&:hover {
-		text-decoration: underline;
+@if ($options__use-bare-link) {
+	.bare-link,
+	%bare-link {
+		@extend %ui-link;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
-}
 
 
-.bare-links a {
-	@extend %bare-link;
+	.bare-links a {
+		@extend %bare-link;
+	}
 }

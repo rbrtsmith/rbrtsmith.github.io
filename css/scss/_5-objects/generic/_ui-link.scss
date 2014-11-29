@@ -18,10 +18,12 @@
   * Extend these objects in scss/custom
   */
 
-.ui-link,
-%ui-link {
-	color: inherit;
-	&:hover {
+@if ($options__use-ui-link) {
+	.ui-link,
+	%ui-link {
 		color: inherit;
+		&:hover {
+			color: inherit;
+		}
 	}
 }

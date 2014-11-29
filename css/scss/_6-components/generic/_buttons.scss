@@ -14,33 +14,35 @@
  * Extend these objecrs in scss/custom
  */
 
-.btn {
-	display: inline-block;
-	border: 0;
-	text-decoration: none;
-	color: $zeta-color;
-	text-align: center;
-	transition: background 0.2s;
-	&:hover {
+@if ($options__use-buttons) {
+	.btn {
+		display: inline-block;
+		border: 0;
 		text-decoration: none;
 		color: $zeta-color;
-	}
-	&--brand {
-		background: $brand-color;
+		text-align: center;
+		transition: background 0.2s;
 		&:hover {
-			background: lighten($brand-color, 6%);
-			
+			text-decoration: none;
+			color: $zeta-color;
 		}
-	}
-	&--alpha {
-		background: $alpha-color;
-		&:hover {
-			background: lighten($alpha-color, 6%);
-			
+		&--brand {
+			background: $brand-color;
+			&:hover {
+				background: lighten($brand-color, 6%);
+				
+			}
 		}
-	}
-	&--lg {
-		line-height: 35px;
-		padding: 0 30px;
+		&--alpha {
+			background: $alpha-color;
+			&:hover {
+				background: lighten($alpha-color, 6%);
+				
+			}
+		}
+		&--lg {
+			line-height: 35px;
+			padding: 0 30px;
+		}
 	}
 }
