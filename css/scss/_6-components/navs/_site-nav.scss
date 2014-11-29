@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #COMPONENTS -> NAVS -> SITE-NAV
+\*------------------------------------*/
+.site-nav {
+	li {
+		margin: 0 $base-margin-width/2;
+	}
+	a {
+		padding: 5px $base-margin-width;
+		border: 2px solid transparent;
+		&:hover {
+			border-color: $brand-color;
+			color: $brand-color;
+		}
+		@include font-size($txt-md);
+	}
+}

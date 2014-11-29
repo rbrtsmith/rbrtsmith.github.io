@@ -5,4 +5,9 @@
 
 
 .site-header {
+	text-align: center;
+	&__logo {
+		border-radius: $rounded-radius;
+		border: 2px solid $alpha-color;
+	}
 }

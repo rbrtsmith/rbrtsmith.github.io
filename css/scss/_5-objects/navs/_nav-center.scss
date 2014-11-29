@@ -16,10 +16,7 @@
 
 @if ($options__use-nav-center) {
 	.nav--center {
+		@extend %inline-list;
 		text-align: center;
-		> li {
-			float: none;
-			display: block;
-		}
 	}
 }

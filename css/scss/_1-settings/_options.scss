@@ -38,7 +38,7 @@
 			$options__grid__offset-classes: false;
 		
 		//SCAFFOLDING -> CLEARFIX
-		$options__use-clearfix: false;
+		$options__use-clearfix: true;
 
 		//SCAFFOLDING -> SITE-WRAP
 		$options__use-sitewrap: true;
@@ -57,10 +57,10 @@
 	//LISTS
 
 		//LISTS -> BARE-LIST
-		$options__use-bare-list: false;
+		$options__use-bare-list: true;
 
 		//LISTS -> INLINE-LIST
-		$options__use-inline-list: false; // D-(bare-list)
+		$options__use-inline-list: true; // D-(bare-list)
 		
 		//LISTS -> SPLIT
 		$options__use-split: false;
@@ -78,7 +78,7 @@
 		$options__use-breadcrumbs: false;
 
 		//NAVS -> NAV-CENTER
-		$options__use-nav-center: false;
+		$options__use-nav-center: true;
 
 		//NAVS -> NAV-FIT
 		$options__use-nav-fit: false;
@@ -120,7 +120,7 @@
 		$options__use-paragraph-group: false;
 
 		//GENERIC -> SECTION
-		$options__use-section: false;
+		$options__use-section: true;
 
 		//GENERIC -> TRUNCATE
 		$options__use-truncate: false;
@@ -176,6 +176,7 @@
 		//NAVS -> PAGINATION
 		$options__use-pagination: false;
 		
+
 
 	//GENERIC
 

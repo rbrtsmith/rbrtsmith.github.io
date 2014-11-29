@@ -63,6 +63,19 @@
 	}
 
 
+	body {
+		&:before {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 5px;
+			background: $brand-color;
+			content: " ";
+		}
+	}
+
+
 	@if ($options__use-sitewrap) {
 		.site-wrap {
 			max-width: $site-wrap-width;

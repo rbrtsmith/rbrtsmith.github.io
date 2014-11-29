@@ -10,6 +10,14 @@
 */
 
 
+.hard--bottom {
+	padding-bottom: 0 !important;
+}
+
+.flush {
+	margin: 0 !important;
+}
+
 @if ($options__use-helpers) {
 	
 	/*------------------------------------*\

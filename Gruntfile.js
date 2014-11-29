@@ -209,8 +209,8 @@ module.exports = function(grunt) {
                 tasks: ['sass', 'autoprefixer', 'cssmin', 'shell:jekyllBuild']
             },
             images: {
-                files: ['img/source/**/*.{png,jpg,gif,svg}', 'shell:jekyllBuild'],
-                tasks: ['imagemin', 'svgstore']
+                files: ['img/source/**/*.{png,jpg,gif,svg}'],
+                tasks: ['imagemin', 'svgstore', 'shell:jekyllBuild']
             },
         }
 

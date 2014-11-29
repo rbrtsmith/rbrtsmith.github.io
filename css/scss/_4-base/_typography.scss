@@ -25,10 +25,12 @@ body {
 	line-height: $site-line-height;
 	font-family: 'Roboto', sans-serif;
 	@include font-size($txt-xs);
+	color: $alpha-color;
 }
 
 h1, h2, h3 {
 	margin: 15px 0;	
+	font-weight: 400;
 }
 h1 {
 	@include font-size($txt-xl);
@@ -41,6 +43,9 @@ h3 {
 }
 
 
+strong {
+	font-weight: 700;
+}
 
 
 p {
