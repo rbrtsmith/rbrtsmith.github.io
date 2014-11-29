@@ -78,7 +78,7 @@ module.exports = function(grunt) {
                     compass: false
                 },
                 files: {
-                    'css/style.css': '_scss/main.scss'
+                    'css/style.css': 'css/scss/main.scss'
                 }
             }
         },
@@ -167,35 +167,51 @@ module.exports = function(grunt) {
 
 
 
+
+/*------------------------------------*\
+    #SHELL & JEKYLL
+\*------------------------------------*/
+
+        shell: {
+            jekyllBuild: {
+                command: 'jekyll build'
+            },
+            jekyllServe: {
+                command: 'jekyll serve'
+            }
+        },
+
+
+
+
+
+
+
 /*------------------------------------*\
     #WATCH
 \*------------------------------------*/
 
         watch: {
+            options: {
+                spawn: false,
+                livereload: true
+            },
+            site: {
+                files: ['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*.md'],
+                tasks: ['shell:jekyllBuild']
+            },
             scripts: {
-                files: ['_js/source*.js'],
-                tasks: ['jshint', 'concat', 'uglify', 'copy'],
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
+                files: ['_js/source/*.js'],
+                tasks: ['jshint', 'concat', 'uglify', 'copy', 'shell:jekyllBuild']
             },
             css: {
-                files: ['_scss/**/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin'],
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
+                files: ['css/scss/**/*.scss'],
+                tasks: ['sass', 'autoprefixer', 'cssmin', 'shell:jekyllBuild']
             },
             images: {
-                files: ['img/source/**/*.{png,jpg,gif,svg}'],
-                tasks: ['imagemin', 'svgstore'],
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
-            }
+                files: ['img/source/**/*.{png,jpg,gif,svg}', 'shell:jekyllBuild'],
+                tasks: ['imagemin', 'svgstore']
+            },
         }
 
 
@@ -215,6 +231,7 @@ module.exports = function(grunt) {
     #LOAD TASKS
 \*------------------------------------*/
 
+    grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -246,5 +263,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'imagemin', 'svgstore', 'jshint', 'watch']);
     grunt.registerTask('dev', ['concat', 'sass', 'autoprefixer', 'imagemin', 'svgstore', 'jshint', 'watch']);
     grunt.registerTask('icons', ['favicons']);
+    grunt.registerTask('serve', ['shell']);
 
 };

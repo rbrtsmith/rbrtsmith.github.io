@@ -11,4 +11,18 @@ markdown: kramdown
 permalink: /:year/:month/:title
 paginate: 10
 
-exclude: ["package.json", "Gruntfile.js", "node_modules", "js/source", "img/source"]
+exclude: [
+	package.json, 
+	Gruntfile.js, 
+	node_modules, 
+	js/source, 
+	img/source,
+	.git,
+	.gitignore,
+	.sass-cache,
+	README.md,
+	.DS_STORE,
+	CNAME,
+	img/source,
+	js/source,
+	css/scss]
