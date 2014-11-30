@@ -1,8 +1,8 @@
 ---
 title: "My second Jekyll Post"
+meta: "Test post"
 date: 2014-11-29
 layout: posts
-meta: "Test post"
 pageClass: posts
 ---
 Lorem
