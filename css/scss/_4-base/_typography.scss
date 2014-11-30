@@ -42,6 +42,10 @@ h3 {
 	@include font-size($txt-md);
 }
 
+figcaption {
+	@include font-size($txt-xs);
+	line-height: 2;
+}
 
 strong,
 a {
