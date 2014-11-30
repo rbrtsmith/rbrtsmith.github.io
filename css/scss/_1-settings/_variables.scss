@@ -10,9 +10,9 @@
  */
 $brand-color:   #45d296;
 $alpha-color:   #222;
-$beta-color:    #000;
-$gamma-color:   #00f;
-$delta-color:   #fff;
+$beta-color:    #ccc;
+$gamma-color:   #f0f0f0;
+$delta-color:   #888;
 $epsilon-color: #fff;
 $zeta-color:    #fff;
 
@@ -21,13 +21,10 @@ $zeta-color:    #fff;
 /**
  * Font sizes (1 == 10px && 1rem)
  */
-$txt-xxl:   4;
-$txt-xl:    3;
-$txt-lg:    2.6;
+$txt-xl:    4;
+$txt-lg:    2.4;
 $txt-md:    2;
 $txt-sm:    1.6;
-$txt-xs:    1.4;
-$txt-xxs:   1.2;
 
 
 
@@ -87,7 +84,7 @@ $base-padding-width: round($grid-gutter-width / 2);
 
 
  	//ui list
- 	$ui-list-spacing: round($grid-gutter-width / 3); //defaults maintain symmetry with grid
+ 	$ui-list-spacing: $base-margin-width*2; //defaults maintain symmetry with grid
 	$ui-list-border-color: $brand-color;
 
 

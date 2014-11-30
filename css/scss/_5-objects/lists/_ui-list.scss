@@ -7,44 +7,36 @@
  *
  * Create blocky lists of content that are border separated.
  *
-	<ul class="ui-list">
-		<li><a href="#" class="ui-list__full-bleed">Link 1</a></li>
-		<li><a href="#" class="ui-list__full-bleed">Link 2</a></li>
-	</ul>
 
  *
  * Extend these objects in scss/custom
  */
 
-%border {
-	border: 0px solid $ui-list-border-color;
-}
+
 @if ($options__use-ui-list) {
 	.ui-list {
 		@extend %bare-list;
-		@extend %border;
-		border-top-width: 1px;
-		>li {
-			padding: $ui-list-spacing;
-			@extend %border;
-			border-bottom-width: 1px;
+		&:before {
+			bottom: 0;
 		}
-		&__full-bleed,
-		&--half__full-bleed {
-			display: block;
-		}
-		&__full-bleed {
-			margin: -$ui-list-spacing;
-			padding: $ui-list-spacing;
-		}
-		&--half {
-			>li {
-				padding: round($ui-list-spacing / 2);
+		&__item {
+			padding: $ui-list-spacing 0;
+			&:before {
+				top: 0;
 			}
-			&__full-bleed {
-				margin: round(-($ui-list-spacing / 2));
-				padding: round($ui-list-spacing / 2);
-			}
+		}
+	}
+	.ui-list,
+	.ui-list__item {
+		position: relative;
+		&:before {
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background: $beta-color;
+			background-image: linear-gradient(to right, $gamma-color, $beta-color 20%, $beta-color 80%, $gamma-color);
+			content: " ";
 		}
 	}
 }

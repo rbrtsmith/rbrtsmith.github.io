@@ -2,13 +2,21 @@
 	<nav class="site-nav section">
 		<ul class="nav nav--center">
 			<li>
-				<a href="/#posts">Posts</a>
+				{% if page.pageClass == "posts" %}
+		            <a href="/#posts" class="active box-link">Posts</a>
+		        {% else %}
+		            <a href="/#posts" class="box-link">Posts</a>
+		        {% endif %}
 			</li>
 			<li>
-				<a href="{{site.url }}/about">About</a>
+				{% if page.pageClass == "about" %}
+		            <a href="{{site.url }}/about" class="active box-link">About</a>
+		        {% else %}
+		            <a href="{{site.url }}/about" class="box-link">About</a>
+		        {% endif %}
 			</li>
 			<li>
-				<a href="https://github.com/rbrtsmith">Github</a>
+				<a href="https://github.com/rbrtsmith" class="box-link">Github</a>
 			</li>
 		</ul>
 	</nav>

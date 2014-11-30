@@ -24,7 +24,7 @@ html {
 body {
 	line-height: $site-line-height;
 	font-family: 'Roboto', sans-serif;
-	@include font-size($txt-xs);
+	@include font-size($txt-sm);
 	color: $alpha-color;
 }
 
@@ -43,8 +43,9 @@ h3 {
 }
 
 
-strong {
-	font-weight: 700;
+strong,
+a {
+	font-weight: 600;
 }
 
 

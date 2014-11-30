@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> POST
+\*------------------------------------*/
+
+.post {
+	&__title {
+		display: inline;
+		font-weight: 400;
+		margin: 0;
+	}
+	&__date {
+		padding-left: 25px;
+		white-space: nowrap;
+		color: $delta-color;
+	}
+}

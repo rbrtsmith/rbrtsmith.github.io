@@ -197,7 +197,7 @@ module.exports = function(grunt) {
                 livereload: true
             },
             site: {
-                files: ['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*.md'],
+                files: ['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*.md', '_config.yml'],
                 tasks: ['shell:jekyllBuild']
             },
             scripts: {
