@@ -15,3 +15,15 @@
 		color: $delta-color;
 	}
 }
+
+.single-post {
+	&__header {
+		margin-bottom: 15px;
+	}
+	&__title {
+		margin-bottom: 0;
+	}
+	&__date {
+		color: $delta-color;
+	}
+}

@@ -6,12 +6,15 @@
 <body>
 	{% include header-alt.html %}
 
-	<article class="section">
+	<article class="section single-post">
 		<div class="site-wrap site-padding">
-			<header>
-				<h1>
+			<header class="single-post__header">
+				<h1 class="single-post__title">
 					{{page.title}}
 				</h1>
+				<time class="single-post__date" datetime="{{ page.date | date: "%Y-%m-%d" }}">
+					{{ page.date | date: "%d %B, %Y" }}
+				</time>
 			</header>
 	    	{{ content }}
 	    </div>
