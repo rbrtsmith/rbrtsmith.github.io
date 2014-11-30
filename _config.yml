@@ -9,7 +9,7 @@ timezone: Europe/Stockholm
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:title
-paginate: 10
+paginate: 3
 
 exclude: [
 	package.json, 

@@ -5,6 +5,11 @@
 
 
 
-.pagination {
+.pagination,
+.social {
 	text-align: center;
+}
+
+.social__item {
+	display: inline-block;
 }

@@ -2,6 +2,12 @@
     #COMPONENTS -> GENERIC -> SITE FOOTER
 \*------------------------------------*/
 .site-footer {
+	text-align: center;
 	background: $alpha-color;
-	color: $zeta-color;
+	color: $beta-color;
+	a {
+		color: inherit;
+		font-weight: inherit;
+		text-decoration: underline;
+	}
 }

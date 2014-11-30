@@ -19,5 +19,19 @@
 	.section {
 		padding-top: $section-padding;
 		padding-bottom: $section-padding;
+		&--alpha {
+			position: relative;
+			padding-bottom: 0;
+			&:before {
+				position: absolute;
+				top: round($section-padding/2);
+				left: 0;
+				right: 0;
+				height: 1px;
+				background: $beta-color;
+				background-image: linear-gradient(to right, $gamma-color, $beta-color 20%, $beta-color 80%, $gamma-color);
+				content: " ";
+			}
+		}
 	}
 }
