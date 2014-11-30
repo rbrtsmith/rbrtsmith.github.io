@@ -54,11 +54,15 @@ a {
 }
 
 strong {
-	color: $epsilon-color;
+	color: #222;
 }
 
 q {
 	font-style: italic;
+}
+
+code {
+	color: $epsilon-color;
 }
 
 pre {
@@ -67,9 +71,11 @@ pre {
 	white-space: pre;
 	word-wrap: normal;
 	background: darken($brand-color, 20%);
-	color: $zeta-color;
 	border: 2px solid darken($brand-color, 30%);
 	border-left-width: 6px;
+	code {
+		color: $zeta-color;
+	}
 }
 
 

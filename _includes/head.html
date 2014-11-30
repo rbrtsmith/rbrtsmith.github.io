@@ -10,4 +10,13 @@
 
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,600'>
 	<link rel="stylesheet" href="{{site.url }}/css/style.css">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@robertwilliam_s">
+	<meta name="twitter:title" content="{{ page.title }} – Robert Smith">
+	{% if page.meta %}
+	    <meta name="twitter:description" content="{{ page.meta }}">
+	{% endif %}
+	<meta name="twitter:description" content="View the album on Flickr.">
+	<meta name="twitter:image" content="{{site.url }}/img/build/robert.jpg">
 </head>
