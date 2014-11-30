@@ -6,11 +6,16 @@
 <body>
 	{% include header-alt.html %}
 
-	<section class="section">
+	<article class="section">
 		<div class="site-wrap site-padding">
+			<header>
+				<h1>
+					{{page.title}}
+				</h1>
+			</header>
 	    	{{ content }}
 	    </div>
-	</section>
+	</article>
 
 {% include footer.html %}
 
