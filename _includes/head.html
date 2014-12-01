@@ -6,11 +6,11 @@
 	<title>
 		{{ page.title }} &ndash; Front-end Development &amp; Archetecture by Robert Smith
 	</title>
-	<meta name="description" content="Articles on CSS, JavaScript, front-end developent, and website performance.">
+	<meta name="description" content="{{site.description }}">
 
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,600'>
 	<link rel="stylesheet" href="{{site.url }}/css/style.css">
-
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
 	<!-- favicons -->
 	<meta name="msapplication-square70x70logo" content="img/build/icons/favicons/windows-tile-70x70.png">
@@ -29,6 +29,13 @@
 	<link rel="shortcut icon" href="img/build/icons/favicons/favicon.ico">
 	<link rel="icon" type="image/png" sizes="64x64" href="img/build/icons/favicons/favicon.png">
 
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:image" content="{{site.url }}/img/build/robert.jpg">
+	<meta property="og:title" content="{{ page.title }} &ndash; Front-end Development &amp; Archetecture by Robert Smith">
+	<meta property="og:site_name" content="Robert Smith Blog">
+	<meta property="og:type" content="blog">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
 	<!-- Twitter card -->
 	<meta name="twitter:card" content="summary">

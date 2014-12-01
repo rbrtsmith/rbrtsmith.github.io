@@ -1,9 +1,9 @@
 # site settings
 title: rbrtsmith
 email: robert@rbrtsmith.com
-description: "I write about Front End Development"
+description: "Articles on CSS, JavaScript, front-end developent, and website performance."
 baseurl: ""
-#uel: "http//rbrtsmith.com"
+url: "http://rbrtsmith.com"
 timezone: Europe/Stockholm
 
 # Build settings
