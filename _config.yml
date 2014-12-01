@@ -6,6 +6,9 @@ baseurl: ""
 url: "http://rbrtsmith.com"
 timezone: Europe/Stockholm
 
+gems:
+  - jekyll-sitemap
+
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:title
@@ -26,6 +29,4 @@ exclude: [
 	img/source,
 	js/source,
 	css/scss]
-	
-gems:
-  - jekyll-sitemap
+
