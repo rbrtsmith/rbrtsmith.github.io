@@ -22,7 +22,7 @@ seen as no tool existed to automate this I thought I'd build one in JavaScript.
 
 [And here is what I came up with](http://codepen.io/rbrtsmith/full/oJHDl/)
 
-THe idea is for the graph to trend upwards, a graph with a lot of spikes is a clear sign of specificity
+The idea is for the graph to trend upwards, a graph with a lot of spikes is a clear sign of specificity
 issues within your codebase, there will always be some anomolies so don't try to aim for a perfectly flat line
 but, you should investigate all the spikes and troughs to see if they can be refactored.  The graph is a very
 crude representation and as such does not contain any units, it's more of an illustration than anything.
