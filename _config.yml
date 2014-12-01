@@ -26,3 +26,6 @@ exclude: [
 	img/source,
 	js/source,
 	css/scss]
+	
+gems:
+  - jekyll-sitemap
