@@ -12,7 +12,7 @@ watched a talk titled __Managing CSS Projects with ITCSS__ by [Harry Roberts](ht
 In his talk he mentioned a method of assessing a websites CSS codebase, specifically the selector specificities.
 We all know the kinds of problems than ensue with large CSS projects and multiple developers..
 
-__TL;DR__ &mdash; Specificity wars.
+__TL;DR &mdash; Specificity wars.__
 
 The ITCSS system has been developed to help teams to organise CSS into specificity order.  To get
 a good overview of the health of a website's CSS specificity we can create what's known as a specificity
