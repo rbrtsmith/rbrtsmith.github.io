@@ -152,11 +152,11 @@ module.exports = function(grunt) {
 
         favicons: {
             options: {
-                html: 'img/icons/favicon.html',
-                HTMLPrefix: "img/favicons/"
+                html: 'img/build/icons/favicons/favicon.html',
+                HTMLPrefix: "img/build/icons/favicons/"
             },
             icons: {
-                src: 'img/source/icons/favicon.png',
+                src: 'img/source/favicon.png',
                 dest: 'img/build/icons/favicons/'
             }
         },
