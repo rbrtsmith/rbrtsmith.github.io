@@ -10,7 +10,7 @@ category: css
 I recently attended the [Trondheim developer Conference](http://trondheimdc.no/) and
 watched a talk titled __Managing CSS Projects with ITCSS__ by [Harry Roberts](https://twitter.com/csswizardry).
 In his talk he mentioned a method of assessing a websites CSS codebase, specifically the selector specificities.
-We all know the kinds of problems than ensue with large CSS projects and multiple developers..
+We all know the kinds of specificity issues that often occur on large CSS projects which can then compunded even further when you add in multiple developers..
 
 __TL;DR &mdash; Specificity wars.__
 
