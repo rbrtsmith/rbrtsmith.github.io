@@ -57,7 +57,7 @@ The label should come first to ensure the select box is layered at the top.
     </div>
 
 
-
+<p>&nbsp;</p>
 
 ###SCSS
     .styled-select {
@@ -100,7 +100,7 @@ The label should come first to ensure the select box is layered at the top.
         }
     }
 
-
+<p>&nbsp;</p>
 
 ###JavaScript
 Bind an onchange event to any selected boxes with a matching hook.  Once that
