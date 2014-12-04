@@ -35,9 +35,8 @@ Now because the select-box is invisible we wouldn't be able to see what selectio
 but that's a simple fix with JavaScript.  We can just pull the selected option into a variable and populate
 a label with it.  The label can sit underneath the select box and of course the label can be styled in any way.
 
-##The code
 
-###HTML
+##HTML
 Wrap the label and select-box inside a wrapping div.  The 'js-styled-select__select' class is a JavaScript
 hook, we should always prefix JS hooks with js-.
 
@@ -59,7 +58,7 @@ The label should come first to ensure the select box is layered at the top.
 
 <p>&nbsp;</p>
 
-###SCSS
+##SCSS
     .styled-select {
         position: relative;
         height: 40px;
@@ -102,7 +101,7 @@ The label should come first to ensure the select box is layered at the top.
 
 <p>&nbsp;</p>
 
-###JavaScript
+##JavaScript
 Bind an onchange event to any selected boxes with a matching hook.  Once that
 event occurs take the value of the selected option  and inject it into the label.
 
