@@ -38,8 +38,9 @@ a label with it.  The label can sit underneath the select box and of course the 
 ##The code
 
 ###HTML
-Wrap the label and select-box inside a wrapping div.  The js-styled-scelect__select is a JavaScript
-hook, we should always prefix JS hooks with the js-
+Wrap the label and select-box inside a wrapping div.  The 'js-styled-select__select' class is a JavaScript
+hook, we should always prefix JS hooks with js-.
+
 The label should come first to ensure the select box is layered at the top.
 
     <div class="styled-select">
@@ -54,6 +55,7 @@ The label should come first to ensure the select box is layered at the top.
             <option value="France">France</option>
         </select>
     </div>
+
 
 
 
@@ -97,6 +99,8 @@ The label should come first to ensure the select box is layered at the top.
             }
         }
     }
+
+
 
 ###JavaScript
 Bind an onchange event to any selected boxes with a matching hook.  Once that
