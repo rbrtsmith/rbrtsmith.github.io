@@ -32,8 +32,8 @@ the select-box would remain translucent even once open.  But I was wrong, the co
 translucent but the options are visible.
 
 Now because the select-box is invisible we wouldn't be able to see what selection had been made,
-but that's a simple fix with JavaScript.  We can just pull the selected option into a variable and populate
-a label with it.  The label can sit underneath the select box and of course the label can be styled in any way.
+but that's a simple fix with JavaScript.  We can just extract the selected option into a variable and inject
+it into the label.  The label should underneath the select box which can then be styled.
 
 
 ##HTML
