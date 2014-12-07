@@ -15,6 +15,10 @@
 // Correct `block` display not defined in IE 8/9.
 //
 
+* {
+    display: none;
+}
+
 @if ($options__use-reset) {
     
     *,
