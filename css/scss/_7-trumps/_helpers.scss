@@ -18,6 +18,10 @@
 	margin: 0 !important;
 }
 
+.hard--top {
+	padding-top: 0 !important;
+}
+
 @if ($options__use-helpers) {
 	
 	/*------------------------------------*\
