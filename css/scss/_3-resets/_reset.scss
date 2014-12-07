@@ -15,10 +15,6 @@
 // Correct `block` display not defined in IE 8/9.
 //
 
-* {
-    display: none;
-}
-
 @if ($options__use-reset) {
     
     *,
@@ -57,6 +53,11 @@
     canvas,
     video {
         display: inline-block;
+    }
+
+
+    .cp_embed_iframe {
+        border: 1px solid #111;
     }
 
 
