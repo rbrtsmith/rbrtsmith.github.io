@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+{% include head.html %}
+
+<body>
+	{% include header-alt.html %}
+
+	<article class="section single-post">
+		<div class="site-wrap site-padding">
+			<header class="single-post__header">
+				<h1 class="single-post__title">
+					{{page.title}}
+				</h1>
+				<time class="single-post__date" datetime="{{ page.date | date: "%Y-%m-%d" }}">
+					{{ page.date | date: "%d %B, %Y" }}
+				</time>
+			</header>
+	    	{{ content }}
+	    </div>
+	</article>
+{% include footer.html %}
+
+</body>
+</html>
