@@ -164,7 +164,7 @@ If the two widths are equal then we can collapse the navigation.
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
-**Note: This navbar has been expanded upon here[rbrtsmith.com/2014/12/a-more-robust-dynamic-navigation-system/](http://rbrtsmith.com/2014/12/a-more-robust-dynamic-navigation-system/) to show how we could nest children inside the navigation.
+**Note:** This navbar has been expanded upon here[rbrtsmith.com/2014/12/a-more-robust-dynamic-navigation-system/](http://rbrtsmith.com/2014/12/a-more-robust-dynamic-navigation-system/) to show how we could nest children inside the navigation.
    
     
     
