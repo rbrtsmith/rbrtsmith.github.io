@@ -43,8 +43,8 @@ And then on hover it will get pulled back into view by setting the left value to
         }
     }
 
-The toggle area is also positioned offscreen, we can use the same class for the main toggle and
-the toggle of children.
+The toggle area is also positioned offscreen, we can use the same class for the main toggle and those
+that toggle children.
 
     &__toggle {
         position: absolute;
@@ -54,8 +54,8 @@ the toggle of children.
         width: $navbarHeight;
     }
 
-In the collapsed state it needs to be ensured that hover and focus events do not toggle the visibility of child events,
-This will result in a confusing UI.  This can be achived by removing the offscreen positioining using `Position: static`
+In the navigations collapsed state it needs to be ensured that hover and focus events do not toggle the visibility of child blocks,
+This will result in a confusing UI.  This can be achived by removing the offscreen positioining (used on larger screens) using `Position: static`
 and hiding it this way:
 
         .navbar__nav,
@@ -65,7 +65,7 @@ and hiding it this way:
             height: 0;
         }
 
-To bring it back into view with `height: auto` This will also push down the rest of the navigation underneath, this provides
+To bring it back into view `height: auto` can be used. This will also push down the rest of the navigation underneath, this provides
 a superior ux to absolute positioning which would have resulted in the child overlaying the rest of the navigation.
 
 
@@ -163,7 +163,7 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
     </div> 
 
 
-###CSS
+###SCSS
 
     /**************************\
        #RESET
@@ -300,7 +300,7 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
     }
 
 
-###JavaScript Incl. jQuery
+###JavaScript Inc. jQuery
 
     (function($) {
         // cache appropiate nodes.
