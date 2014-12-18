@@ -1,7 +1,7 @@
 ---
 title: "A more robust dynamic navigation system"
 meta: "How to handle dynamic, multi hierarchical navigation"
-layout: drafts
+layout: posts
 pageClass: Posts
 category: JavaScript
 ---
