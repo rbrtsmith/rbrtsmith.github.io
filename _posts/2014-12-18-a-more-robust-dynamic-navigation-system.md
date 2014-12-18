@@ -157,10 +157,6 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
       </nav>
     </div>
 
-    <div class="wrap wrap--button">
-      <button id="addItem">Add item to navbar</button>
-      <button id="removeItem">Remove item from navbar</button>
-    </div> 
 
 
 ###SCSS
@@ -334,17 +330,6 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
             $(this).parent().toggleClass('navbar--open');
         }
         
-        function addItemToNav() {
-          var item = '<li><a href="#" class="navbar__item">Item</a></li>';
-          navbar__nav.append(item);
-          calculateBreakpoint();
-        }
-        
-        function removeItemFromNav() {
-          var item = navbar__nav.children('li').last();
-          item.remove();
-          calculateBreakpoint();
-        }
         
         $(window).on('resize', calculateBreakpoint);
         navbar__toggle.on('click', toggleNav);
