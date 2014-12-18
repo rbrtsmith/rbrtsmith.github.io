@@ -333,8 +333,6 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
         
         $(window).on('resize', calculateBreakpoint);
         navbar__toggle.on('click', toggleNav);
-        $('#addItem').on('click', addItemToNav);
-        $('#removeItem').on('click', removeItemFromNav);
         
         calculateBreakpoint();
     }(jQuery));
