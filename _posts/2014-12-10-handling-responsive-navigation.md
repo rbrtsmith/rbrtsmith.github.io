@@ -31,108 +31,19 @@ property of table (Inline block adds weird margins so we won't be using it).
 If the two widths are equal then we can collapse the navigation.
 
 **This is how we could create the navbar**
-	
+
+##HTML
 {% gist 276260d77b003abfd8d8 html %}
 
 &nbsp;
 
-	.navbar {
-	  background: #bbb;
-	  &__nav {
-	    display: table;
-	    margin: 0;
-	    padding: 0;
-	    list-style: none;
-	    &:after {
-	      // clearfix
-	      display: table;
-	      clear: both;
-	      content: " ";
-	    }
-	    > li {
-	      float: left;
-	    }
-	  }
-	  &__toggle {
-	    display: none;
-	  }
-	  &__item {
-	    display: block;
-	    padding: 15px 25px;
-	    color: white;
-	    text-decoration: none;
-	    &:hover {
-	      background: darken(red, 10%);
-	    }
-	  }
-	  &--collapsed {
-	    .navbar__nav {
-	      display: block;
-	      height: 0;
-	      overflow: hidden;
-	      > li {
-	        width: 100%;
-	      }
-	    }
-	    .navbar__item {
-	      width: 100%;
-	      opacity: 0;
-	      transition: opacity 0.3s linear;
-	    }
-	    .navbar__toggle {
-	      display: block;
-	      padding: 15px 0;
-	      cursor: pointer;
-	      text-align: center;
-	      color: white;
-	      border-bottom: 1px solid #999;
-	    }
-	  }
-	  &--open {
-	    .navbar__nav {
-	      height: auto;
-	    }
-	    .navbar__item {
-	      opacity: 1;
-	    }
-	  }
-	}
+##SCSS
+{% gist 276260d77b003abfd8d8 scss %}
 
 &nbsp;
 
-	(function($) {
-	  // cache appropiate nodes.
-	  var navbar = $('#navbar'),
-	      navbar__toggle = navbar.find('#navbar__toggle'),
-	      navbar__nav = navbar.find('#navbar__nav'),
-	      navbarWidth,
-	      navbar__navWidth;
-
-	  function calculateBreakpoint() {
-	  	// Momentarially removed collapsed state
-	    navbar.removeClass('navbar--collapsed');
-	    // get the width of the wrapper and the nav
-	    navbarWidth = navbar.outerWidth();
-	    navbar__navWidth = navbar__nav.outerWidth();
-	    if (navbar__navWidth === navbarWidth) {
-	      navbar.addClass('navbar--collapsed');
-	    } else {
-	      navbar.removeClass('navbar--collapsed');
-	    }
-	  }
-
-	  function toggleNav(){
-	    navbar.toggleClass('navbar--open');
-	  }
-
-	  $(window).on('resize', calculateBreakpoint);
-	  navbar__toggle.on('click', toggleNav);
-	  calculateBreakpoint();
-
-	}(jQuery));
-
-
-
+##JavaScript
+{% gist 276260d77b003abfd8d8 javascript %}
 
 ##Result
 
