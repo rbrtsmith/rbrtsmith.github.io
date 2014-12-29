@@ -32,7 +32,7 @@ If the two widths are equal then we can collapse the navigation.
 
 **This is how we could create the navbar**
 	
-{% gist 276260d77b003abfd8d8#file-html %}
+{% gist 276260d77b003abfd8d8 %}
 
 &nbsp;
 
