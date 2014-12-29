@@ -47,46 +47,10 @@ The label should come first to ensure the select box is layered at the top.
 
 <p>&nbsp;</p>
 
+
 ##SCSS
-    .styled-select {
-        position: relative;
-        height: 40px;
-        &__select,
-        &__label {
-            // ensure select-box and label to fill the container
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-        }
-        &__select {
-            background: none;
-            opacity: 0;
-            width: 100%;
-            cursor: pointer;
-        }
-        &__label {
-            // style the select box
-            border: 1px solid #45d296;
-            border-radius: 3px;
-            line-height: 40px;
-            padding: 0 10px;
-            color: #333;
-            background: white;
-            &:before {
-                // create the triangle
-                position: absolute;
-                top: 50%;
-                right: 10px;
-                margin-top: -3px;
-                border-left: 6px solid transparent;
-                border-right: 6px solid transparent;
-                border-top: 6px solid #45d296;
-                content: " ";
-            }
-        }
-    }
+
+{% gist 54d9a1e96712738fc579 %}
 
 <p>&nbsp;</p>
 
@@ -94,17 +58,7 @@ The label should come first to ensure the select box is layered at the top.
 Bind an onchange event to any selected boxes with a matching hook.  Once that
 event occurs take the value of the selected option  and inject it into the label.
 
-    (function() {
-        if ( 'querySelector' in document && 'addEventListener' in window ) {
-            // check query selector is recognised by the browser IE9+
-            var value;
-            document.querySelector('.js-styled-select__select').onchange = function() {
-                value = this.options[this.selectedIndex].value;
-                var sibling = this.parentNode.children[0];
-                sibling.innerHTML = value;
-            };
-        }
-    }());
+{% gist 47333a518c226ff28e45 %}
 
 ##And the result
 <p data-height="268" data-theme-id="0" data-slug-hash="azvywm" data-default-tab="result" data-user="rbrtsmith" class='codepen'>See the Pen <a href='http://codepen.io/rbrtsmith/pen/azvywm/'>azvywm</a> by Robert Smith (<a href='http://codepen.io/rbrtsmith'>@rbrtsmith</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
