@@ -32,31 +32,7 @@ If the two widths are equal then we can collapse the navigation.
 
 **This is how we could create the navbar**
 	
-	<nav class="navbar" id="navbar">
-	  <div class="navbar__toggle" id="navbar__toggle">
-	    NAVIGATION
-	  </div>
-	  <ul class="navbar__nav" id="navbar__nav">
-	    <li>
-	      <a href="#" class="navbar__item">Item</a>
-	    </li>
-	    <li>
-	      <a href="#" class="navbar__item">Item</a>
-	    </li>
-	    <li>
-	      <a href="#" class="navbar__item">Item</a>
-	    </li>
-	    <li>
-	      <a href="#" class="navbar__item">Item</a>
-	    </li>
-	    <li>
-	      <a href="#" class="navbar__item">Item</a>
-	    </li> 
-	    <li>
-	      <a href="#" class="navbar__item">Item</a>
-	    </li>
-	  </ul>
-	</nav>
+{% gist 276260d77b003abfd8d8#file-html %}
 
 &nbsp;
 
