@@ -42,18 +42,7 @@ hook, we should always prefix JS hooks with js-.
 
 The label should come first to ensure the select box is layered at the top.
 
-    <div class="styled-select">
-        <label class="styled-select__label">
-            Select Country
-        </label>
-        <select class="styled-select__select js-styled-select__select" name="countries" id="countries">
-            <option value="" selected disabled>Select Country</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="Germany">Germany</option>
-            <option value="United States">United States</option>
-            <option value="France">France</option>
-        </select>
-    </div>
+{% gist 441c98abaf42013dfefd %}
 
 
 <p>&nbsp;</p>
