@@ -23,18 +23,21 @@ child pages, parent pages should be easy to navigate to.
 To fix this there should be an area inside a parent that is specifically there for 
 the purpose of toggling children.  On larger screens this can be hidden and the visibility
 of the children can be toggled by a hover or focus event.
-To start with on large screens the child elements can be positioned offscreen
+To start with on large screens the child elements can be positioned offscreen..
 
 {% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-1 %}
+
 &nbsp;
 And then on hover it will get pulled back into view by setting the left value to zero.
 
 {% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-2 %}
+
 &nbsp;
 The toggle area is also positioned offscreen, we can use the same class for the main toggle and those
 that toggle children.
 
 {% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-3 %}
+
 &nbsp;
 In the navigations collapsed state it needs to be ensured that hover and focus events do not toggle the visibility of child blocks,
 This will result in a confusing UI.  This can be achived by removing the offscreen positioining (used on larger screens) using `Position: static`
