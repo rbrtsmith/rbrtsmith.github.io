@@ -23,7 +23,7 @@ the purpose of toggling children.  On larger screens this can be hidden and the 
 of the children can be toggled by a hover or focus event.
 To start with on large screens the child elements can be positioned offscreen
 
-{% gist 4ef4217d3787e15c6e75 %}
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-1 %}
 
 And then on hover it will get pulled back into view by setting the left value to zero.
 
