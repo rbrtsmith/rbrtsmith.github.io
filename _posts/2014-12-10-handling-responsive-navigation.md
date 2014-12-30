@@ -30,6 +30,8 @@ should have a width that collapses to fit it's contents, so it should either be 
 property of table (Inline block adds weird margins so we won't be using it).
 If the two widths are equal then we can collapse the navigation.
 
+&nbsp;
+
 **This is how we could create the navbar**
 
 ##HTML
@@ -44,6 +46,8 @@ If the two widths are equal then we can collapse the navigation.
 
 ##JavaScript
 {% gist 276260d77b003abfd8d8 handling-responsive-navigation-with-dynamic-content--javascript %}
+
+&nbsp;
 
 ##Result
 
