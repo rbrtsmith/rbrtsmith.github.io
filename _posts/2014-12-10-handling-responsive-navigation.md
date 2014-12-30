@@ -33,17 +33,17 @@ If the two widths are equal then we can collapse the navigation.
 **This is how we could create the navbar**
 
 ##HTML
-{% gist 276260d77b003abfd8d8 html %}
+{% gist 276260d77b003abfd8d8 handling-responsive navigation with-dynamic-content--html %}
 
 &nbsp;
 
 ##SCSS
-{% gist 276260d77b003abfd8d8 scss %}
+{% gist 276260d77b003abfd8d8 handling-responsive navigation with-dynamic-content--scss %}
 
 &nbsp;
 
 ##JavaScript
-{% gist 276260d77b003abfd8d8 javascript %}
+{% gist 276260d77b003abfd8d8 handling-responsive navigation with-dynamic-content--javascript %}
 
 ##Result
 
