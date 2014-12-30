@@ -42,7 +42,7 @@ hook, we should always prefix JS hooks with js-.
 
 The label should come first to ensure the select box is layered at the top.
 
-{% gist 441c98abaf42013dfefd %}
+{% gist 68a60fcfa14f47ba5ca3 styled-select--html %}
 
 
 <p>&nbsp;</p>
@@ -50,7 +50,7 @@ The label should come first to ensure the select box is layered at the top.
 
 ##SCSS
 
-{% gist 54d9a1e96712738fc579 %}
+{% gist 68a60fcfa14f47ba5ca3 styled-select--scss %}
 
 <p>&nbsp;</p>
 
@@ -58,7 +58,7 @@ The label should come first to ensure the select box is layered at the top.
 Bind an onchange event to any selected boxes with a matching hook.  Once that
 event occurs take the value of the selected option  and inject it into the label.
 
-{% gist 47333a518c226ff28e45 %}
+{% gist 68a60fcfa14f47ba5ca3 styled-select--javascript %}
 
 ##And the result
 <p data-height="268" data-theme-id="0" data-slug-hash="azvywm" data-default-tab="result" data-user="rbrtsmith" class='codepen'>See the Pen <a href='http://codepen.io/rbrtsmith/pen/azvywm/'>azvywm</a> by Robert Smith (<a href='http://codepen.io/rbrtsmith'>@rbrtsmith</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
