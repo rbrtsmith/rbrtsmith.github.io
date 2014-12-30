@@ -27,37 +27,18 @@ To start with on large screens the child elements can be positioned offscreen
 
 And then on hover it will get pulled back into view by setting the left value to zero.
 
-    &__parent {
-        position: relative;
-        &:hover,
-        &:focus {
-            .navbar__child {
-                left: 0;
-            }
-        }
-    }
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-2 %}
 
 The toggle area is also positioned offscreen, we can use the same class for the main toggle and those
 that toggle children.
 
-    &__toggle {
-        position: absolute;
-        left: -999999px;
-        top: 0;
-        height: $navbarHeight;
-        width: $navbarHeight;
-    }
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-3 %}
 
 In the navigations collapsed state it needs to be ensured that hover and focus events do not toggle the visibility of child blocks,
 This will result in a confusing UI.  This can be achived by removing the offscreen positioining (used on larger screens) using `Position: static`
 and hiding it this way:
 
-        .navbar__nav,
-        .navbar__child {
-            position: static;
-            overflow: hidden;
-            height: 0;
-        }
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-4 %}
 
 To bring it back into view `height: auto` can be used. This will also push down the rest of the navigation underneath, this provides
 a superior ux to absolute positioning which would have resulted in the child overlaying the rest of the navigation.
@@ -70,24 +51,7 @@ to the width of the container to determine the breakpoint.  In this example, non
 
 __N.B. Always prefix JavaScript class hooks with__ `js-`
 
-    function calculateBreakpoint() {
-        navbar.removeClass('navbar--collapsed'); // ensure nav isn't collapsed before grabbing width values.
-        navbarWidth = navbar.outerWidth();
-        navbar__navWidth = navbar__nav.outerWidth();
-        function calculateNonNavItemsWidth() {
-            var temp = 0;
-            navbar.find('.js-non-nav-content').each(function() {
-                temp += $(this).outerWidth();
-            });
-            return temp; // return total width of non-nav-content
-        }
-        nonNavWidth = calculateNonNavItemsWidth();
-        if (navbar__navWidth >= navbarWidth - nonNavWidth) {
-            navbar.addClass('navbar--collapsed');
-        } else {
-            navbar.removeClass('navbar--collapsed');
-        }
-    }
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-5 %}
 
 
 ##Result
@@ -102,231 +66,20 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
 
 ##All the code
 
+&nbsp;
+
 ###HTML
-    <div class="wrap">
-      <nav class="navbar clearfix" id="navbar">
-        <div class="navbar__non-nav-content js-non-nav-content">
-         <img src="http://rbrtsmith.com/img/build/robert.jpg">
-        </div>
-        <div class="navbar__non-nav-content js-non-nav-content">
-         <img src="http://rbrtsmith.com/img/build/robert.jpg">
-        </div>
-        <div class="navbar__non-nav-content js-non-nav-content">
-         <img src="http://rbrtsmith.com/img/build/robert.jpg">
-        </div>
-        <div class="navbar__toggle js-navbar__toggle">
-          Menu
-        </div>
-        <ul class="navbar__nav bare-list clearfix" id="navbar__nav">
-          <li>
-            <a href="#" class="navbar__item">Item 1</a>
-          </li>
-          <li class="navbar__parent">
-            <div class="navbar__toggle js-navbar__toggle">
-              S-Menu
-            </div>
-            <a href="#" class="navbar__item">Item parent</a>
-            <ul class="navbar__child bare-list">
-              <li>
-                <a href="#" class="navbar__item">Child item 1</a>
-              </li>
-              <li>
-                <a href="#" class="navbar__item">Child item 2</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="navbar__item">Item 2</a>
-          </li>
-          <li>
-            <a href="#" class="navbar__item">Item 3</a>
-          </li>
-          <li>
-            <a href="#" class="navbar__item">Item 4</a>
-          </li> 
-          <li>
-            <a href="#" class="navbar__item">Item 5</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
 
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--full-html %}
 
+&nbsp;
 
 ###SCSS
 
-    /**************************\
-       #RESET
-    /**************************/
-    * { box-sizing: border-box; }
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--full-scss %}
 
-
-    .clearfix:after {
-      // clearfix
-      display: table;
-      clear: both;
-      content: " ";
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .wrap {
-      // page wrapper
-      max-width: 800px;
-      margin: 0 auto;
-      &--button {
-        margin-top: 50px;
-      }
-    }
-
-    .bare-list {
-      // remove list styling
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-
-
-    /**************************\
-       #NAVBAR
-    /**************************/
-    $navbarHeight: 50px;
-    $itemSpacing: 25px;
-    $navbarBackground: #BBB;
-    $itemHoverBackground: darken(red, 10%);
-    $toggleBackground: #555;
-    $textColor: #FFF;
-
-    .navbar {
-      position: relative;
-      background: $navbarBackground;
-      color: $textColor;
-      &__non-nav-content {
-        // height shouldn't be greater than navbar.
-        float: left;
-        width: 50px;
-        height: $navbarHeight;
-      }
-      &__nav {
-        float: right;
-        > li {
-          float: left;
-        }
-        li {
-          &:hover > .navbar__item,
-          &:focus > .navbar__item {
-            background: $itemHoverBackground;
-          }
-        }
-      }
-      &__toggle {
-        position: absolute;
-        left: -999999px;
-        top: 0;
-        line-height: $navbarHeight;
-        height: $navbarHeight;
-        width: $navbarHeight;
-        text-align: center;
-        background: $toggleBackground;
-        cursor: pointer;
-        font-size: 10px;
-      }
-      &__item {
-        display: block;
-        padding: 0 $itemSpacing;
-        line-height: $navbarHeight;
-        text-decoration: none;
-        color: inherit;
-      }
-      &__parent {
-        position: relative;
-        &:hover,
-        &:focus {
-          .navbar__child {
-            left: 0;
-          }
-        }
-      }
-      &__child {
-        position: absolute;
-        top: 100%;
-        left: -99999px;
-        white-space: nowrap;
-        background: $navbarBackground;
-      }
-      &--collapsed {
-        .navbar__nav,
-        li,
-        .navbar__item {
-          width: 100%;
-        }
-        .navbar__nav,
-        .navbar__child {
-          position: static;
-          overflow: hidden;
-          height: 0;
-        }
-        .navbar__toggle {
-          left: auto;
-          right: 0;
-        }
-      }
-      &--open {
-        .navbar__nav {
-          height: auto;
-        }
-      }
-      &__parent.navbar--open {
-        background: $itemHoverBackground;
-        > .navbar__child {
-          height: auto;
-          background: darken($navbarBackground, 10%);
-        }
-      }
-    }
-
+&nbsp;
 
 ###JavaScript Inc. jQuery
 
-    (function($) {
-        // cache appropiate nodes.
-        var navbar = $('#navbar'),
-            navbar__toggle = navbar.find('.js-navbar__toggle'),
-            navbar__nav = navbar.find('#navbar__nav'),
-            navbarWidth,
-            nonNavWidth,
-            navbar__navWidth;
-        
-        function calculateBreakpoint() {
-          navbar.removeClass('navbar--collapsed');
-          navbarWidth = navbar.outerWidth();
-          navbar__navWidth = navbar__nav.outerWidth();
-          function calculateNonNavItemsWidth() {
-            var temp = 0;
-            navbar.find('.js-non-nav-content').each(function() {
-              temp += $(this).outerWidth();
-            });
-            return temp;
-          }
-          nonNavWidth = calculateNonNavItemsWidth();
-          if (navbar__navWidth >= navbarWidth - nonNavWidth) {
-            navbar.addClass('navbar--collapsed');
-          } else {
-            navbar.removeClass('navbar--collapsed');
-          }
-        }
-        
-        function toggleNav(){
-            $(this).parent().toggleClass('navbar--open');
-        }
-        
-        
-        $(window).on('resize', calculateBreakpoint);
-        navbar__toggle.on('click', toggleNav);
-        
-        calculateBreakpoint();
-    }(jQuery));
+{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--full-javascript %}
