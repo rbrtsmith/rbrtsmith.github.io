@@ -8,10 +8,18 @@
 	</title>
 	<meta name="description" content="{{site.description }}">
 
+	<!-- DNS PREFETCHING -->
+	<link rel="dns-prefetch" href="http://fonts.googleapis.com">
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,600'>
 	<link rel="stylesheet" href="{{site.url }}/css/style.css">
+	
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+	<link rel="dns-prefetch" href="//platform.twitter.com/">
+
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+	<!-- Prerender about page -->
+	<link rel="prerender" href="{{site.url }}/about">
 
 	<!-- Analytics -->
 	<script>
