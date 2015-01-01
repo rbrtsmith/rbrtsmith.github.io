@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "Robert Smith",
   "url": "http://rbrtsmith.com",
-  "copyright": "2014",
+  "copyright": "2014 MIT license",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.7.2",
