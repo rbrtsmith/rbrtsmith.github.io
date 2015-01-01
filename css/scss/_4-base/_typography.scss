@@ -10,13 +10,13 @@ html {
 		font-size: 60%;
 	}
 	@media (max-width: $screen-sm) {
-		font-size: 56%;
+		font-size: 58%;
 	}
 	@media (max-width: $screen-xs) {
-		font-size: 52%;
+		font-size: 56%;
 	}
 	@media (max-width: $screen-xxs) {
-		font-size: 48%;
+		font-size: 54%;
 	}
 }
 
@@ -35,12 +35,30 @@ h1, h2, h3 {
 }
 h1 {
 	@include font-size($txt-xl);
+	@media (max-width: $screen-sm) {
+		@include font-size(($txt-xl +-.25));
+	}
+	@media (max-width: $screen-xs) {
+		@include font-size(($txt-xl +-.5));
+	}
 }
 h2 {
 	@include font-size($txt-lg);
+	@media (max-width: $screen-sm) {
+		@include font-size(($txt-lg +-.25));
+	}
+	@media (max-width: $screen-xs) {
+		@include font-size(($txt-lg +-.5));
+	}
 }
 h3 {
 	@include font-size($txt-md);
+	@media (max-width: $screen-sm) {
+		@include font-size(($txt-md +-.15));
+	}
+	@media (max-width: $screen-xs) {
+		@include font-size(($txt-md +-.3));
+	}
 }
 
 figcaption {
