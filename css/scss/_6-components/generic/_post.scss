@@ -8,6 +8,12 @@
 		font-weight: 400;
 		margin: 0;
 		@include font-size($txt-md);
+		@media (max-width: $screen-sm) {
+			@include font-size(($txt-md +-.15));
+		}
+		@media (max-width: $screen-xs) {
+			@include font-size(($txt-md +-.3));
+		}
 	}
 	&__date {
 		padding-left: 25px;
