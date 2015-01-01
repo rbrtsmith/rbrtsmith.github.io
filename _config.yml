@@ -6,8 +6,8 @@ baseurl: ""
 url: "http://rbrtsmith.com"
 timezone: Europe/Stockholm
 
-gems:
-  - jekyll-sitemap
+#gems:
+#  - jekyll-sitemap
 
 # Build settings
 markdown: kramdown

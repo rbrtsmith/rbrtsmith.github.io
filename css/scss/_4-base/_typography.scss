@@ -36,10 +36,10 @@ h1, h2, h3 {
 h1 {
 	@include font-size($txt-xl);
 	@media (max-width: $screen-sm) {
-		@include font-size(($txt-xl +-.25));
+		@include font-size(($txt-xl +-.4));
 	}
 	@media (max-width: $screen-xs) {
-		@include font-size(($txt-xl +-.5));
+		@include font-size(($txt-xl +-.8));
 	}
 }
 h2 {
