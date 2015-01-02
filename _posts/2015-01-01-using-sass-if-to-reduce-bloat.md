@@ -16,8 +16,8 @@ makes far too many design decisions, but that's not the topic of this post.
 &nbsp;
 
 ##The good parts
-There are, however some good parts of Bootstrap &ndash; namely their grid system, which itself is laden with bloat,
-but at the same time has some very useful functionality that allows developers to build complex layouts incredibly quickly.
+There are, however some good parts of Bootstrap &ndash; namely their grid system, which itself contains bloat,
+however, at the same time it does have some very powerful functionality that allows developers to build complex layouts incredibly quickly.
 If you see good parts of a framework, there's no reason why you can't use those parts in your own in-house framework.  My 
 own framework largely consists of the good parts from other frameworks.  Many of them originate from 
 [Inuit.css](https://github.com/inuitcss) Inuit has many incredibly useful objects and abstractions, I highly recommend
@@ -27,9 +27,9 @@ you check it out.
 
 ##Reducing the redundancy
 As I've already stated, redundancy is bad.  Even if we take only the grid from Bootstrap &ndash; [that in itself includes a
-large amount of bloat](https://gist.github.com/rbrtsmith/56bc62247acf3ce48019#file-using-sass-if-to-reduce-bloat-grid-example) that can be sensibly reduced.
+large amount of bloat](https://gist.github.com/rbrtsmith/56bc62247acf3ce48019#file-using-sass-if-to-reduce-bloat-grid-example), as previously mentioned.  With the use of Sass this bloat can be sensibly reduced, or even removed altogether.
 
-A useful feature of Sass is @if which works in the same manner as if statements in programming languages, an If statement
+An incredibly useful feature of Sass is @if which works in the same manner as if statements in programming languages, an if statement
 simply tests against a condition and returns a boolean.  
 `@if (condition) { // if result is true execute code here }`<br>
 If the statement returns false then the code inside the parentheses won't be compiled.
