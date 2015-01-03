@@ -15,10 +15,10 @@ permalink: /:year/:month/:title
 paginate: 5
 
 exclude: [
-	package.json, 
-	Gruntfile.js, 
-	node_modules, 
-	js/source, 
+	package.json,
+	Gruntfile.js,
+	node_modules,
+	js/source,
 	img/source,
 	.git,
 	.gitignore,
@@ -30,3 +30,8 @@ exclude: [
 	js/source,
 	css/scss]
 
+# _layouts/compress.html
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
