@@ -1,4 +1,7 @@
-pre code { background: #181818; padding: 16px; color: #F8F8F8; font-family: Consolas, Monaco,"Lucida Console"; }
+pre {
+	background: #181818;
+}
+pre code { color: #F8F8F8; font-family: Consolas, Monaco,"Lucida Console"; }
 pre code * { font-family: Consolas, Monaco,"Lucida Console"; }
 .hll { background-color: #ffffcc }
 .c { color: #5F5A60; font-style: italic } /* Comment */
