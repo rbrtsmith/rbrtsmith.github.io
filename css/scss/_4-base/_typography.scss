@@ -83,19 +83,6 @@ code {
 	color: $epsilon-color;
 }
 
-pre {
-	padding: 15px;
-	overflow-y: auto;
-	white-space: pre;
-	word-wrap: normal;
-	background: darken($brand-color, 25%);
-	border: 2px solid darken($brand-color, 35%);
-	border-left-width: 6px;
-	code {
-		color: $zeta-color;
-	}
-}
-
 
 p {
 	margin-top: 0;
