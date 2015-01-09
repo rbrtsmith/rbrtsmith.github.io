@@ -23,26 +23,26 @@ $double-spacing: false;
 $border: true;
 
 .island {
-	display: block;
-	padding: $spacing;
-	@if ($border) {
-		border: 1px solid $border-color;
-	}
-	@if ($full-bleed) {
-		&__full-bleed {
-			margin-left: -$spacing;
-			margin-right: -$spacing;
-		}
-	}
-	@if ($double-spacing) {
-		&--double {
-			padding: ($spacing * 2);
-			&__full-bleed {
-				margin-left: -($spacing * 2);
-				margin-right: -($spacing * 2);
-			}
-		}
-	}
+  display: block;
+  padding: $spacing;
+  @if ($border) {
+    border: 1px solid $border-color;
+  }
+  @if ($full-bleed) {
+    &__full-bleed {
+      margin-left: -$spacing;
+      margin-right: -$spacing;
+    }
+  }
+  @if ($double-spacing) {
+    &--double {
+      padding: ($spacing * 2);
+      &__full-bleed {
+        margin-left: -($spacing * 2);
+        margin-right: -($spacing * 2);
+      }
+    }
+  }
 }
 {% endhighlight %}
 
