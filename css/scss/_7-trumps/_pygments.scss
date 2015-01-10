@@ -5,6 +5,7 @@ pre {
 	word-wrap: normal;
 	border-left-width: 6px;
 	background: #272822;
+    @include font-size($txt-xs);
 }
 pre code { color: #F8F8F8; font-family: Consolas, Monaco,"Lucida Console"; }
 pre code * { font-family: Consolas, Monaco,"Lucida Console"; }
