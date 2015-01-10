@@ -42,15 +42,67 @@ hook, we should always prefix JS hooks with js-.
 
 The label should come first to ensure the select box is layered at the top.
 
-{% gist 68a60fcfa14f47ba5ca3 styled-select--html %}
-
+{% highlight html linenos %}
+<div class="styled-select">
+  <label class="styled-select__label">
+    Select Country
+  </label>
+  <select class="styled-select__select js-styled-select__select" name="countries" id="countries">
+    <option value="" selected disabled>Select Country</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="Germany">Germany</option>
+    <option value="United States">United States</option>
+    <option value="France">France</option>
+  </select>
+</div>
+{% endhighlight %}
 
 <p>&nbsp;</p>
 
 
 ##SCSS
 
-{% gist 68a60fcfa14f47ba5ca3 styled-select--scss %}
+{% highlight scss linenos %}
+.styled-select {
+    position: relative;
+    height: 40px;
+  &__select,
+  &__label {
+    // ensure select-box and label to fill the container
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  &__select {
+    background: none;
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__label {
+    // style the select box
+    border: 1px solid #45d296;
+    border-radius: 3px;
+    line-height: 40px;
+    padding: 0 10px;
+    color: #333;
+    background: white;
+    &:before {
+      // create the triangle
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -3px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #45d296;
+      content: " ";
+    }
+  }
+}
+{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -58,7 +110,19 @@ The label should come first to ensure the select box is layered at the top.
 Bind an onchange event to any selected boxes with a matching hook.  Once that
 event occurs take the value of the selected option  and inject it into the label.
 
-{% gist 68a60fcfa14f47ba5ca3 styled-select--javascript %}
+{% highlight javascript linenos %}
+(function() {
+  if ( 'querySelector' in document && 'addEventListener' in window ) {
+    // check query selector is recognised by the browser IE9+
+    var value;
+    document.querySelector('.js-styled-select__select').onchange = function() {
+    value = this.options[this.selectedIndex].value;
+    var sibling = this.parentNode.children[0];
+    sibling.innerHTML = value;
+    };
+  }
+}());
+{% endhighlight %}
 
 ##And the result
 <p data-height="268" data-theme-id="0" data-slug-hash="azvywm" data-default-tab="result" data-user="rbrtsmith" class='codepen'>See the Pen <a href='http://codepen.io/rbrtsmith/pen/azvywm/'>azvywm</a> by Robert Smith (<a href='http://codepen.io/rbrtsmith'>@rbrtsmith</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
