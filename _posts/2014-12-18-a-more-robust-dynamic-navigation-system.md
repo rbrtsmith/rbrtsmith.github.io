@@ -25,20 +25,46 @@ the purpose of toggling children.  On larger screens this can be hidden and the 
 of the children can be toggled by a hover or focus event.
 To start with on large screens the child elements can be positioned offscreen..
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-1 %}
+{% highlight scss %}
+&__child {
+    position: absolute;
+    top: 100%;
+    left: -99999px;
+    white-space: nowrap;
+    background: $navbarBackground;
+}
+{% endhighlight %}
 
 &nbsp;
 
 And then on hover it will get pulled back into view by setting the left value to zero.
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-2 %}
+{% highlight scss %}
+&__parent {
+    position: relative;
+    &:hover,
+    &:focus {
+        .navbar__child {
+            left: 0;
+        }
+    }
+}
+{% endhighlight %}
 
 &nbsp;
 
 The toggle area is also positioned offscreen, we can use the same class for the main toggle and those
 that toggle children.
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-3 %}
+{% highlight scss %}
+&__toggle {
+    position: absolute;
+    left: -999999px;
+    top: 0;
+    height: $navbarHeight;
+    width: $navbarHeight;
+}
+{% endhighlight %}
 
 &nbsp;
 
@@ -46,7 +72,14 @@ In the navigations collapsed state it needs to be ensured that hover and focus e
 This will result in a confusing UI.  This can be achived by removing the offscreen positioining (used on larger screens) using `Position: static`
 and hiding it this way:
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-4 %}
+{% highlight scss %}
+.navbar__nav,
+.navbar__child {
+    position: static;
+    overflow: hidden;
+    height: 0;
+}
+{% endhighlight %}
 &nbsp;
 
 To bring it back into view `height: auto` can be used. This will also push down the rest of the navigation underneath, this provides
@@ -61,7 +94,28 @@ to the width of the container to determine the breakpoint.  In this example, non
 
 __N.B. Always prefix JavaScript class hooks with__ `js-`
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--snippet-5 %}
+{% highlight javascript %}
+function calculateBreakpoint() {
+    navbar.removeClass('navbar--collapsed'); 
+    // ensure nav isn't collapsed before grabbing width values.
+
+    navbarWidth = navbar.outerWidth();
+    navbar__navWidth = navbar__nav.outerWidth();
+    function calculateNonNavItemsWidth() {
+        var temp = 0;
+        navbar.find('.js-non-nav-content').each(function() {
+            temp += $(this).outerWidth();
+        });
+        return temp; // return total width of non-nav-content
+    }
+    nonNavWidth = calculateNonNavItemsWidth();
+    if (navbar__navWidth >= navbarWidth - nonNavWidth) {
+        navbar.addClass('navbar--collapsed');
+    } else {
+        navbar.removeClass('navbar--collapsed');
+    }
+}
+{% endhighlight %}
 
 &nbsp;
 
@@ -81,16 +135,237 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
 
 ###HTML
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--full-html %}
+{% highlight html %}
+<div class="wrap">
+  <nav class="navbar clearfix" id="navbar">
+    <div class="navbar__non-nav-content js-non-nav-content">
+     <img src="http://rbrtsmith.com/img/build/robert.jpg">
+    </div>
+    <div class="navbar__non-nav-content js-non-nav-content">
+     <img src="http://rbrtsmith.com/img/build/robert.jpg">
+    </div>
+    <div class="navbar__non-nav-content js-non-nav-content">
+     <img src="http://rbrtsmith.com/img/build/robert.jpg">
+    </div>
+    <div class="navbar__toggle js-navbar__toggle">
+      Menu
+    </div>
+    <ul class="navbar__nav bare-list clearfix" id="navbar__nav">
+      <li>
+        <a href="#" class="navbar__item">Item 1</a>
+      </li>
+      <li class="navbar__parent">
+        <div class="navbar__toggle js-navbar__toggle">
+          S-Menu
+        </div>
+        <a href="#" class="navbar__item">Item parent</a>
+        <ul class="navbar__child bare-list">
+          <li>
+            <a href="#" class="navbar__item">Child item 1</a>
+          </li>
+          <li>
+            <a href="#" class="navbar__item">Child item 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="navbar__item">Item 2</a>
+      </li>
+      <li>
+        <a href="#" class="navbar__item">Item 3</a>
+      </li>
+      <li>
+        <a href="#" class="navbar__item">Item 4</a>
+      </li> 
+      <li>
+        <a href="#" class="navbar__item">Item 5</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+{% endhighlight %}
 
 &nbsp;
 
 ###SCSS
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--full-scss %}
+{% highlight scss %}
+/**************************\
+   #RESET
+/**************************/
+* { box-sizing: border-box; }
+ 
+ 
+.clearfix:after {
+  // clearfix
+  display: table;
+  clear: both;
+  content: " ";
+}
+ 
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
+.wrap {
+  // page wrapper
+  max-width: 800px;
+  margin: 0 auto;
+  &--button {
+    margin-top: 50px;
+  }
+}
+ 
+.bare-list {
+  // remove list styling
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ 
+ 
+ 
+/**************************\
+   #NAVBAR
+/**************************/
+$navbarHeight: 50px;
+$itemSpacing: 25px;
+$navbarBackground: #BBB;
+$itemHoverBackground: darken(red, 10%);
+$toggleBackground: #555;
+$textColor: #FFF;
+ 
+.navbar {
+  position: relative;
+  background: $navbarBackground;
+  color: $textColor;
+  &__non-nav-content {
+    // height shouldn't be greater than navbar.
+    float: left;
+    width: 50px;
+    height: $navbarHeight;
+  }
+  &__nav {
+    float: right;
+    > li {
+      float: left;
+    }
+    li {
+      &:hover > .navbar__item,
+      &:focus > .navbar__item {
+        background: $itemHoverBackground;
+      }
+    }
+  }
+  &__toggle {
+    position: absolute;
+    left: -999999px;
+    top: 0;
+    line-height: $navbarHeight;
+    height: $navbarHeight;
+    width: $navbarHeight;
+    text-align: center;
+    background: $toggleBackground;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  &__item {
+    display: block;
+    padding: 0 $itemSpacing;
+    line-height: $navbarHeight;
+    text-decoration: none;
+    color: inherit;
+  }
+  &__parent {
+    position: relative;
+    &:hover,
+    &:focus {
+      .navbar__child {
+        left: 0;
+      }
+    }
+  }
+  &__child {
+    position: absolute;
+    top: 100%;
+    left: -99999px;
+    white-space: nowrap;
+    background: $navbarBackground;
+  }
+  &--collapsed {
+    .navbar__nav,
+    li,
+    .navbar__item {
+      width: 100%;
+    }
+    .navbar__nav,
+    .navbar__child {
+      position: static;
+      overflow: hidden;
+      height: 0;
+    }
+    .navbar__toggle {
+      left: auto;
+      right: 0;
+    }
+  }
+  &--open {
+    .navbar__nav {
+      height: auto;
+    }
+  }
+  &__parent.navbar--open {
+    background: $itemHoverBackground;
+    > .navbar__child {
+      height: auto;
+      background: darken($navbarBackground, 10%);
+    }
+  }
+}
+{% endhighlight %}
 
 &nbsp;
 
 ###JavaScript Inc. jQuery
 
-{% gist 4ef4217d3787e15c6e75 a-more-robust-dynamic-navigation-system--full-javascript %}
+{% highlight javascript %}
+(function($) {
+    // cache appropiate nodes.
+    var navbar = $('#navbar'),
+        navbar__toggle = navbar.find('.js-navbar__toggle'),
+        navbar__nav = navbar.find('#navbar__nav'),
+        navbarWidth,
+        nonNavWidth,
+        navbar__navWidth;
+    
+    function calculateBreakpoint() {
+      navbar.removeClass('navbar--collapsed');
+      navbarWidth = navbar.outerWidth();
+      navbar__navWidth = navbar__nav.outerWidth();
+      function calculateNonNavItemsWidth() {
+        var temp = 0;
+        navbar.find('.js-non-nav-content').each(function() {
+          temp += $(this).outerWidth();
+        });
+        return temp;
+      }
+      nonNavWidth = calculateNonNavItemsWidth();
+      if (navbar__navWidth >= navbarWidth - nonNavWidth) {
+        navbar.addClass('navbar--collapsed');
+      } else {
+        navbar.removeClass('navbar--collapsed');
+      }
+    }
+    
+    function toggleNav(){
+        $(this).parent().toggleClass('navbar--open');
+    }
+    
+    
+    $(window).on('resize', calculateBreakpoint);
+    navbar__toggle.on('click', toggleNav);
+    
+    calculateBreakpoint();
+}(jQuery));
+{% endhighlight %}
