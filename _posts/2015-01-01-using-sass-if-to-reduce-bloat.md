@@ -44,7 +44,19 @@ This list of variables could look something like this:
 
 **N.B. It makes sense to prefix switch variables to set them apart from the other variables used in your project**
 
-{% gist 56bc62247acf3ce48019 using-sass-if-to-reduce-bloat--options-example %}
+{% highlight scss %}
+$options__use-grid: false;
+$options__grid__screen-xxs: false;
+$options__grid__screen-xs: false;
+$options__grid__screen-sm: false;
+$options__grid__screen-md: false;
+$options__grid__screen-lg: false;
+ 
+$options__grid__push-classes: false;
+$options__grid__pull-classes: false;
+$options__grid__offset-classes: false;
+
+{% endhighlight %}
 
 It's possible take this a step further and use a variable for quite literally every single grid segment or class, 
 I'd say that depends on how important development time is vs absolute code efficiency.  In most of my projects I think that it's overkill and the small amount of options I listed above be suffice.
