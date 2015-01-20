@@ -61,7 +61,7 @@ If the two widths are equal then we can collapse the navigation.
     </li>
   </ul>
 </nav>
-{ endhighlight}
+{% endhighlight %}
 
 &nbsp;
 
@@ -128,7 +128,7 @@ If the two widths are equal then we can collapse the navigation.
     }
   }
 }
-{ endhighlight}
+{% endhighlight %}
 
 &nbsp;
 
@@ -164,7 +164,7 @@ If the two widths are equal then we can collapse the navigation.
   calculateBreakpoint();
  
 }(jQuery));
-{ endhighlight}
+{% endhighlight %}
 
 &nbsp;
 
