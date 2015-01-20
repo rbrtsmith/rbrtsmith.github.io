@@ -35,17 +35,136 @@ If the two widths are equal then we can collapse the navigation.
 **This is how we could create the navbar**
 
 ##HTML
-{% gist 276260d77b003abfd8d8 handling-responsive-navigation-with-dynamic-content--html %}
+{% highlight html %}
+<nav class="navbar" id="navbar">
+  <div class="navbar__toggle" id="navbar__toggle">
+    NAVIGATION
+  </div>
+  <ul class="navbar__nav" id="navbar__nav">
+    <li>
+      <a href="#" class="navbar__item">Item</a>
+    </li>
+    <li>
+      <a href="#" class="navbar__item">Item</a>
+    </li>
+    <li>
+      <a href="#" class="navbar__item">Item</a>
+    </li>
+    <li>
+      <a href="#" class="navbar__item">Item</a>
+    </li>
+    <li>
+      <a href="#" class="navbar__item">Item</a>
+    </li> 
+    <li>
+      <a href="#" class="navbar__item">Item</a>
+    </li>
+  </ul>
+</nav>
+{ endhighlight}
 
 &nbsp;
 
 ##SCSS
-{% gist 276260d77b003abfd8d8 handling-responsive-navigation-with-dynamic-content--scss %}
+{% highlight scss %}
+.navbar {
+  background: #bbb;
+  &__nav {
+    display: table;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &:after {
+      // clearfix
+      display: table;
+      clear: both;
+      content: " ";
+    }
+    > li {
+      float: left;
+    }
+  }
+  &__toggle {
+    display: none;
+  }
+  &__item {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      background: darken(red, 10%);
+    }
+  }
+  &--collapsed {
+    .navbar__nav {
+      display: block;
+      height: 0;
+      overflow: hidden;
+      > li {
+        width: 100%;
+      }
+    }
+    .navbar__item {
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.3s linear;
+    }
+    .navbar__toggle {
+      display: block;
+      padding: 15px 0;
+      cursor: pointer;
+      text-align: center;
+      color: white;
+      border-bottom: 1px solid #999;
+    }
+  }
+  &--open {
+    .navbar__nav {
+      height: auto;
+    }
+    .navbar__item {
+      opacity: 1;
+    }
+  }
+}
+{ endhighlight}
 
 &nbsp;
 
 ##JavaScript
-{% gist 276260d77b003abfd8d8 handling-responsive-navigation-with-dynamic-content--javascript %}
+{% highlight javascript %}
+(function($) {
+  // cache appropiate nodes.
+  var navbar = $('#navbar'),
+      navbar__toggle = navbar.find('#navbar__toggle'),
+      navbar__nav = navbar.find('#navbar__nav'),
+      navbarWidth,
+      navbar__navWidth;
+ 
+  function calculateBreakpoint() {
+  	// Momentarially removed collapsed state
+    navbar.removeClass('navbar--collapsed');
+    // get the width of the wrapper and the nav
+    navbarWidth = navbar.outerWidth();
+    navbar__navWidth = navbar__nav.outerWidth();
+    if (navbar__navWidth === navbarWidth) {
+      navbar.addClass('navbar--collapsed');
+    } else {
+      navbar.removeClass('navbar--collapsed');
+    }
+  }
+ 
+  function toggleNav(){
+    navbar.toggleClass('navbar--open');
+  }
+ 
+  $(window).on('resize', calculateBreakpoint);
+  navbar__toggle.on('click', toggleNav);
+  calculateBreakpoint();
+ 
+}(jQuery));
+{ endhighlight}
 
 &nbsp;
 
