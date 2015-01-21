@@ -48,7 +48,7 @@ use. **The flag object**
 Early 2013 Harry Roberts introduced us to, what he has coined the flag object,
 it's intention is to fix the problem of vertical alignment.  It does so using a 
 table cells ability to vertically center it's content.
-This article also assumes you have a full understanding of how the Flag  Object works. I also recommend that you read through Harry's 
+This article also assumes you have a full understanding of how the Flag  Object works. I therefore recommend that you read through Harry's 
 [article](http://csswizardry.com/2013/05/the-flag-object/)  
 before you procede any further.
 <figure>
@@ -63,7 +63,7 @@ Assuming you have read and understood both articles you may be left thinking
 that with the **Flag Object being considerably more powerful for layout**, why was
 the Media Object was not made redundant.  The simple answer was browser support.
 The Media Object will work in browsers right back to IE6.  The Flag Object
-uses the properties `display: table` and `display: table-cell which is only
+uses the properties `display: table` and `display: table-cell` which is only
 supported in IE8+ and back in 2013 when the Flag Object was introduced most of us were still supporting IE7.
 
 &nbsp;
