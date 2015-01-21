@@ -56,14 +56,17 @@ before you procede any further.
 	<figcaption>Using the flag object to vertically center the image.</figcaption>
 </figure>
 
+&nbsp;
 
 ##The Flag Object vs the Media Object##
 Assuming you have read and understood both articles you may be left thinking
 that with the **Flag Object being considerably more powerful for layout**, why was
 the Media Object was not made redundant.  The simple answer was browser support.
 The Media Object will work in browsers right back to IE6.  The Flag Object
-uses the properties `display: table` and `display: table-cell` which is only
+uses the properties `display: table` and `display: table-cell which is only
 supported in IE8+ and back in 2013 when the Flag Object was introduced most of us were still supporting IE7.
+
+&nbsp;
 
 ##Should we drop support for the media object?##
 
