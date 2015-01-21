@@ -26,7 +26,7 @@ The media object is a fixed-width image and fluid-width textual
  content laid out side by side. Unlike a typical floating scenario the fluid 
  content does not wrap around the image it simply expands downwards.
  This article is assuming your knowledge of the Media object so I suggest you
- read Nicole's [post]((http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) before you procede.
+ read Nicole's [post](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) before you procede.
 
 <figure>
 	<img src="/img/build/posts/2015/01-05/screen-1.jpg" alt>
