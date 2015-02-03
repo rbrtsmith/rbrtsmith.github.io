@@ -71,7 +71,7 @@ image, which as I mentioned earlier might not always be the case.  It makes good
 sense to have more extraneous classnames.  Perhaps in some way describing their
 behaviour, rather than what they contain.
 
-> I use this abstraction multiple times in literally every project, and you should too.
+> "I use this abstraction multiple times in literally every project, and you should too."
 
 I propose renaming `flag__body` and `flag__image` with names that better describe their
 behaviour. Simply because one takes up a fixed width, dictated by it's content and
