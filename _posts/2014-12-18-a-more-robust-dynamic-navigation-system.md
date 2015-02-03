@@ -32,6 +32,7 @@ To start with on large screens the child elements can be positioned offscreen..
     left: -99999px;
     white-space: nowrap;
     background: $navbarBackground;
+
 }
 {% endhighlight %}
 
@@ -42,12 +43,15 @@ And then on hover it will get pulled back into view by setting the left value to
 {% highlight scss %}
 &__parent {
     position: relative;
+
     &:hover,
     &:focus {
         .navbar__child {
             left: 0;
         }
+
     }
+
 }
 {% endhighlight %}
 
@@ -64,6 +68,7 @@ that toggle children.
     height: $navbarHeight;
     width: $navbarHeight;
 }
+
 {% endhighlight %}
 
 &nbsp;
@@ -79,6 +84,7 @@ and hiding it this way:
     overflow: hidden;
     height: 0;
 }
+
 {% endhighlight %}
 &nbsp;
 
@@ -193,35 +199,44 @@ here: [http://bartenderbolaget.se/](http://bartenderbolaget.se/).
 /**************************\
    #RESET
 /**************************/
-* { box-sizing: border-box; }
+* { 
+    box-sizing: border-box; 
+
+}
  
  
 .clearfix:after {
-  // clearfix
-  display: table;
-  clear: both;
-  content: " ";
+    // clearfix
+    display: table;
+    clear: both;
+    content: " ";
+
 }
  
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+
 }
  
 .wrap {
-  // page wrapper
-  max-width: 800px;
-  margin: 0 auto;
-  &--button {
-    margin-top: 50px;
-  }
+    // page wrapper
+    max-width: 800px;
+    margin: 0 auto;
+
+    &--button {
+        margin-top: 50px;
+
+    }
+
 }
  
 .bare-list {
-  // remove list styling
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    // remove list styling
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
 }
  
  
@@ -237,91 +252,118 @@ $toggleBackground: #555;
 $textColor: #FFF;
  
 .navbar {
-  position: relative;
-  background: $navbarBackground;
-  color: $textColor;
-  &__non-nav-content {
-    // height shouldn't be greater than navbar.
-    float: left;
-    width: 50px;
-    height: $navbarHeight;
-  }
-  &__nav {
-    float: right;
-    > li {
-      float: left;
-    }
-    li {
-      &:hover > .navbar__item,
-      &:focus > .navbar__item {
-        background: $itemHoverBackground;
-      }
-    }
-  }
-  &__toggle {
-    position: absolute;
-    left: -999999px;
-    top: 0;
-    line-height: $navbarHeight;
-    height: $navbarHeight;
-    width: $navbarHeight;
-    text-align: center;
-    background: $toggleBackground;
-    cursor: pointer;
-    font-size: 10px;
-  }
-  &__item {
-    display: block;
-    padding: 0 $itemSpacing;
-    line-height: $navbarHeight;
-    text-decoration: none;
-    color: inherit;
-  }
-  &__parent {
     position: relative;
-    &:hover,
-    &:focus {
-      .navbar__child {
-        left: 0;
-      }
-    }
-  }
-  &__child {
-    position: absolute;
-    top: 100%;
-    left: -99999px;
-    white-space: nowrap;
     background: $navbarBackground;
-  }
-  &--collapsed {
-    .navbar__nav,
-    li,
-    .navbar__item {
-      width: 100%;
+    color: $textColor;
+
+    &__non-nav-content {
+        // height shouldn't be greater than navbar.
+        float: left;
+        width: 50px;
+        height: $navbarHeight;
     }
-    .navbar__nav,
-    .navbar__child {
-      position: static;
-      overflow: hidden;
-      height: 0;
+
+    &__nav {
+        float: right;
+
+        > li {
+            float: left;
+
+        }
+        li {
+
+            &:hover > .navbar__item,
+            &:focus > .navbar__item {
+                background: $itemHoverBackground;
+            }
+
+        }
+
     }
-    .navbar__toggle {
-      left: auto;
-      right: 0;
+
+    &__toggle {
+        position: absolute;
+        left: -999999px;
+        top: 0;
+        line-height: $navbarHeight;
+        height: $navbarHeight;
+        width: $navbarHeight;
+        text-align: center;
+        background: $toggleBackground;
+        cursor: pointer;
+        font-size: 10px;
     }
-  }
-  &--open {
-    .navbar__nav {
-      height: auto;
+
+    &__item {
+        display: block;
+        padding: 0 $itemSpacing;
+        line-height: $navbarHeight;
+        text-decoration: none;
+        color: inherit;
     }
-  }
-  &__parent.navbar--open {
-    background: $itemHoverBackground;
-    > .navbar__child {
-      height: auto;
-      background: darken($navbarBackground, 10%);
+
+    &__parent {
+        position: relative;
+
+        &:hover,
+        &:focus {
+
+            .navbar__child {
+                left: 0;
+            }
+
+        }
+
     }
-  }
+
+    &__child {
+        position: absolute;
+        top: 100%;
+        left: -99999px;
+        white-space: nowrap;
+        background: $navbarBackground;
+    }
+
+    &--collapsed {
+
+        .navbar__nav,
+        li,
+        .navbar__item {
+            width: 100%;
+        }
+
+        .navbar__nav,
+        .navbar__child {
+            position: static;
+            overflow: hidden;
+            height: 0;
+        }
+
+        .navbar__toggle {
+            left: auto;
+            right: 0;
+        }
+
+    }
+
+    &--open {
+
+        .navbar__nav {
+            height: auto;
+        }
+
+    }
+
+    &__parent.navbar--open {
+        background: $itemHoverBackground;
+
+        > .navbar__child {
+            height: auto;
+            background: darken($navbarBackground, 10%);
+        }
+
+    }
+    
 }
 {% endhighlight %}
 

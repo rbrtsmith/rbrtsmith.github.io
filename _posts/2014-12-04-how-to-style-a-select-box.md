@@ -67,6 +67,7 @@ The label should come first to ensure the select box is layered at the top.
 .styled-select {
     position: relative;
     height: 40px;
+
     &__select,
     &__label {
         // ensure select-box and label to fill the container
@@ -76,12 +77,14 @@ The label should come first to ensure the select box is layered at the top.
         left: 0;
         bottom: 0;
     }
+
     &__select {
         background: none;
         opacity: 0;
         width: 100%;
         cursor: pointer;
     }
+
     &__label {
         // style the select box
         border: 1px solid #45d296;
@@ -90,6 +93,7 @@ The label should come first to ensure the select box is layered at the top.
         padding: 0 10px;
         color: #333;
         background: white;
+        
         &:before {
             // create the triangle
             position: absolute;

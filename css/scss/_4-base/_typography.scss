@@ -104,11 +104,13 @@ a {
 
 blockquote {
 	position: relative;
+	left: -2rem;
 	max-width: 500px;
 	margin-left: 0;
 	margin-right: 0;
 	padding-left: 0;
 	color: darken($delta-color, 10%);
+	@include font-size($txt-md);
 	&:before {
 		position: absolute;
 		top: 0;

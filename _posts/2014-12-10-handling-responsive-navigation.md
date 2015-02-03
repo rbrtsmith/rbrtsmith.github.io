@@ -68,65 +68,84 @@ If the two widths are equal then we can collapse the navigation.
 ##SCSS
 {% highlight scss %}
 .navbar {
-  background: #bbb;
-  &__nav {
-    display: table;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    &:after {
-      // clearfix
-      display: table;
-      clear: both;
-      content: " ";
+    background: #bbb;
+
+    &__nav {
+        display: table;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &:after {
+            // clearfix
+            display: table;
+            clear: both;
+            content: " ";
+        }
+
+        > li {
+            float: left;
+        }
+
     }
-    > li {
-      float: left;
+
+    &__toggle {
+        display: none;
     }
-  }
-  &__toggle {
-    display: none;
-  }
-  &__item {
-    display: block;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    &:hover {
-      background: darken(red, 10%);
+
+    &__item {
+        display: block;
+        padding: 15px 25px;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            background: darken(red, 10%);
+        }
+
     }
-  }
-  &--collapsed {
-    .navbar__nav {
-      display: block;
-      height: 0;
-      overflow: hidden;
-      > li {
-        width: 100%;
-      }
+
+    &--collapsed {
+        .navbar__nav {
+            display: block;
+            height: 0;
+            overflow: hidden;
+
+            > li {
+                width: 100%;
+            }
+
+        }
+
+        .navbar__item {
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s linear;
+        }
+
+        .navbar__toggle {
+            display: block;
+            padding: 15px 0;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            border-bottom: 1px solid #999;
+        }
+
     }
-    .navbar__item {
-      width: 100%;
-      opacity: 0;
-      transition: opacity 0.3s linear;
+
+    &--open {
+
+        .navbar__nav {
+            height: auto;
+        }
+
+        .navbar__item {
+            opacity: 1;
+        }
+
     }
-    .navbar__toggle {
-      display: block;
-      padding: 15px 0;
-      cursor: pointer;
-      text-align: center;
-      color: white;
-      border-bottom: 1px solid #999;
-    }
-  }
-  &--open {
-    .navbar__nav {
-      height: auto;
-    }
-    .navbar__item {
-      opacity: 1;
-    }
-  }
+
 }
 {% endhighlight %}
 
