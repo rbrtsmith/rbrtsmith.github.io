@@ -111,6 +111,10 @@ blockquote {
 	padding-left: 0;
 	color: darken($delta-color, 10%);
 	@include font-size($txt-md);
+	@media (max-width: 800px) {
+		left: 0;
+		margin-left: 3rem;
+	}
 	&:before {
 		position: absolute;
 		top: 0;
