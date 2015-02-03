@@ -1,7 +1,7 @@
 ---
 title: "Developing the flag object"
 meta: "The flag object can be used in a wide variety of scenarios, here we take a look at some of them"
-layout: drafts
+layout: posts
 pageClass: posts
 category: CSS
 ---
