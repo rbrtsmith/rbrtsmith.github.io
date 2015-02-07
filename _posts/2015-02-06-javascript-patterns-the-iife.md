@@ -1,12 +1,12 @@
 ---
 title: "JavaScript patterns The IIFE"
-meta: "Create a new scrope context with the IIFE (Immediately Invoked Functiom Expression)"
+meta: "Create a new scope context with the IIFE (Immediately Invoked Functiom Expression)"
 layout: posts
 pageClass: posts
 category: JavaScript
 ---
 
-The **Immediately Invoked Functiom Expression** or shorter **IIFE** is one of
+The **Immediately Invoked Function Expression** or shorter **IIFE** is one of
 the most widely used JavaScript patterns.  Here I'll explain why it is useful
 and how you can use it in your projects.  The IIFE is an important construct
 for modularising and organising your code into something that's far more robust.
@@ -53,12 +53,12 @@ reference error.
 
 function foo() {
    var bar = "baz";
-   console.log(bar) // "baz"
+   console.log(bar); // "baz"
 }
 
 foo();
 
-console.log(bar) // "Reference error, bar not defined"
+console.log(bar); // "Reference error, bar not defined"
 
 {% endhighlight %}
 
@@ -79,18 +79,18 @@ function foo() {
    function(bam) {
       var thud = "qux";
       
-      console.log(bar) // "baz"
-      console.log(thud) // "qux"
+      console.log(bar); // "baz"
+      console.log(thud); // "qux"
    }
    bam();
 
-   console.log(bar) // "baz"
-   console.log(thud) // "Reference error, thud not defined"
+   console.log(bar); // "baz"
+   console.log(thud); // "Reference error, thud not defined"
 }
 
 foo();
 
-console.log(bar) // "baz"
+console.log(bar); // "baz"
 
 {% endhighlight %}
 
@@ -119,10 +119,10 @@ Here is the basic construct for an IIFE
 (function() {
    var foo = "bar";
 
-   console.log(foo) // "bar"
+   console.log(foo); // "bar"
 }());
 
-console.log(foo) // "Reference error, foo not defined"
+console.log(foo); // "Reference error, foo not defined"
 
 {% endhighlight %}
 
@@ -141,10 +141,10 @@ we get..
 (function baz() {
    var foo = "bar";
 
-   console.log(foo) // "bar"
+   console.log(foo); // "bar"
 }());
 
-console.log(foo) // "Reference error, foo not defined"
+console.log(foo); // "Reference error, foo not defined"
 
 {% endhighlight %}
 
