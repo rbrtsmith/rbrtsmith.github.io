@@ -7,7 +7,7 @@ category: JavaScript
 ---
 
 This is a continuation of the post 
-[JavaScript patters the iife](http://rbrtsmith.com/2015/01/javascript-patterns-the-iife/)
+[JavaScript patters the iife](http://rbrtsmith.com/2015/02/javascript-patterns-the-iife/)
 Closures are probably the most important parts of the JavaScript langauge, without
 closure we would be unable to pass functions around as parameters in the manner that
 we do.  Closure allows us to write JavaScript with huge expressive power and 

@@ -176,4 +176,6 @@ code and avoids you polluting the global scope.
 In my next post I will be taking this a little further and talking about 
 Closure, Closure being one of the best features of JavaScript.
 
+[JavaScript patterns Closure](http://rbrtsmith.com/2015/02/javascript-patterns-closure/)
+
 Stay tuned!
