@@ -76,7 +76,7 @@ var bar = "baz";
 
 function foo() {
 
-   function(bam) {
+   function bam() {
       var thud = "qux";
       
       console.log(bar) // "baz"
