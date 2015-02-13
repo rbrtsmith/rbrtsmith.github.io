@@ -18,7 +18,7 @@ as a result the whole language opens up.
 >function is executed outside of that lexical scope."
 ><br>&mdash; [Kyle Simpson](https://twitter.com/getify)
 
-As we saw in the previous [article](http://rbrtsmith.com/2015/01/javascript-patterns-the-iife/) 
+As we saw in the previous [article](http://rbrtsmith.com/2015/02/javascript-patterns-the-iife/) 
 because of lexical scope a function defined within a function has access to the
 wrapping functions scope.
 
