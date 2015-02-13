@@ -7,7 +7,7 @@ category: JavaScript
 ---
 
 This is a continuation of the post 
-[JavaScript patters the iife](http://rbrtsmith.com/2015/02/javascript-patterns-the-iife/)
+[JavaScript patterns the iife](http://rbrtsmith.com/2015/02/javascript-patterns-the-iife/)
 Closure is one of the most important mechanisms in the JavaScript langauge, without
 closure we would be unable to pass functions around as parameters in the manner that
 we do.  Closure allows us to write JavaScript with huge expressive power and 
