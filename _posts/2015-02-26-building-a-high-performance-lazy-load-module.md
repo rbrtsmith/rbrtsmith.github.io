@@ -609,8 +609,7 @@ Here is all the completed code:
 {% highlight javascript %}
 
 (function(){
-   var k = 0;
-      var scrollOffset = $(window).scrollTop(),
+   var scrollOffset = $(window).scrollTop(),
       intervalDuration = 200,
       winHeight = $(window).height(),
       windowBottomOffset = null,
