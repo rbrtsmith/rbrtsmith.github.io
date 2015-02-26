@@ -225,7 +225,7 @@ There are a number of ways to reduce this, one of them is known as
 a debounce function to reduce the number of times the callback function in the scroll
 event is called.
 
-But my preffered method for this is just simply using a setInterval to fire every
+But my preferred method for this is just simply using a setInterval to fire every
 200ms, then we could compare the current scroll position with the previous to determine
 if the user has scrolled.
 
