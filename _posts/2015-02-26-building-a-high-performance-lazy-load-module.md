@@ -17,14 +17,14 @@ and often expensive data plans.
 been reduced it won't be so noticeable to the user, as the page will render
 before all the images have downloaded.
 
-First I will create a very rudamentary, very low performance 
+First I will create a very rudamentary, low performance 
 lazy load with the use of some data attributes and some JavaScript.  Then
 I will demonstrate how we can vastly improve the performance.
 
 With the images we populate the src with a blank GIF, it inavlidates the 
 markup if you leave the src attribute blank.  Then you would put the
-location of the image into the lazy-src sata attribute.  Put a JavaScript
-hook into the classname, and don't forget to put some drescriptive text
+url of the image into the lazy-src data attribute.  Put a JavaScript
+hook into the classname, and don't forget to put some descriptive text
 on the alt attribute.
 
 {% highlight html %}
@@ -47,7 +47,7 @@ on the alt attribute.
 &nbsp;
 
 
-Firstly we should create an [IIFE]({{site.url }}/2015/02/javascript-patterns-the-iife/)
+In our JavaScript we should create an [IIFE]({{site.url }}/2015/02/javascript-patterns-the-iife/)
 to ensure that none of our variables leak out into the global scope.
 
 **N.B.** Never omit the var keyword or else that variable will instead be bound
@@ -65,7 +65,7 @@ to the global scope.  This is bad.
 
 Next we need to bind a scroll event handler to the window object, declare
 an anomynous function to be called on the scroll event.
-Then store the current window Y position.  in other words how far we have
+Then store the current window Y position &nbash; in other words how far we have
 scrolled from the top of the document.  We also store the height of the window,
 and use that value to determine the position of the bottom of the window.  This
 will be used to see if the images are inside the viewport.
@@ -85,8 +85,8 @@ will be used to see if the images are inside the viewport.
 
 &nbsp;
 
-Loop through all the lazy images by targeting the `.js-lazy-load` hook inside
-of the loop we store the images offset and compare that with the window bottom
+Loop through all the lazy images by targeting the `.js-lazy-load` hook, inside
+of the loop we store the images' offset and compare that with the window bottom
 offset to determine if the image is within the viewport.
 We also store the lazy-src attribute value.
 
@@ -111,7 +111,7 @@ We also store the lazy-src attribute value.
 
 &nbsp;
 
-Finally inside the if statement we apply set the src attribute to the lazySrc
+Finally inside the if statement we set the url of the src attribute to the lazySrc
 value.
 
 {% highlight javascript %}
@@ -135,13 +135,13 @@ value.
 
 &nbsp;
 
-So that is a basic lazy load function.  it works but there's huge room for improvement
-in terms of performance, the poor performance of this would be noticeable if there's
-many lazy-loaded images, and other effects bound to scroll events such as parallax.
-Even more so on lower powered devices.
+So that is a basic lazy load function.  It works but there's huge room for improvement
+in terms of performance, the poor performance of this function would be clearly noticeable if there's
+many lazy-loaded images or other effects bound to scroll events such as parallax.
+This would be even more profound on lower powered devices.
 
 ##Micro optimisations##
-There are a few things we can do to the code to slighty improve the speed of execution.
+There are a few things we can do to the code to slighty improve the speed of execution..
 
 
 Declare scrollOffset, winHeight and windowBottom offset outside of the scroll event.
