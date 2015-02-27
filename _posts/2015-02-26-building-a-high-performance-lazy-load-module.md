@@ -293,7 +293,7 @@ we have to calculate the images offset.  It would be more efficient to determine
 offset once and store that value.
 
 ##Determining the position of the images##
-Initially this sounds very simple, we can just test the offsetTop of the images
+Initially this sounds very simple, on page-load we can just grab the offsetTop of the images
 and store the values in the array, but upon further investigation this presents
 a problem.  When we scroll to an image and it loads in, it pushes the content below
 further down the page, rendering the remaning offset values invalid.
