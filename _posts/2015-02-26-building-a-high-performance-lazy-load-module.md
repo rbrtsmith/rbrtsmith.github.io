@@ -365,7 +365,7 @@ there via jQuery's `.css method.
 First loop through all the lazy-load images, get the width and height attributes
 and use this to calculate the aspect ratio as a percentage which then gets applied
 to the parent element in the padding-bottom property, then that element's parent
-gets it's max-width attribute augmented witht the images width.  
+gets it's max-width attribute augmented with the images width.  
 This forces the block to behave like a responsive image of those dimensions.  
 
 So we now have our placeholders.
@@ -387,7 +387,7 @@ function generatePlaceholders() {
 
 &nbsp;
 
-the full code should now look like this:
+The full code should now look like this:
 
 {% highlight javascript %}
 
@@ -523,11 +523,11 @@ function lazyLoad() {
 
 &nbsp;
 
-This is now far more optimised than it was prevuously, but there's a little more
+This is now far more optimised than it was previously, but there's a little more
 we can do.  After an image has been loaded there's no need to keep looping over
 it's data in the array, so we should remove it from the array.
 
-We can do that with the Array's splice method.
+We can do that with the `Array.splice()` method.
 
 {% highlight javascript %}
 function lazyLoad() {
@@ -673,3 +673,7 @@ Here is all the completed code:
 
 <p data-height="490" data-theme-id="10596" data-slug-hash="JoZXyx" data-default-tab="result" data-user="rbrtsmith" class='codepen'></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+&nbsp; 
+
+If anybody has anything to add, pehaps some way to optimise things even further then please leave a comment below.  Thanks for reading.
