@@ -6,7 +6,7 @@ pageClass: posts
 category: JavaScript
 ---
 
-For those who are not familiar lazy loading means to only load in the content
+For those who are not familiar, lazy loading means to only load in the content
 that is inside the users viewport, when the user scrolls down more content is
 loaded in.  This has a number of benefits:
 
