@@ -47,6 +47,7 @@ so what actually happens in this example is:
 
 Here's another common function that is built into JavaScript as of ES5
 
+
 ##For Each
 
 {% highlight javascript %}
@@ -84,13 +85,13 @@ we'll call it **myForEach**.
 First we must augment the JavaScript Array prototype with out new function.  for the callback to execute we must pass it as an argument to our newly created function
 
 {% highlight javascript %}
-Array.prototype.myForEach = function(cb) {
+Array.prototype.myForEach = function(callback) {
 };
 {% endhighlight %}
 
 Because we are calling the function as a method on the Array prototype the `this`value will always reference the array that it is called upon.  So we can loop over the array using the `this` value
 {% highlight javascript %}
-Array.prototype.myForEach = function(cb) {
+Array.prototype.myForEach = function(callback) {
   for (var index = 0; index < this.length; index++) {
 
   }
@@ -102,7 +103,7 @@ native `forEach()` we must pass in three arguments to the callback, the current 
 array itself:
 
 {% highlight javascript %}
-Array.prototype.myForEach = function(cb) {
+Array.prototype.myForEach = function(callback) {
   for (var index = 0; index < this.length; index++) {
     cb(this[index], index, this);
   }
@@ -134,3 +135,36 @@ The output will be:
 "Baz"
 ["Foo", "Bar", "Baz"]
 {% endhighlight %}
+
+
+##Nesting callbacks##
+
+Callbacks can be nested within one another, we can look to the `setTimeout()` function again to demonstrate.
+
+{% highlight javascript %}
+setTimeout(function() {
+  console.log(1);
+  setTimeout(function() {
+    console.log(2);
+    setTimeout(function() {
+      console.log(3);
+    }, 1000);
+  }, 1000);
+}, 1000);
+
+console.log(0);
+{% end highlight %}
+
+The output will be:
+{% highlight javascript %}
+0
+//...wait 1 second...
+1
+//...wait another second..
+2
+//...wait another second..
+3
+{% endhighlight %}
+As you can see when we start to nest callbacks inside one another the code can become difficult to read, and is
+commonly reffered to as callback hell.  I will talk about how to avoid callback hell in a later post, but for now
+have some fun playing around with callbacks, they are a very powerful JavaScript feature!
