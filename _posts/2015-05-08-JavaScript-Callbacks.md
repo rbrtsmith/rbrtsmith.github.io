@@ -64,7 +64,7 @@ myArray.forEach(function(value, index, array) {
 The 'forEach' function iterates over an array, executing a callback function on each item, as you can see from
 the example above there are 3 parameters that we can access, the current value, the current index and the array itself.  This is demonstrated from the output of the above program:
 
-{% highlight javascript %)
+{% highlight javascript %}
 0
 "Foo"
 ["Foo", "Bar", "Baz"]
