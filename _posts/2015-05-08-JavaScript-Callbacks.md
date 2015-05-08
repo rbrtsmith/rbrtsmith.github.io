@@ -153,7 +153,7 @@ setTimeout(function() {
 }, 1000);
 
 console.log(0);
-{% end highlight %}
+{% endhighlight %}
 
 The output will be:
 {% highlight javascript %}
@@ -165,6 +165,7 @@ The output will be:
 //...wait another second..
 3
 {% endhighlight %}
+
 As you can see when we start to nest callbacks inside one another the code can become difficult to read, and is
 commonly reffered to as callback hell.  I will talk about how to avoid callback hell in a later post, but for now
 have some fun playing around with callbacks, they are a very powerful JavaScript feature!
