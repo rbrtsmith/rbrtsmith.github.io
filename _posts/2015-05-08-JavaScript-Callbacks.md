@@ -44,3 +44,34 @@ so what actually happens in this example is:
 //...wait 1 second...
 "foo"
 {% endhighlight %}
+
+Here's another common function that is built into JavaScript as of ES5
+
+##For Each
+
+{% highlight javascript %}
+
+var myArray = ["Foo", "Bar", "Baz"];
+
+myArray.forEach(function(value, index, array) {
+  console.log(index);
+  console.log(value);
+  console.log(array);
+});
+
+{% endhighlight %}
+
+The 'forEach' function iterates over an array, executing a callback function on each item, as you can see from
+the example above there are 3 parameters that we can access, the current value, the current index and the array itself.  This is demonstrated from the output of the above program:
+
+{% highlight javascript %)
+0
+"Foo"
+["Foo", "Bar", "Baz"]
+1
+"Bar"
+["Foo", "Bar", "Baz"]
+2
+"Baz"
+["Foo", "Bar", "Baz"]
+{% endhighlight %}
