@@ -15,11 +15,11 @@ Most of us are familiar with the `setTimeout()` function.  `setTimeout()` accept
 example below: 
 
 ````
-setTimeout(function() {
-  console.log('foo');
-});
-
-console.log('bar');
+    setTimeout(function() {
+      console.log('foo');
+    });
+    
+    console.log('bar');
 ````
 Many would assume that the output would be:
 ´´´
