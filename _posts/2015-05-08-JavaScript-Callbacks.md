@@ -99,13 +99,13 @@ Array.prototype.myForEach = function(callback) {
 {% endhighlight %}
 
 Then inside of our loop we can execute the passed callback.  in order to replicate the functionality of the
-native `forEach()` we must pass in three arguments to the callback, the current value, the current index, and the
+native `forEach()` we must pass in three arguments to the callback: the current value, the current index, and the
 array itself:
 
 {% highlight javascript %}
 Array.prototype.myForEach = function(callback) {
   for (var index = 0; index < this.length; index++) {
-    cb(this[index], index, this);
+    callback(this[index], index, this);
   }
 };
 {% endhighlight %}
