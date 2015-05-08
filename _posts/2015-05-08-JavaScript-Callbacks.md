@@ -75,3 +75,61 @@ the example above there are 3 parameters that we can access, the current value, 
 "Baz"
 ["Foo", "Bar", "Baz"]
 {% endhighlight %}
+
+
+##Creating our own callback##
+
+So what is actually happening inside the forEach function.  We can start by building our own,
+we'll call it **myForEach**. 
+First we must augment the JavaScript Array prototype with out new function.  for the callback to execute we must pass it as an argument to our newly created function
+
+{% highlight javascript %}
+Array.prototype.myForEach = function(cb) {
+};
+{% endhighlight %}
+
+Because we are calling the function as a method on the Array prototype the `this`value will always reference the array that it is called upon.  So we can loop over the array using the `this` value
+{% highlight javascript %}
+Array.prototype.myForEach = function(cb) {
+  for (var index = 0; index < this.length; index++) {
+
+  }
+};
+{% endhighlight %}
+
+Then inside of our loop we can execute the passed callback.  in order to replicate the functionality of the
+native `forEach()` we must pass in three arguments to the callback, the current value, the current index, and the
+array itself:
+{% hightlight javascript %}
+Array.prototype.myForEach = function(cb) {
+  for (var index = 0; index < this.length; index++) {
+    cb(this[index], index, this);
+  }
+};
+{% endhighlight %}
+
+That's the completed function, now we can use it, just like the native function:
+
+{% highlight javascript %}
+var myArray = ["Foo", "Bar", "Baz"];
+
+myArray.myForEach(function(value, index, array) {
+  console.log(index);
+  console.log(value);
+  console.log(array);
+});
+
+{% endhighlight %}
+
+The output will be:
+{% highlight javascript %)
+0
+"Foo"
+["Foo", "Bar", "Baz"]
+1
+"Bar"
+["Foo", "Bar", "Baz"]
+2
+"Baz"
+["Foo", "Bar", "Baz"]
+{% endhighlight %}
