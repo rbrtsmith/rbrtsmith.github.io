@@ -78,7 +78,7 @@ the example above there are 3 parameters that we can access, the current value, 
 {% endhighlight %}
 
 
-##Creating our own callback##
+##Creating our own function that accepts a callback as an argument##
 
 So what is actually happening inside the forEach function.  We can start by building our own,
 we'll call it **myForEach**. 
