@@ -17,7 +17,7 @@ as an argument, take this example below that passes an anomynous function as the
 
 setTimeout(function() {
   console.log('foo');
-});
+}, 100);
 
 console.log('bar');
 
