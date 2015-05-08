@@ -36,7 +36,7 @@ Many would assume that the output would be:
 This is because the setTimeout function pauses execution for a second before executing the `console.log('foo');`
 right?  **Wrong!**
 
-What actually happens is the body of the `setTimeout()` is skipped and then the program continues to execute
+What actually happens is the body of the `setTimeout()` is skipped and then the program continues to execute before jumping back to the setTimeout body, executing that, then jumping back to where it previously left.  This is made possible by something known as the **call stack**
 so what actually happens in this example is:
 
 {% highlight javascript %}
