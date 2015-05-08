@@ -11,8 +11,8 @@ that is passed to a function to be called at a later time.  This allows for us t
 asynchronously, also known as non-blocking and is the primary reason that Node.js has gained is reputation for
 being fast.
 
-Most of us are familiar with the `setTimeout()` function.  `setTimeout()` accepts a callback function, take this
-example below: 
+Most of us are familiar with the `setTimeout()` function.  `setTimeout()` accepts a callback function
+as an argument, take this example below that passes an anomynous function as the callback:
 {% highlight javascript %}
 
 setTimeout(function() {
