@@ -61,7 +61,7 @@ myArray.forEach(function(value, index, array) {
 
 {% endhighlight %}
 
-The 'forEach' function iterates over an array, executing a callback function on each item, as you can see from
+The `forEach` function iterates over an array, executing a callback function on each item, as you can see from
 the example above there are 3 parameters that we can access, the current value, the current index and the array itself.  This is demonstrated from the output of the above program:
 
 {% highlight javascript %}
@@ -100,7 +100,8 @@ Array.prototype.myForEach = function(cb) {
 Then inside of our loop we can execute the passed callback.  in order to replicate the functionality of the
 native `forEach()` we must pass in three arguments to the callback, the current value, the current index, and the
 array itself:
-{% hightlight javascript %}
+
+{% highlight javascript %}
 Array.prototype.myForEach = function(cb) {
   for (var index = 0; index < this.length; index++) {
     cb(this[index], index, this);
@@ -122,7 +123,7 @@ myArray.myForEach(function(value, index, array) {
 {% endhighlight %}
 
 The output will be:
-{% highlight javascript %)
+{% highlight javascript %}
 0
 "Foo"
 ["Foo", "Bar", "Baz"]
