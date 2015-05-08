@@ -167,5 +167,5 @@ The output will be:
 {% endhighlight %}
 
 As you can see when we start to nest callbacks inside one another the code can become difficult to read, and is
-commonly reffered to as callback hell.  I will talk about how to avoid callback hell in a later post, but for now
+commonly referred to as callback hell.  I will talk about how to avoid callback hell in a later post, but for now
 have some fun playing around with callbacks, they are a very powerful JavaScript feature!
