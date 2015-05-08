@@ -14,13 +14,12 @@ being fast.
 Most of us are familiar with the `setTimeout()` function.  `setTimeout()` accepts a callback function, take this
 example below: 
 
-````
     setTimeout(function() {
       console.log('foo');
     });
     
     console.log('bar');
-````
+    
 Many would assume that the output would be:
 ´´´
 //...wait 1 second...
