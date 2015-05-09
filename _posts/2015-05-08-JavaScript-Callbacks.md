@@ -12,7 +12,7 @@ asynchronously, also known as non-blocking and is the primary reason that Node.j
 being fast.
 
 Most of us are familiar with the `setTimeout()` function.  `setTimeout()` accepts a callback function
-as an argument, take this example below that passes an anomynous function as the callback:
+as an argument, take this example below that passes an anomynous function (a callback) as an arguemnt to `setTimeout()`:
 {% highlight javascript %}
 
 setTimeout(function() {
@@ -36,7 +36,7 @@ Many would assume that the output would be:
 This is because the setTimeout function pauses execution for a second before executing the `console.log('foo');`
 right?  **Wrong!**
 
-What actually happens is the body of the `setTimeout()` is skipped and then the program continues to execute before jumping back to the setTimeout body, executing that, then jumping back to where it previously left.  This is made possible by something known as the **call stack**
+What actually happens is the body of the `setTimeout()` is skipped and then the program continues to execute before jumping back to the `setTimeout()` body, executing that, then jumping back to where it previously left.  This is made possible by something known as the **call stack**
 so what actually happens in this example is:
 
 {% highlight javascript %}
@@ -48,7 +48,7 @@ so what actually happens in this example is:
 Here's another common function that is built into JavaScript as of ES5
 
 
-##For Each
+##ForEach
 
 {% highlight javascript %}
 
@@ -63,7 +63,7 @@ myArray.forEach(function(value, index, array) {
 {% endhighlight %}
 
 The `forEach` function iterates over an array, executing a callback function on each item, as you can see from
-the example above there are 3 parameters that we can access, the current value, the current index and the array itself.  This is demonstrated from the output of the above program:
+the example above there are 3 parameters that we can access: the current value, the current index and the array itself.  This is demonstrated from the output of the above program:
 
 {% highlight javascript %}
 0
@@ -80,7 +80,7 @@ the example above there are 3 parameters that we can access, the current value, 
 
 ##Creating our own function that accepts a callback as an argument##
 
-So what is actually happening inside the forEach function.  We can start by building our own,
+So what is actually happening inside the forEach function?  We can start by building our own,
 we'll call it **myForEach**. 
 First we must augment the JavaScript Array prototype with out new function.  for the callback to execute we must pass it as an argument to our newly created function
 
