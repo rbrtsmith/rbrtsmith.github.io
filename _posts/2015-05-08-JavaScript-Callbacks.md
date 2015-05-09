@@ -89,7 +89,7 @@ Array.prototype.myForEach = function(callback) {
 };
 {% endhighlight %}
 
-Because we are calling the function as a method on the Array prototype the `this`value will always reference the array that it is called upon.  So we can loop over the array using the `this` value
+Because we are calling the function as a method on the Array prototype the `this` value will always reference the array that it is called upon.  So we can loop over the array using the `this` value
 {% highlight javascript %}
 Array.prototype.myForEach = function(callback) {
   for (var index = 0; index < this.length; index++) {
