@@ -84,7 +84,9 @@ So what is actually happening inside the forEach function?  We can start by buil
 we'll call it **myForEach**. 
 First we must augment the JavaScript Array prototype with out new function.  for the callback to execute we must pass it as an argument to our newly created function:
 
+<small>
 **Note** &mdash; *Extending a native object's prototype is generally frowned upon because it's possible to override native methods.  I'm only doing it here to illustrate how forEach works*
+</small>
 
 {% highlight javascript %}
 Array.prototype.myForEach = function(callback) {
