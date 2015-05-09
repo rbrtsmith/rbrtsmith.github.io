@@ -82,7 +82,8 @@ the example above there are 3 parameters that we can access: the current value, 
 
 So what is actually happening inside the forEach function?  We can start by building our own,
 we'll call it **myForEach**. 
-First we must augment the JavaScript Array prototype with out new function.  for the callback to execute we must pass it as an argument to our newly created function 
+First we must augment the JavaScript Array prototype with out new function.  for the callback to execute we must pass it as an argument to our newly created function:
+
 **Note** &mdash; *Extending a native object's prototype is generally frowned upon because it's possible to override native methods.  I'm only doing it here to illustrate how forEach works*
 
 {% highlight javascript %}
