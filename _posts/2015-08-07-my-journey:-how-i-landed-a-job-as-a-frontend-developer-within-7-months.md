@@ -19,4 +19,4 @@ a full time developer.
 
 For those who read the article and are interested to see where it all started - my blog about my time in Nepal can be found [here](http://www.robstravelstuff.com/)
 
-*N.B.* It was two years ago 8At the time of writing) that I became employed now. I will write a post in the coming weeks about progression from employement as a junior and onwards to a more senior level.
+*N.B.* It was two years ago (At the time of writing) that I became employed now. I will write a post in the coming weeks about progression from employement as a junior and onwards to a more senior level.
