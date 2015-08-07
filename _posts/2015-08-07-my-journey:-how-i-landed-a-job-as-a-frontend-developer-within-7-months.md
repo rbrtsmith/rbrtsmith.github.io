@@ -12,7 +12,7 @@ them they're one of the largest online coding schools in the industry.
 In my interview I talk about how I came to discover web development, how I was able to land my 
 first time role as a developer within 7 months starting almost from scratch.
 
-You can take a read of my journey [here]
-(http://blog.teamtreehouse.com/robert-relied-treehouse-became-full-time-front-end-developer).
+You can take a read of my journey [here](http://blog.teamtreehouse.com/robert-relied-treehouse-became-full-time-front-end-developer).
+
 I hope it inspires some of you hobbyists and those just starting out to take the plunge into becoming 
 a full time developer.
