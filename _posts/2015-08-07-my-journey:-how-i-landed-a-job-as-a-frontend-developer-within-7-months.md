@@ -17,4 +17,4 @@ You can take a read of my journey [here](http://blog.teamtreehouse.com/robert-re
 I hope it inspires some of you hobbyists and those just starting out to take the plunge into becoming 
 a full time developer.
 
-*N.B.* It was two years ago that I became employed now. I will write a post in the coming weeks about progression from employement as a junior and onwards to a more senior level.
+*N.B.* It was two years ago 8At the time of writing) that I became employed now. I will write a post in the coming weeks about progression from employement as a junior and onwards to a more senior level.
