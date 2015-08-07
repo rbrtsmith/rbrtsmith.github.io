@@ -8,7 +8,7 @@ category: general
 ---
 
 I was recently interviewed by [Treehouse](http://teamtreehouse.com/).  If you haven't already heard of 
-them they're one of the largest online coding schools in the industry.
+them they're one of the largest online coding schools in the industry, Treehouse is the resource I used right from the beginning and I'd recommend them as the best introduction to web development you'll find online.
 In my interview I talk about how I came to discover web development, how I was able to land my 
 first time role as a developer within 7 months starting almost from scratch.
 
