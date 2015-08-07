@@ -1,4 +1,12 @@
-#My journey: how I landed a job as a front-end developer within 7 months#
+---
+title: "My journey: how I landed a job as a front-end developer within 7 months"
+meta: "Read how I rapidly improved my coding ability to land my first programming role within 7 months"
+date: 2015-08-07
+layout: posts
+pageClass: posts
+category: general
+---
+
 I was recently interviewed by [Treehouse](http://teamtreehouse.com/).  If you haven't already heard of 
 them they're one of the largest online coding schools in the industry.
 In my interview I talk about how I came to discover web development, how I was able to land my 
