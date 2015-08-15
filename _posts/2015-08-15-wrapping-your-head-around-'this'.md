@@ -198,4 +198,4 @@ strongest.
 
 I hope this post helps clear up some of the confusions surrounding `this` in
 JavaScript, please comment below if you have further questions or add me on 
-Twitter [http://twitter.com/robertwilliam_s](@robertwilliam_s).
+Twitter [@robertwilliam_s](http://twitter.com/robertwilliam_s).
