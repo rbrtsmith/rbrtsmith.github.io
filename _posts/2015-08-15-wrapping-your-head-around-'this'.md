@@ -32,11 +32,9 @@ baz(); // the call site of baz()
 There are four rules, in order of precedence that can be used to determine 
 what `this` gets bound to.
 
-&nbsp;
-
 ###Rule 1###
 Function invocation (Default binding) - When you invoke a function declaration 
-or a function body the `this` keyword will be bound to the global object, which 
+or a function expression the `this` keyword will be bound to the global object, which 
 in the browser is the window object.
 
 {% highlight javascript %}
