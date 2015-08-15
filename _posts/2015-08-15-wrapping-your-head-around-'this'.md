@@ -42,7 +42,7 @@ var baz = function baz() {
     console.log(this); 
 };
 
-baz(); // window
+baz(); // window | global
 {% endhighlight %}
 
 **N.B.** this behavior has been seen by many as unwanted and has since been 
