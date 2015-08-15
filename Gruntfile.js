@@ -150,16 +150,6 @@ module.exports = function(grunt) {
 
 
 
-        favicons: {
-            options: {
-                html: 'img/build/icons/favicons/favicon.html',
-                HTMLPrefix: "img/build/icons/favicons/"
-            },
-            icons: {
-                src: 'img/source/favicon.png',
-                dest: 'img/build/icons/favicons/'
-            }
-        },
 
 
 
@@ -174,10 +164,10 @@ module.exports = function(grunt) {
 
         shell: {
             jekyllBuild: {
-                command: 'jekyll build'
+                command: 'bundle exec jekyll build'
             },
             jekyllServe: {
-                command: 'jekyll serve'
+                command: 'bundle exec jekyll serve --drafts'
             }
         },
 
@@ -238,7 +228,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-favicons');
     grunt.loadNpmTasks('grunt-svgstore');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -257,12 +246,10 @@ module.exports = function(grunt) {
     // -----------------------------------------
     // Local development        :: Run 'grunt dev'
     // Production build         :: Run 'grunt'
-    // Create favicons          :: Run 'grunt icons'
     // -----------------------------------------
 
     grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'cssmin', 'imagemin', 'svgstore', 'jshint', 'shell:jekyllBuild', 'watch']);
-    grunt.registerTask('dev', ['concat', 'sass', 'autoprefixer', 'imagemin', 'svgstore', 'jshint', 'shell:jekyllBuild', 'watch']);
-    grunt.registerTask('icons', ['favicons']);
-    grunt.registerTask('serve', ['shell']);
+    grunt.registerTask('dev', ['concat', 'sass', 'autoprefixer', 'imagemin', 'svgstore', 'jshint', 'shell:jekyllServe', 'watch']);
+    grunt.registerTask('serve', ['shell:jekyllServe']);
 
 };

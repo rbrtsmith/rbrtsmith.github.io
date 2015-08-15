@@ -6,4 +6,2083 @@
  * Copyright 2014 MIT license.  licensed.
  */
 
-@charset "UTF-8";*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}dd,dl,dt{margin:0;padding:0}audio,canvas,video{display:inline-block}.cp_embed_iframe{border:1px solid #111}html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased;word-wrap:break-word;-moz-osx-font-smoothing:grayscale}body{margin:0}body,html{height:100%}b,strong{font-weight:700}dfn{font-style:italic}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{max-width:100%;vertical-align:middle}table{border-collapse:collapse;border-spacing:0}a:focus{outline:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button{border:0}button,input{line-height:normal}select{background:0 0}label{cursor:pointer}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;outline:0;-webkit-font-smoothing:antialiased}button,select{text-transform:none}textarea{overflow:auto;vertical-align:top;resize:none;padding:10px 0 10px 10px}figure{margin:0 0 20px}figure a{display:block;max-width:100%}figcaption a{display:inline}a img{border:none}abbr[title]{border-bottom:1px dotted}html{font-size:62.5%}@media (max-width:992px){html{font-size:60%}}@media (max-width:768px){html{font-size:58%}}@media (max-width:480px){html{font-size:56%}}@media (max-width:400px){html{font-size:54%}}body{line-height:1.6;font-family:Roboto,sans-serif;font-size:16px;font-size:1.6rem;color:#444;font-weight:300}h1,h2,h3{margin:15px 0;font-weight:300}h1{font-size:40px;font-size:4rem}@media (max-width:768px){h1{font-size:36px;font-size:3.6rem}}@media (max-width:480px){h1{font-size:32px;font-size:3.2rem}}h2{font-size:30px;font-size:3rem}@media (max-width:768px){h2{font-size:27.5px;font-size:2.75rem}}@media (max-width:480px){h2{font-size:25px;font-size:2.5rem}}h3{font-size:22px;font-size:2.2rem}@media (max-width:768px){h3{font-size:20.5px;font-size:2.05rem}}@media (max-width:480px){h3{font-size:19px;font-size:1.9rem}}figcaption{font-size:13px;font-size:1.3rem;line-height:2}a,strong{font-weight:600}strong{color:#222}q{font-style:italic}code{color:#e84428}p{margin-top:0}a{color:#45d296;text-decoration:none}a:focus,a:hover{color:#27a36e;text-decoration:none}a:active{outline:0}blockquote{position:relative;left:-2rem;max-width:500px;margin-left:0;margin-right:0;padding-left:0;color:#909090;font-size:22px;font-size:2.2rem}@media (max-width:800px){blockquote{left:0;margin-left:3rem}}blockquote:before{position:absolute;top:0;left:-20px;bottom:0;width:5px;background:#ccc;content:" "}body:before{position:fixed;left:0;right:0;top:0;z-index:2;height:5px;background:#45d296;content:" "}.site-wrap{max-width:700px;margin:0 auto}.site-wrap.site-padding{max-width:730px;padding:0 15px}@media (max-width:400px){.site-wrap.site-padding{padding:0 10px}}.clearfix:after,.inline-list--blocks:after{content:"";display:table;clear:both}ul>li{margin-bottom:5px}.section{padding-top:40px;padding-bottom:40px}.section--alpha{position:relative;padding-bottom:0}.section--alpha:before{position:absolute;top:20px;left:0;right:0;height:1px;background:#ccc;background-image:-webkit-gradient(linear,left top,right top,from(#f0f0f0),color-stop(20%,#ccc),color-stop(80%,#ccc),to(#f0f0f0));background-image:-webkit-linear-gradient(left,#f0f0f0,#ccc 20%,#ccc 80%,#f0f0f0);background-image:linear-gradient(to right,#f0f0f0,#ccc 20%,#ccc 80%,#f0f0f0);content:" "}.flag{display:table;width:100%}.flag__body,.flag__component{display:table-cell;vertical-align:middle}.flag__body.flag--top,.flag__component.flag--top{vertical-align:top}.flag__body.flag--bottom,.flag__component.flag--bottom{vertical-align:bottom}.flag__component>img{display:block;max-width:none}.flag__body{width:100%}.bare-list,.inline-list,.nav--center,.ui-list{margin:0;padding:0;list-style:none}.bare-list--spaced>li{margin-top:10px}.bare-list--spaced>li:first-child{margin-top:0}.inline-list>li,.nav--center>li{display:inline-block;vertical-align:middle}.inline-list--spaced>li{margin-left:10px}.inline-list--spaced>li:first-child{margin-left:0}.inline-list--blocks>li{display:block;float:left}.ui-list:before{bottom:0}.ui-list__item{padding:3rem 0}.ui-list__item:before{top:0}.ui-list,.ui-list__item{position:relative}.ui-list:before,.ui-list__item:before{position:absolute;left:0;right:0;height:1px;background:#ccc;background-image:-webkit-gradient(linear,left top,right top,from(#f0f0f0),color-stop(20%,#ccc),color-stop(80%,#ccc),to(#f0f0f0));background-image:-webkit-linear-gradient(left,#f0f0f0,#ccc 20%,#ccc 80%,#f0f0f0);background-image:linear-gradient(to right,#f0f0f0,#ccc 20%,#ccc 80%,#f0f0f0);content:" "}.nav--center{text-align:center}.site-nav li{margin:0 7.5px}.site-footer{text-align:center;background:#444;color:#ccc}.site-footer a{color:inherit;font-weight:inherit;text-decoration:underline}.site-header{text-align:center}.site-header__logo{-webkit-border-radius:5px;border-radius:5px;border:2px solid #444}.post__title{display:inline;font-weight:400;margin:0;font-size:22px;font-size:2.2rem}@media (max-width:768px){.post__title{font-size:20.5px;font-size:2.05rem}}@media (max-width:480px){.post__title{font-size:19px;font-size:1.9rem}}.post__date{padding-left:25px;white-space:nowrap;color:#aaa}.single-post__header{margin-bottom:15px}.single-post__title{margin-bottom:0}.single-post__date{color:#aaa}.box-link{padding:5px 15px;border:2px solid transparent;font-size:22px;font-size:2.2rem}.box-link:hover{border-color:#45d296;color:#45d296}.box-link.active{position:relative}.box-link.active:before{position:absolute;bottom:-2px;left:15px;right:15px;height:2px;background:#45d296;content:" "}.pagination,.social{text-align:center}.social__item{display:inline-block}.hard--bottom{padding-bottom:0!important}.flush{margin:0!important}.hard--top{padding-top:0!important}pre{padding:15px;overflow-y:auto;white-space:pre;word-wrap:normal;border-left-width:6px;background:#272822;font-size:13px;font-size:1.3rem}pre code{color:#F8F8F8;font-family:Consolas,Monaco,"Lucida Console"}pre code *{font-family:Consolas,Monaco,"Lucida Console"}.hll{background-color:#ffc}.c{color:#5F5A60;font-style:italic}.err{border:#B22518}.k{color:#CDA869}.cm{color:#5F5A60;font-style:italic}.cp{color:#5F5A60}.c1,.cs{color:#5F5A60;font-style:italic}.gd{background:#420E09}.ge{font-style:italic}.gr{background:#B22518}.gh{color:navy;font-weight:700}.gi{background:#253B22}.gp,.gs{font-weight:700}.gu{color:purple;font-weight:700}.kd{color:#e9df8f}.kp{color:#9B703F}.na{color:#F9EE98}.nb{color:#CDA869}.nc{color:#9B859D;font-weight:700}.no{color:#9B859D}.nd{color:#7587A6}.ni{color:#CF6A4C;font-weight:700}.nf{color:#9B703F;font-weight:700}.nn{color:#9B859D;font-weight:700}.nt{color:#CDA869;font-weight:700}.nv{color:#7587A6}.ow{color:#A2F;font-weight:700}.w{color:#141414}.mf,.mh,.mi,.mo{color:#CF6A4C}.sb,.sc{color:#8F9D6A}.sd{color:#8F9D6A;font-style:italic}.s2{color:#8F9D6A}.se{color:#F9EE98;font-weight:700}.sh{color:#8F9D6A}.si{color:#DAEFA3;font-weight:700}.sx{color:#8F9D6A}.sr{color:#E9C062}.s1{color:#8F9D6A}.ss{color:#CF6A4C}.bp{color:#0aa}.vc,.vg,.vi{color:#7587A6}.il{color:#099}
+@charset "UTF-8";
+/*------------------------------------*\
+    #SETTINGS
+    Global variables, config switches
+\*------------------------------------*/
+/*------------------------------------*\
+    #SETTINGS -> VARIABLES
+    Global variables
+\*------------------------------------*/
+/**
+ * Colors
+ */
+/**
+ * Font sizes (1 == 10px && 1rem)
+ */
+/**
+ * Line height
+ */
+/**
+ * Grid & Architecture
+ */
+/**
+ *  Helpers - functions found in _helpers.scss
+ * 
+ */
+/**
+ *  Objects - functions found in _objects.scss
+ *
+ */
+/*---Architecture---*/
+/*---Colors---*/
+/**
+ * Forms
+ */
+/**
+ * Breakpoints
+ */
+/*------------------------------------*\
+    #SETTINGS -> OPTIONS
+    Global options & config switches
+\*------------------------------------*/
+/*  Site wide options to turn on various functionality, modules and functons,
+  NOTE - Turning on all functions will result in more bloated code.
+  		You should only set those you plan to use to a true value.
+*/
+/*------------------------------------*\
+    #RESETS
+\*------------------------------------*/
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/*------------------------------------*\
+    #OBJECTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #TRUMPS
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS
+    Default mixins and functions
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS -> MIXINS
+    Default mixins
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS -> MIXINS -> GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS -> MIXINS -> HELPERS
+\*------------------------------------*/
+/*------------------------------------*\
+    #FLOATS & TEXT ALIGNMENT
+\*------------------------------------*/
+/*------------------------------------*\
+    #PUSH & SOFT CLASSES & REMOVE BORDER
+\*------------------------------------*/
+/*------------------------------------*\
+    #VISIBILITY
+\*------------------------------------*/
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS -> MIXINS -> TYPOGRAPHY
+\*------------------------------------*/
+/*------------------------------------*\
+    #TOOLS -> MIXINS -> COLUMNS
+\*------------------------------------*/
+/*------------------------------------*\
+    #GENERIC
+    Ground zero styles -- reset
+\*------------------------------------*/
+/*------------------------------------*\
+    #RESETS -> RESET
+\*------------------------------------*/
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+.cp_embed_iframe {
+  border: 1px solid #111;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:focus {
+  outline: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+}
+
+input,
+button {
+  line-height: normal;
+}
+
+select {
+  background: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: none;
+  padding: 10px 0 10px 10px;
+}
+
+figure {
+  margin: 0 0 20px 0;
+}
+figure a {
+  display: block;
+  max-width: 100%;
+}
+
+figcaption a {
+  display: inline;
+}
+
+a img {
+  border: none;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*------------------------------------*\
+    #BASE
+    Unclassed HTML elements & [type selectors]
+\*------------------------------------*/
+/*------------------------------------*\
+    #BASE -> TYPOGRAPHY
+    element, attribute & psuedo selectors
+\*------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 56%;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 54%;
+  }
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #444;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  margin: 15px 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 40px;
+  font-size: 4rem;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+    font-size: 3.2rem;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 27.5px;
+    font-size: 2.75rem;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 20.5px;
+    font-size: 2.05rem;
+  }
+}
+@media (max-width: 480px) {
+  h3 {
+    font-size: 19px;
+    font-size: 1.9rem;
+  }
+}
+
+figcaption {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+strong,
+a {
+  font-weight: 600;
+}
+
+strong {
+  color: #222;
+}
+
+q {
+  font-style: italic;
+}
+
+code {
+  color: #e84428;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: #45d296;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #27a36e;
+  text-decoration: none;
+}
+a:active {
+  outline: none;
+}
+
+blockquote {
+  position: relative;
+  left: -2rem;
+  max-width: 500px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  color: #919191;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+@media (max-width: 800px) {
+  blockquote {
+    left: 0;
+    margin-left: 3rem;
+  }
+}
+blockquote:before {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  bottom: 0;
+  width: 5px;
+  background: #ccc;
+  content: " ";
+}
+
+/*------------------------------------*\
+    #BASE -> SCAFFOLDING
+\*------------------------------------*/
+body:before {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  height: 5px;
+  background: #45d296;
+  content: " ";
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.site-wrap.site-padding {
+  max-width: 730px;
+  padding: 0 15px;
+}
+@media (max-width: 400px) {
+  .site-wrap.site-padding {
+    padding: 0 10px;
+  }
+}
+
+.clearfix:after,
+.inline-list--blocks:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul > li {
+  margin-bottom: 5px;
+}
+
+/*------------------------------------*\
+    #OBJECTS
+    Cosmetic design free patterns
+\*------------------------------------*/
+/*------------------------------------*\
+    #OBJECTS -> GENERIC
+\*------------------------------------*/
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> BORDER_RADIUS
+\*------------------------------------*/
+/**
+ * Used to add a border-radius to elements.
+ *
+ 
+	<div class="circle">
+		...
+	</div>
+
+	<div class="rounded">
+		...
+	</div>
+
+	<div class="rounded--lg">
+		...
+	</div>
+
+ */
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> COLUMNS
+\*------------------------------------*/
+/**
+ * Used to create newspaper like columns where
+ * the text flows from one columns to another.
+	
+  <div class="cols--two">
+      ...
+  </div>
+
+  <div class="four-cols two-cols--screen-sm one-col--screen-xs">
+  	...
+  </div>§
+
+*
+* Extend these objects in scss/custom
+*/
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> SECTION
+\*------------------------------------*/
+/**
+ * Adds padding top and bottom to give some breathing space
+ * between sections -- usually used on the section tag but can be
+ * any block element such as a div.
+
+ <section class="section">
+ 	...
+ </section>
+
+ *
+ * Extend these objects in scss/custom
+ */
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section--alpha {
+  position: relative;
+  padding-bottom: 0;
+}
+.section--alpha:before {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ccc;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f0f0f0), color-stop(20%, #ccc), color-stop(80%, #ccc), to(#f0f0f0));
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #ccc 20%, #ccc 80%, #f0f0f0);
+  background-image: linear-gradient(to right, #f0f0f0, #ccc 20%, #ccc 80%, #f0f0f0);
+  content: " ";
+}
+
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> ISLAND
+\*------------------------------------*/
+/**
+ * Defines an area of boxed off content with padding, the full-bleed modifier that can be added to children
+ * use negative margin to make them occupy the full width of the island.
+ * The half modifier creates boxed off content with half of the padding.
+	
+	<div class="island">
+		...
+	</div>
+
+
+	<div class="island island--half">
+		...
+	</div>
+
+
+	<div class="island">
+		<div class="island__full-bleed">
+			...
+		</div>
+	</div>
+
+
+	<div class="island island--half">
+		<div class="island--half__full-bleed">
+			...
+		</div>
+	</div>
+
+
+
+*/
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> DISPLAY TABLE
+\*------------------------------------*/
+/**
+ *
+ * The display table object is used for vertically
+ * aligning content like text to the center of
+ * the parent block
+ *
+
+
+	<div class="table--block">
+		<div class="table__cell">
+			...
+		</div>
+	</div>
+
+
+
+	 where we want a fluid column and a fixed column, fluid takes up remaining space
+	 left over from fixed width column.
+	 
+	<div class="table--block">
+		<div class="table__cell table__cell--full">
+			<input type="email" placeholder="E-post">
+		</div>
+		<div class="table__cell">
+			<button type="submit" class="btn">Skicka</button>
+		</div>
+	</div>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> MEDIA BLOCK
+\*------------------------------------*/
+/*
+ * Place any image like content- and text-like content side-by-side
+
+	<div class="media-block">
+		<div class="media-block__component">
+			...
+		</div>
+		<div class="media-block__body">
+			...
+		</div>
+	</div>
+
+
+
+	Component to the right:
+
+	<div class="media-block">
+		<div class="media-block__component--right">
+			...
+		</div>
+		<div class="media-block__body">
+			...
+		</div>
+	</div>
+	
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> UI LINK
+\*------------------------------------*/
+/*
+ * removes all link styling including hover 
+ * states, useful for linked blocks of elements
+  where the block changes state rather than the text.
+
+	<a href="#" class="ui-link">
+		<article>
+			<h1>...</h1>
+			<p>...</p>
+		</article>
+	</a>
+
+ /*
+  * Extend these objects in scss/custom
+  */
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> BARE LINK
+\*------------------------------------*/
+/**
+ * Used to remove default styling of link, inherits
+ * it's parent's text color and on hover adds an underline.
+ 
+	<a href="#" class="bare-link">...</a>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> VIDEO WRAPPER
+\*------------------------------------*/
+/**
+ * used to wrap around a video such as vimeo and youtube that is
+ * embedded via an iframe.  This wrapper will ensure the
+ * video is resonsive and maintains 16:9 aspect ratio.
+	
+  <div class="cols--two">
+      ...
+  </div>
+
+*
+* Extend these objects in scss/custom
+*/
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> FLAG OBJECT
+\*------------------------------------*/
+/* The flag object allows you to display texttual contnent.
+	and image like content side by side, with tha addition
+	of being able to vertically align them.
+
+/*
+Vertically aligned to the top
+<div class="flag">
+	<div class="flag__component">
+		<img src="http://placehold.it/270x270" alt="">
+	</div>
+	<div class="flag__body flag--top">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, dignissimos?</p>
+	</div>
+</div>
+*/
+/*
+Vertically aligned to the middle
+<div class="flag">
+	<div class="flag__component">
+		<img src="http://placehold.it/270x270" alt="">
+	</div>
+	<div class="flag__body">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, dignissimos?</p>
+	</div>
+</div>
+*/
+/*
+Vertically aligned to the bottom
+<div class="flag">
+	<div class="flag__component">
+		<img src="http://placehold.it/270x270" alt="">
+	</div>
+	<div class="flag__body flag--bottom">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, dignissimos?</p>
+	</div>
+</div>
+*/
+.flag {
+  display: table;
+  width: 100%;
+}
+.flag__component, .flag__body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.flag__component.flag--top, .flag__body.flag--top {
+  vertical-align: top;
+}
+.flag__component.flag--bottom, .flag__body.flag--bottom {
+  vertical-align: bottom;
+}
+.flag__component > img {
+  display: block;
+  max-width: none;
+}
+.flag__body {
+  width: 100%;
+}
+
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> ARTICLE
+\*------------------------------------*/
+/**
+ * Used on large(ish) articles where you get an image either to the left
+ * or the right that is 50% wide then you have text that wraps around the image
+ * at medium screen sizes.
+
+	<article class="article clearfix">
+		<figure class="article__img article__img--left lazy-load-wrap">
+			<img class="js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+				data-lazy-src="http://placehold.it/570x400"
+				width="570" height="400">
+		</figure>
+		<div class="article__body">
+			<header>
+				<h1 class="flush--top">Om oss</h1>
+			</header>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue neque sed fringilla condimentum. Ut adipiscing lectus pretium mattis ornare. Sed eu sagittis sem, ut aliquet tellus. Cras vestibulum libero enim, sed tempor quam aliquet a. Praesent dictum congue rhoncus. </p>
+			<p>Ut bibendum viverra turpis cursus varius. Ut sit amet tempor lectus. Aliquam quis eleifend justo, sed tincidunt purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget blandit ipsum. In risus ante, venenatis eget auctor eget, ultrices ut enim. Pellentesque ac ante a dolor laoreet aliquet.</p>
+		</div>
+	</article>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> PARAGRAPH GROUP
+\*------------------------------------*/
+/**
+ * removes margin bottom for last paragraph in the group.
+ *
+
+	<div class="paragraph-group">
+		<p>...</p>
+		<p>...</p>
+	</div>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> GENERIC -> TRUNCATION
+\*------------------------------------*/
+/**
+ *
+ *
+ *	Truncates a single line of text so text that would otherwise overflow is replaced 
+ *	with elipsis at the point of overflow
+
+ *	Example: 
+  <div class="tuncate">
+	...
+  </div>
+ */
+/*------------------------------------*\
+    #OBJECTS -> LISTS
+    Cosmetic design free patterns (LISTS)
+\*------------------------------------*/
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> BARE LIST
+\*------------------------------------*/
+/**
+ *
+ * Removes all margins, padding and list styling from a list.
+ *
+	<ul class="bare-list">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+
+ *
+ * Extend these objects in scss/custom
+ */
+.bare-list,
+.inline-list,
+.nav--center,
+.ui-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bare-list--spaced > li {
+  margin-top: 10px;
+}
+.bare-list--spaced > li:first-child {
+  margin-top: 0;
+}
+
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> INLINE LIST
+\*------------------------------------*/
+/**
+ *
+ * Throws a list inline, extends bare-list.
+ *
+
+	<ul class="inline-list">
+		<li>...</li>
+		<li>...</li>
+	</ul>
+
+
+	if you want some whitespace between the blocks
+	<ul class="inline-list inline-list--spaced">
+		<li>...</li>
+		<li>...</li>
+	</ul>
+
+
+	if you require zero whitespace then use the block-modifier
+	<ul class="inline-list inline-list--blocks">
+		<li>...</li>
+		<li>...</li>
+	</ul>
+
+
+
+
+ *
+ * Extend these objects in scss/custom
+ */
+.inline-list > li,
+.nav--center > li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.inline-list--spaced > li {
+  margin-left: 10px;
+}
+.inline-list--spaced > li:first-child {
+  margin-left: 0;
+}
+.inline-list--blocks > li {
+  display: block;
+  float: left;
+}
+
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> SPLIT
+\*------------------------------------*/
+/**
+ * Simple split item for creating two elements floated 
+   away from one another, on left one right.  Often used on
+   definition lists.
+
+	<dl class="split">
+		<dt class="split__title">
+			...
+		</dt>
+		<dd>
+			...
+		</dd>
+	</dl>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> TOUCH FRIENDLY LINK LIST
+\*------------------------------------*/
+/**
+ * Adds vertical spacing between link lists 
+ 	(or other classed items) on small screens.
+ 
+	<ul class="bare-list touch-friendly">
+		<li><a href="">...</a></li>
+		<li><a href="">...</a></li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> LISTS -> UI LIST
+\*------------------------------------*/
+/**
+ *
+ * Create blocky lists of content that are border separated.
+ *
+
+ *
+ * Extend these objects in scss/custom
+ */
+.ui-list:before {
+  bottom: 0;
+}
+.ui-list__item {
+  padding: 3rem 0;
+}
+.ui-list__item:before {
+  top: 0;
+}
+
+.ui-list,
+.ui-list__item {
+  position: relative;
+}
+.ui-list:before,
+.ui-list__item:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ccc;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f0f0f0), color-stop(20%, #ccc), color-stop(80%, #ccc), to(#f0f0f0));
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #ccc 20%, #ccc 80%, #f0f0f0);
+  background-image: linear-gradient(to right, #f0f0f0, #ccc 20%, #ccc 80%, #f0f0f0);
+  content: " ";
+}
+
+/*------------------------------------*\
+    #OBJECTS -> NAVS
+    Cosmetic design free patterns (NAVS)
+\*------------------------------------*/
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV
+\*------------------------------------*/
+/**
+ *
+ * Throws the list into horizontal alignment,
+ * extends inline-list.
+ *
+	<ul class="nav">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+	if you want a nav with zero whitespace between elements
+	<ul class="nav nav--block">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> BREADCRUMBS
+\*------------------------------------*/
+/**
+ *
+ * Breadcrumbs object, extends nav
+ * 
+	<ol class="nav nav--breadcrumb">
+		<li><a href="#">Foo</a></li>
+		<li><a href="#">Bar</a></li>
+		<li><a href="#">Baz</a></li>
+	</ol>
+
+
+
+ /**
+  *
+  * Custom breadcrumbs
+
+	<ol class="nav nav--breadcrumb">
+		<li><a href="#">Foo</a></li>
+		<li data-breadcrumb="/"><a href="#">Bar</a></li>
+		<li data-breadcrumb="/"><a href="#">Baz</a></li>
+	</ol>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV CENTER
+\*------------------------------------*/
+/**
+ *
+ * centers the nav horizontally.
+ *
+	<ul class="nav nav--center">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+.nav--center {
+  text-align: center;
+}
+
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV FIT
+\*------------------------------------*/
+/**
+ *
+ * forces the nav to fit the width of the container,
+ * dividing each item equally.
+ *
+	<ul class="nav nav--fit">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+	if nav contains bare-links
+
+	ul class="nav nav--fit nav--fit--bare-links">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #OBJECTS -> NAVS -> NAV STACKED
+\*------------------------------------*/
+/**
+ *
+ * Throws the nav into vertical mode.
+ *
+	<ul class="nav nav--stacked">
+		<li>...</li>
+		<li>..</li>
+	</ul>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #COMPONENTS
+    Designed components, chunks of UI
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS -> TYPOGRAPHY
+    class selectors
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS --> FORMS
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> FORM RESET
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> BLOCK FORM
+\*------------------------------------*/
+/**
+ * Makes form elements full width of their containers.
+ *
+
+	<form class="block-form" action="contact-thanks" method="post">
+		<input type="text" class="text-input" name="" placeholder="">
+		<button type="submit" class="button-input">skicka</button>
+	</form>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> CHECK LIST
+\*------------------------------------*/
+/**
+ * Group checkboxes and radio buttons neatly
+ *
+	
+    <ul class="check-list">
+        <li>
+            <input type="checkbox" id="chk1"> 
+            <label for="chk1">Chk1</label>
+        </li>
+        <li>
+            <input type="checkbox" id="chk2"> 
+            <label for="chk2">Chk2</label>
+        </li>
+        <li>
+            <input type="checkbox" id="chk3"> 
+            <label for="chk3">Chk3</label>
+        </li>
+    </ul>
+
+*
+* Extend these objects in scss/custom
+*/
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> TEXT INPUT
+\*------------------------------------*/
+/**
+ * Should be used on any kind of input that the user
+ * enters textual data, this is used instead of type 
+ * selector.
+    
+    <form action="" method="">
+        <input type="text" class="text-input" name="">
+        <textarea name="message" class="text-input text-input--textarea"></textarea>
+    </form>
+
+*
+* Extend these objects in scss/custom
+*/
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> INPUT ADDON
+\*------------------------------------*/
+/*  
+
+    // Add overlaying the input and to the left.
+    <div class="addon-group addon-group--inside addon-group--inside--left">
+        <input type="text" class="text-input addon-group--inside__input">
+        <button type="submit" class="addon-group--inside__addon">S</button>
+    </div>
+
+
+
+    Addon outside and to the right of the input element
+
+    <div class="addon-group addon-group--outside addon-group--outside--right">
+        <input type="text" class="text-input addon-group--outside__input">
+        <button type="submit" class="addon-group--outside__addon">S</button>
+    </div>
+
+
+ */
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> FILE UPLOAD
+\*------------------------------------*/
+/*Allows for styling of file upload element by visually hiding the input and styling the label
+ to appear as though that is the input.
+ Example:
+ 
+<div class="file-upload">
+    <input type="file" class="file-upload__file js-file-upload__file">
+    <label class="file-upload__label js-file-upload__label">
+</div>
+ */
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> STYLED SELECT
+\*------------------------------------*/
+/*
+   Allow for a select box to appear visually styled by styling an underlying label and setting the opacity of the
+   select box to zero.  Requires class of .js-select on parent element to pass the selected value into the label.
+   Example:
+    <div class="select-wrap js-select">
+        <label class="select-wrap__label"></label>
+        <select class="select-wrap__select">
+            <option selected disabled>select option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+    </div>
+*/
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> REAL TIME VALIDATION
+\*------------------------------------*/
+/**
+ * Gives realtime validation as the user fills in the form, you need to ensure
+ * that js-reatime-validate.js has been activated for this to work.
+ *
+
+    <form action="contact-thanks" class="js-realtime-validate" autocomplete="off">
+        <input type="date" class="text-input" data-min-length="10" name="name">
+        <input type="email" class="text-input" data-min-length="10" name="email" required>
+        <input type="tel" class="text-input" name="telephone">
+        <select class="js-input-text">
+            <option value="" selected disabled></option>
+            <option value="1">1</option>
+            <option value="1">1</option>
+            <option value="1">1</option>
+        </select>
+        <textarea name="message" class="js-input-text text-input"></textarea>
+        <button type="submit" class="btn btn--brand btn--lg">Skicka</button>
+    </form>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> PLACEHOLDER CONTROL
+\*------------------------------------*/
+/**
+ * Gives an informative placeholder even while the user is focused and typing within the input field.
+ *
+
+    <form action="contact-thanks" method="post">
+        <ul class="bare-list bare-list--spaced">
+            <li class="placeholder-control js-placeholder-control">
+                <input type="text" class="text-input placeholder-control__input" name="name" id="name" placeholder="Namn">
+                <label class="placeholder-control__label" for="name">Namn</label>
+            </li>
+            <li class="placeholder-control js-placeholder-control">
+                <input type="email" class="text-input placeholder-control__input" name="email" id="email" placeholder="E-post">
+                <label class="placeholder-control__label" for="email">E.post</label>
+            </li>
+        </ul>
+    </form>
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #COMPONENTS -> FORMS -> GENERAL
+    Any form styling that doesn't fit with
+    a particular component.
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS --> NAVS
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS -> NAVS -> PAGINATION
+\*------------------------------------*/
+/**
+ *
+ * Pagination object, extends nav
+ * some funky commenting is required to remove whitespace from
+ * around the inline-blocks.
+ *
+	<div class="text-center">
+		<ol class="nav nav--pagination">
+			<li class="pagination__first"><a href="#">First</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li class="pagination__last"><a href="#">Last</a></li>
+		</ol>
+	</div>
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #COMPONENTS -> NAVS -> NAVBAR
+\*------------------------------------*/
+/*
+ * The navbar is a full width bar that contains navigation,
+ * It relies on the jQuery file navbar.js located in js/source/scripts/components
+ * Extends the nav object,
+ * Auto collapses when the items inside are too wide of the the container,
+ * Supports sub navs in both expanded and collapsed state.
+
+
+
+
+	---- EXAMPLES ----
+
+
+	Navbar containing nav only, when collapsed a bar appears
+	that allows the user to toggle it's visibility 
+
+	<div class="navbar-wrap js-navbar-wrap">
+		<nav class="navbar clearfix js-navbar js-nav-parent">
+			<div class="site-wrap">
+				<div class=" navbar__toggle navbar__toggle--block js-toggle-nav">
+					NAVIGATION
+				</div>
+				<ul class="navbar__nav float-right js-navbar__nav">
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item5</a></li>
+					<li><a href="#">item5</a></li>
+				</ul>
+				
+			</div>
+		</nav>
+	</div>
+
+
+
+
+	Navbar that can also contain non-nav items, when collapsed 
+	a toggle button appears.
+
+	<div class="navbar-wrap js-navbar-wrap">
+		<nav class="navbar clearfix js-navbar js-nav-parent>
+			<div class="site-wrap">
+				<div class=" navbar__toggle navbar__toggle--btn js-toggle-nav">
+					<span class="burger burger-top"></span>
+                    <span class="burger burger-middle"></span>
+                    <span class="burger burger-bottom"></span>
+				</div>
+				<div class="navbar__non-nav-content navbar__non-nav-content--first js-non-nav-content">
+					Logo
+				</div>
+				
+				<ul class="navbar__nav float-right js-navbar__nav">
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item5</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+
+
+
+	Navbar that can also contain non-nav items, when collapsed 
+	a toggle button appears.  This example also contains a sub nav.
+
+	<div class="navbar-wrap js-navbar-wrap js-sticky-parent">
+		<nav class="navbar clearfix js-navbar js-nav-parent js-sticky" data-sticky-offset="45">
+			<div class="site-wrap">
+				<div class=" navbar__toggle navbar__toggle--btn js-toggle-nav">
+					<span class="burger burger-top"></span>
+                    <span class="burger burger-middle"></span>
+                    <span class="burger burger-bottom"></span>
+				</div>
+				<div class="navbar__non-nav-content navbar__non-nav-content--first js-non-nav-content">
+					Logo
+				</div>
+				
+				<ul class="navbar__nav float-right js-navbar__nav">
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li class="menu-item-has-children flyout js-nav-parent">
+						<a href="#">item4
+						</a>
+						<ul class="sub-menu">
+							<li><a href="#">item155</a></li>
+							<li><a href="#">item255</a></li>
+							<li><a href="#">item355</a></li>
+						</ul>
+					</li>
+					<li><a href="#">item1</a></li>
+					<li><a href="#">item2</a></li>
+					<li><a href="#">item3</a></li>
+					<li><a href="#">item4</a></li>
+					<li><a href="#">item5</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+
+
+
+ * Extend this module in objects.scss (or header.scss if 
+ 	navbar is in the sites header)
+
+
+
+*/
+/*------------------------------------*\
+    #COMPONENTS -> NAVS -> SITE-NAV
+\*------------------------------------*/
+.site-nav li {
+  margin: 0 7.5px;
+}
+
+/*------------------------------------*\
+    #COMPONENTS -> NAVS -> GENERAL
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS --> GENERIC
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> STEPPER BOX
+\*------------------------------------*/
+/* NOTE This is to be used in conjunction with stepper-control.js
+
+    Consists of a text-box with 2 controls to increment or decrement
+    the number in the text-box.
+
+    <ul class="inline-list js-stepper-qty-wrap">
+        <li class="stepper-box">
+            <input type="number" class="stepper-box__text-input js-stepper-qty-total" value="1">
+        </li>
+        <li class="stepper-box stepper-box--alpha js-stepper-qty-increase">+</li>
+        <li class="stepper-box stepper-box--alpha js-stepper-qty-decrease">-</li>
+    </ul>
+
+*/
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> LAZY-LOAD
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> BUTTONS
+\*------------------------------------*/
+/**
+ * Based object for all buttons, not much
+ * in here as buttons generally vary from
+ * project to project.
+ *
+
+ 	<a href="#" class="btn">...</a>
+
+ *
+ * Extend these objecrs in scss/custom
+ */
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> SVG ICONS
+\*------------------------------------*/
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> FLYOUTS
+\*------------------------------------*/
+/*------------------------------------*\
+    #FLYOUT HOVER
+\*------------------------------------*/
+/**
+ * Flyout is a piece of content that wil flyout when its parent 
+ * element is hovered.
+ *
+ * You can specify where the flyout appears in relation to
+ * it's parent, the exmaple below positions the flyout at the
+ * bottom of it's parent.
+
+ <div class="flyout">
+	Parent
+	<div class="flyout__content flyout__content--bottom">
+		child
+	</div>
+</div>
+
+
+
+Bottom right::
+
+<div class="flyout">
+	Parent
+	<div class="flyout__content flyout__content--bottom--right">
+		child
+	</div>
+</div>
+
+
+*/
+/*------------------------------------*\
+    #FLYOUT CLICK
+\*------------------------------------*/
+/**
+ * Flyout click is a piece of content that flyout when a sibling 
+ * toggle element is clicked.
+ *
+
+ * REQUIRES JAVASCRIPT:
+ 		the js- prefixed classes on the example below
+ 		are required for the flyout to work on the click event,
+ 		clicking any part of the document besides the flyout will
+ 		force the flyout to close.
+ 		
+ 		NOTE -- the number at the endo of
+ 		js-ui-popup-wrap[] is the unique index of the flyout on the page.
+ 		if you add more than one click enabled flyout you need to increase
+ 		this index. -- make not of any others that may already be in the project
+ 		by doing a search within the .php / .html files.
+ *		
+
+
+<div class="flyout-click js-ui-popup-wrap0"> 
+	<div class="flyout__toggle js-ui-popup-toggle">
+		toggle_text
+	</div>
+	<div class="flyout__content flyout__content--bottom">
+		...
+	</div>
+</div>
+
+
+*/
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> SITE MODULE
+\*------------------------------------*/
+/**
+ *
+ * Site modules are goups of modules that are characterised
+ * by an image at the top and some textual content underneath.
+ * 
+ *
+ *
+
+	Generic site modules
+	<div class="site-modules">
+		<div class="row">
+			<?php for ($i=0; $i<8; $i++) : ?>
+				<div class="col-sm-3 col-xs-6 col-xxs-12">
+					<div class="site-modules__module">
+						<div class="site-modules__img lazy-load-wrap">
+							<img class="js-multi-img-src js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+								data-lg-src="http://placehold.it/270x270"
+								data-md-src="http://placehold.it/270x270"
+								data-sm-src="http://placehold.it/100x100"
+								width="270" height="270"
+								>
+						</div>
+						<div class="site-modules__content">
+							Foo
+						</div>
+					</div>
+				</div>
+			<?php endfor; ?>
+		</div>
+		<div class="text-center site-modules__btn">
+			<a href="#" class="btn btn--brand btn--md">Läs in fler</a>
+		</div>
+	</div>
+
+
+	Site modules that get thrown into horizontal mode
+	on viewports less than $screen-xs.
+
+	<div class="site-modules site-modules--horizontal--screen-xs">
+		<div class="row">
+			<?php for ($i=0; $i<8; $i++) : ?>
+				<div class="col-sm-3 col-xs-6 col-xxs-12">
+					<div class="site-modules__module site-modules--horizontal--screen-xs__module">
+						<div class="site-modules__img site-modules--horizontal--screen-xs__img lazy-load-wrap">
+							<img class="js-multi-img-src js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+								data-lg-src="http://placehold.it/270x270"
+								data-md-src="http://placehold.it/270x270"
+								data-sm-src="http://placehold.it/100x100"
+								width="270" height="270"
+								>
+						</div>
+						<div class="site-modules__content site-modules--horizontal--screen-xs__content">
+							Foo
+						</div>
+					</div>
+				</div>
+			<?php endfor; ?>
+		</div>
+		<div class="text-center site-modules__btn">
+			<a href="#" class="btn btn--brand btn--md">Läs in fler</a>
+		</div>
+	</div>
+
+
+	Site modules that get thrown into horizontal mode
+	on viewports less than $screen-sm
+
+	<div class="site-modules site-modules--horizontal--screen-sm">
+		<div class="row">
+			<?php for ($i=0; $i<3; $i++) : ?>
+				<div class="col-sm-4 col-xs-12">
+					<div class="site-modules__module site-modules--horizontal--screen-sm__module">
+						<div class="site-modules__img site-modules--horizontal--screen-sm__img lazy-load-wrap">
+							<img class="js-multi-img-src js-lazy-load" src="<?php bloginfo('template_directory'); ?>/img/build/media/blank.gif" alt=""
+								data-lg-src="http://placehold.it/270x270"
+								data-md-src="http://placehold.it/150x150"
+								data-sm-src="http://placehold.it/100x100"
+								width="270" height="270"
+								>
+						</div>
+						<div class="site-modules__content site-modules--horizontal--screen-sm__content">
+							Foo
+						</div>
+					</div>
+				</div>
+			<?php endfor; ?>
+		</div>
+		<div class="text-center site-modules__btn">
+			<a href="#" class="btn btn--brand btn--md">Läs in fler</a>
+		</div>
+	</div>
+
+
+
+
+ * Can change mobile text vertical alignment from the default (center) to
+ * the top by appending the class "site-modules__content--top" to the
+ * "site-modules__content" element.
+
+ *
+ * Extend these objects in scss/custom
+ */
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> SITE FOOTER
+\*------------------------------------*/
+.site-footer {
+  text-align: center;
+  background: #444;
+  color: #ccc;
+}
+.site-footer a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> SITE HEADER
+\*------------------------------------*/
+.site-header {
+  text-align: center;
+}
+.site-header__logo {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #444;
+}
+
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> POST
+\*------------------------------------*/
+.post__title {
+  display: inline;
+  font-weight: 400;
+  margin: 0;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+@media (max-width: 768px) {
+  .post__title {
+    font-size: 20.5px;
+    font-size: 2.05rem;
+  }
+}
+@media (max-width: 480px) {
+  .post__title {
+    font-size: 19px;
+    font-size: 1.9rem;
+  }
+}
+.post__date {
+  padding-left: 25px;
+  white-space: nowrap;
+  color: #aaa;
+}
+
+.single-post__header {
+  margin-bottom: 15px;
+}
+.single-post__title {
+  margin-bottom: 0;
+}
+.single-post__date {
+  color: #aaa;
+}
+
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> BOX LINK
+\*------------------------------------*/
+.box-link {
+  padding: 5px 15px;
+  border: 2px solid transparent;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+.box-link:hover {
+  border-color: #45d296;
+  color: #45d296;
+}
+.box-link.active {
+  position: relative;
+}
+.box-link.active:before {
+  position: absolute;
+  bottom: -2px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background: #45d296;
+  content: " ";
+}
+
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> GENERAL
+    // user styles, that don't fit intp any particular component.
+\*------------------------------------*/
+.pagination,
+.social {
+  text-align: center;
+}
+
+.social__item {
+  display: inline-block;
+}
+
+/*------------------------------------*\
+    #COMPONENTS -> GENERIC -> SHAME
+\*------------------------------------*/
+/*------------------------------------*\
+    #TRUMPS
+    Helpers & overrides
+\*------------------------------------*/
+/*------------------------------------*\
+    #TRUMPS -> FAKE LINK
+\*------------------------------------*/
+/**
+ * iOS seems to like the idea of automatically adding links to numbers it
+  thinks are telephone numbers, which will of course is undesireable.  This will
+  make the 'link' look and act like default text and prevent apple adding a link around it.
+
+	<a href="#" onclick="return false;" class="fake-link">55 66 40-75 72</a>
+*/
+/*------------------------------------*\
+    #TRUMPS -> HELPERS
+\*------------------------------------*/
+/* 	Most of these have !important added, being helpers 
+	they should almost always ovveride any other conflicting styling.
+*/
+.hard--bottom {
+  padding-bottom: 0 !important;
+}
+
+.flush {
+  margin: 0 !important;
+}
+
+.hard--top {
+  padding-top: 0 !important;
+}
+
+/*------------------------------------*\
+    #TRUMPS GENERAL
+\*------------------------------------*/
+pre {
+  padding: 15px;
+  overflow-y: auto;
+  white-space: pre;
+  word-wrap: normal;
+  border-left-width: 6px;
+  background: #272822;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+pre code {
+  color: #F8F8F8;
+  font-family: Consolas, Monaco,"Lucida Console";
+}
+
+pre code * {
+  font-family: Consolas, Monaco,"Lucida Console";
+}
+
+.hll {
+  background-color: #ffffcc;
+}
+
+.c {
+  color: #5F5A60;
+  font-style: italic;
+}
+
+/* Comment */
+.err {
+  border: #B22518;
+}
+
+/* Error */
+.k {
+  color: #CDA869;
+}
+
+/* Keyword */
+.cm {
+  color: #5F5A60;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+.cp {
+  color: #5F5A60;
+}
+
+/* Comment.Preproc */
+.c1 {
+  color: #5F5A60;
+  font-style: italic;
+}
+
+/* Comment.Single */
+.cs {
+  color: #5F5A60;
+  font-style: italic;
+}
+
+/* Comment.Special */
+.gd {
+  background: #420E09;
+}
+
+/* Generic.Deleted */
+.ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.gr {
+  background: #B22518;
+}
+
+/* Generic.Error */
+.gh {
+  color: #000080;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+.gi {
+  background: #253B22;
+}
+
+/* Generic.Inserted */
+/* Generic.Output */
+.gp {
+  font-weight: bold;
+}
+
+/* Generic.Prompt */
+.gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+/* Generic.Traceback */
+/* Keyword.Constant */
+.kd {
+  color: #e9df8f;
+}
+
+/* Keyword.Declaration */
+/* Keyword.Namespace */
+.kp {
+  color: #9B703F;
+}
+
+/* Keyword.Pseudo */
+/* Keyword.Reserved */
+/* Keyword.Type */
+/* Literal.Number */
+/* Literal.String */
+.na {
+  color: #F9EE98;
+}
+
+/* Name.Attribute */
+.nb {
+  color: #CDA869;
+}
+
+/* Name.Builtin */
+.nc {
+  color: #9B859D;
+  font-weight: bold;
+}
+
+/* Name.Class */
+.no {
+  color: #9B859D;
+}
+
+/* Name.Constant */
+.nd {
+  color: #7587A6;
+}
+
+/* Name.Decorator */
+.ni {
+  color: #CF6A4C;
+  font-weight: bold;
+}
+
+/* Name.Entity */
+.nf {
+  color: #9B703F;
+  font-weight: bold;
+}
+
+/* Name.Function */
+.nn {
+  color: #9B859D;
+  font-weight: bold;
+}
+
+/* Name.Namespace */
+.nt {
+  color: #CDA869;
+  font-weight: bold;
+}
+
+/* Name.Tag */
+.nv {
+  color: #7587A6;
+}
+
+/* Name.Variable */
+.ow {
+  color: #AA22FF;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+.w {
+  color: #141414;
+}
+
+/* Text.Whitespace */
+.mf {
+  color: #CF6A4C;
+}
+
+/* Literal.Number.Float */
+.mh {
+  color: #CF6A4C;
+}
+
+/* Literal.Number.Hex */
+.mi {
+  color: #CF6A4C;
+}
+
+/* Literal.Number.Integer */
+.mo {
+  color: #CF6A4C;
+}
+
+/* Literal.Number.Oct */
+.sb {
+  color: #8F9D6A;
+}
+
+/* Literal.String.Backtick */
+.sc {
+  color: #8F9D6A;
+}
+
+/* Literal.String.Char */
+.sd {
+  color: #8F9D6A;
+  font-style: italic;
+}
+
+/* Literal.String.Doc */
+.s2 {
+  color: #8F9D6A;
+}
+
+/* Literal.String.Double */
+.se {
+  color: #F9EE98;
+  font-weight: bold;
+}
+
+/* Literal.String.Escape */
+.sh {
+  color: #8F9D6A;
+}
+
+/* Literal.String.Heredoc */
+.si {
+  color: #DAEFA3;
+  font-weight: bold;
+}
+
+/* Literal.String.Interpol */
+.sx {
+  color: #8F9D6A;
+}
+
+/* Literal.String.Other */
+.sr {
+  color: #E9C062;
+}
+
+/* Literal.String.Regex */
+.s1 {
+  color: #8F9D6A;
+}
+
+/* Literal.String.Single */
+.ss {
+  color: #CF6A4C;
+}
+
+/* Literal.String.Symbol */
+.bp {
+  color: #00aaaa;
+}
+
+/* Name.Builtin.Pseudo */
+.vc {
+  color: #7587A6;
+}
+
+/* Name.Variable.Class */
+.vg {
+  color: #7587A6;
+}
+
+/* Name.Variable.Global */
+.vi {
+  color: #7587A6;
+}
+
+/* Name.Variable.Instance */
+.il {
+  color: #009999;
+}
+
+/* Literal.Number.Integer.Long */
+
+/*# sourceMappingURL=style.css.map */
