@@ -9,7 +9,7 @@ category: frontend
 
     
 The workflow of a modern front-end developer has changed **vastly** in the past four or five years.  The days of using a cumbersome IDE such as Dreamweaver and
-are drag n drop solutions are (thankfully) long gone.  
+drag n drop solutions are (thankfully) long gone.  
 We've got a vast array of tools that allow us to build well organized, 
 scalable web applications.  
 In this post I shall give an overview of the tools that I currently use in my
@@ -20,22 +20,22 @@ This is a highly opinionated overview of what works well for me, it's highly lik
 &nbsp;
 
 ##Sass
-Sass is a CSS preprocessor, a CSS preprocessor allows you to write your CSS in  
+Sass is a CSS preprocessor. A CSS preprocessor allows you to write your CSS in  
 a more programmatic manner, it allows for things like variables, mixins,
 functions, loops and other features you typically get from a programming
-language.  One of it's best features is the ability to separate your code into separate files which then are imported into the master file upon compilation.  The fact we can now have modularity, mixins and variables allows us to keep our code much dryer than was possible with plain CSS.
+language.  One of it's best features is the ability to structure your code into separate files which are then imported into the master file upon compilation.  The fact we can now have modularity, mixins and variables allows us to keep our code much dryer, more modular than was possible with plain CSS.  This leads to few bugs and code that can easily scale.
 
 Your Sass code is compiled into CSS using a Ruby compiler (Although there's alternatives now such as Libsass written in C++) [Hugo Giraudel's blog](http://hugogiraudel.com/blog/) is a great place to see the full capabilities of Sass.
 
-In my workflow I have my Sass compilation handled in my task runner (Gulp) which I shall talk about later in this post.
+In my workflow I have my Sass compilation handled by my task runner (Gulp) which I shall talk about later in this post.
 
 Another point is post-processors as a part of the build process.  A post processor will parse a and process a CSS file and perform tasks.  
-I use [Autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) to handle all my vendor prefixes it's something that I no longer even have to think about.  I also use a CSS minifier as part of my post-processing.  I will talk more about how all this fits together when I talk about
+I use [Autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) to handle all my vendor prefixes it's something that I no longer even have to think about.  I also use a CSS minifier as part of my post-processing.  I will talk more about how all this fits together when I talk about [Automated task runners](#task-runners)
 
 &nbsp;
 
 ##Emmet
-Emmet, originally called Zen coding is a plugin that will work on all modern IDEs / text editors that will vastly speed up your ability to write HTML and CSS/Sass.  In HTML it's syntax sort of mimmics that of CSS.  For example if I wanted to create an nav element I could write this:    
+Emmet, originally called Zen coding is a plugin that will work on all modern IDEs / text editors that will vastly speed up your ability to write HTML and CSS/Sass.  In HTML the syntax sort of mimics that of CSS.  For example if I wanted to create an navigation list component I could write this:    
 `nav.site-nav>ul.bare-list>li*4>a`  
 and then hit tab. Which will produce:
 {% highlight html %}
@@ -56,7 +56,7 @@ The [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/) is a good 
 &nbsp;
 
 ##IDE's &amp; text editors
-Honestly, in web development there is no real need for a weighty IDE environment.  A text editor will do just fine.  The most popular right now are Sublime Text 3, Vim, Emacs and Atom.  
+Honestly, in front-end development there is no real need for a weighty IDE environment.  A text editor will do just fine.  The most popular right now are Sublime Text 3, Vim, Emacs and Atom.  There are some IDE's that are used and are still very good - one of those is [webstorm](https://www.jetbrains.com/webstorm/).
 I personally use [Sublime text 3](http://www.sublimetext.com/3), out of the box it's very simple but has an incredible ecosystem of plugins and is highly customizable.  With it's well thought out keyboard shortcuts and when combined with Emmet you can write and edit code **blazingly fast**
 
 Here's some plugins that I use with Sublime text 3  
@@ -69,19 +69,20 @@ And my [user preferences JSON file](https://github.com/rbrtsmith/Sublime-prefere
 
 When I'm working in terminal - I use VIM, which is installed by default on every Mac & Unix based machine.  My skills with VIM are limited at best, but over time they'll improve.
 
+Ultimately use the text editor / IDE that you feel most comfortable with, but don't be afraid to try alternatives once in a while!
 &nbsp;
 
 ##Terminal
-With increasing numbers of tools being built specifically for the command line, not to mention using it ()once you know how) is much faster than clicking around with a mouse in a GUI.  There's no getting away from it, knowing the terminal will make you a far more productive developer.  
-Like Emmet I learnt with a cheatsheet for a few basic commands for move around the filesystem, I still only really know the basics, but for web development that's all you need to know.
+With a increasing array of tools being built specifically for the command line and the fact that it's much faster than clicking around with a mouse inside of a GUI making it an essential tool for any productive developer.
+Like Emmet I learnt with a cheatsheet consisting a few basic commands like how to move around the filesystem create / remove files and directories and move them around.  Over time I've gradually improved my terminal knowledge, but I am probably still only just scratching the surface, which in most cases is sufficient as a front-end developer.
 
-I use [Iterm2](https://www.iterm2.com/) as my terminal application, for windows you wanna get something that simulates the UNIX command line system - or ideally use something like Mac or Linux.  I had no end of issues trying to get things working on windows - many aren't officially supported.
+I use [Iterm2](https://www.iterm2.com/) as my terminal application, for windows you wanna get something that simulates the UNIX command line system - or ideally use something like Mac or Linux.  I had no end of issues trying to get things working on windows - many tools and applications aren't officially supported and as a result either don't work at all, or require workouts - which wastes time and is potentially unstable.
 
 [A good introduction to the Unix terminal (Mac, Ubuntu)](http://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192)
 
 &nbsp;
 
-##Automated task runners
+<h2 id="task-runners">Automated task runners</h2>
 An automated task runner runs in the background watching for changes to files in specified directories, then executing predefined tasks as a part of your build process.  Gulp and Grunt are the two most popular at the time of writing.
 
 They are both JavaScript based and run on-top of [Node.js](https://nodejs.org/).   Node JS based applications such as these are executed from the terminal.
@@ -121,8 +122,8 @@ Don't be that developer!
 
 The most popular framework right now is Angular, although React, the new kid on the block is kicking up a stir and it's component based architecture using a virtual DOM is allowing for super fast rendering and is definitely worth checking out.
 
-In my projects though I never really make use of these frameworks, my code is well organized into different files and using the [module pattern](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html).  
-This isn't because I dislike frameworks, but because what I've being building hasn't been to such a scale that it would benefit from using one.  
+In my projects though I very rarely make use of these frameworks, my code is organized into different files and using the [module pattern](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html) helps eep me from polluting the global namespace.
+This choice isn't because I dislike frameworks, but because what I've being building hasn't been to such a scale that it would benefit from using one.  
 
 Knowing when to use a framework is a useful skill, and understanding that a framework, like a library is a tool designed for a specific purpose there's no best one.
 
@@ -130,10 +131,10 @@ In terms of libraries I use [Lodash](https://lodash.com/) which comes loaded wit
 
 I also use jQuery for DOM manipulation.  There's a growing school of thought that you don't need jQuery.  Well it's true &ndash; you don't!  **But** The DOM API is absolutely the worst API ever conceived by man.
 
-jQuery abstracts that nasty interface into something far more beautiful.  There's also the bonus that it normalizes the browser differences and renders something like Ajax to be trivially easy.  jQuery also has fantastic [documentation](http://api.jquery.com/)  
+jQuery abstracts that nasty interface into something far more manageable.  There's also the bonus that it normalizes the browser differences and renders something like Ajax to be trivially easy.  jQuery also has fantastic [documentation](http://api.jquery.com/)  
 
-It's important to note that you should not rely on jQuery for every single project, like Angular and React it is a tool.  If your app literally consists of a few click handlers there's no need to use it and you are wasting your users bandwidth.    
-Those who like to avoid it even in applications with complex DOM manipulation, I feel a prematurely optimizing and that time could be more effectively spent elsewhere.  Like image optimization *hint hint*
+It's important to note that you should not rely on jQuery for every single project, like Angular and React it is a tool.  If your app or website's JavaScript literally consists of a few click handlers there's no need to use it and you are wasting your users bandwidth.    
+Those who like to avoid it even in applications with complex DOM manipulation, I feel a prematurely optimizing and that time could be more effectively spent elsewhere.  Like image optimization *hint hint* Of course there are going to be instances were every byte counts, but this isn't the norm.
 
 &nbsp;
 
