@@ -148,6 +148,8 @@ There are two main bundlers and they are [Browserify](http://browserify.org/) an
 
 I've been spending most of my time playing with webpack but I'm yet to fully get the hang of it, beyond the very basics at least.  I plan to write more about webpack as I improve my understanding of the tool.
 
+[Here](http://survivejs.com/) is a book introducing Webpack - and also covers ReactJs
+
 &nbsp;
 
 ##Test driven development
@@ -155,6 +157,8 @@ Firstly I'll admit to not having tested much of my code, it's only recently that
 
 TDD is something I'm actively working at to make a part of my workflow, the general thought process is that you write your tests from the outset.  They will all fail because you have no code.  
 You then write your application gradually passing the tests.  Writing testable code in itself is a challenge and a big reason that I am studying functional programming  - In true functional programming functions are very small and have a single responsibility.  This makes them easy to test, reason about and are highly reusable.
+
+[Here](http://build-podcast.com/mocha/) a great podcast covering the basics of Mocha.
 
 I plan to write a lot more about TDD in Javascript and the Front-end.
 
