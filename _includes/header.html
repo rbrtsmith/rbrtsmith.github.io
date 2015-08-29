@@ -16,6 +16,13 @@
 		        {% endif %}
 			</li>
 			<li>
+				{% if page.pageClass == "work" %}
+		            <a href="{{site.url }}/work" class="active box-link">Work</a>
+		        {% else %}
+		            <a href="{{site.url }}/work" class="box-link">Work</a>
+		        {% endif %}
+			</li>
+			<li>
 				<a href="https://github.com/rbrtsmith" class="box-link">Github</a>
 			</li>
 		</ul>
