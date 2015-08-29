@@ -158,7 +158,7 @@ Firstly I'll admit to not having tested much of my code, it's only recently that
 TDD is something I'm actively working at to make a part of my workflow, the general thought process is that you write your tests from the outset.  They will all fail because you have no code.  
 You then write your application gradually passing the tests.  Writing testable code in itself is a challenge and a big reason that I am studying functional programming  - In true functional programming functions are very small and have a single responsibility.  This makes them easy to test, reason about and are highly reusable.
 
-[Here](http://build-podcast.com/mocha/) a great podcast covering the basics of Mocha.
+[Here](http://build-podcast.com/mocha/) is a great podcast covering the basics of Mocha.
 
 I plan to write a lot more about TDD in Javascript and the Front-end.
 
