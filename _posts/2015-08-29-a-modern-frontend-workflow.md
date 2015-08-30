@@ -11,11 +11,13 @@ category: frontend
 The workflow of a modern front-end developer has changed **vastly** in the past four or five years.  The days of using a cumbersome IDE such as Dreamweaver and
 drag n drop solutions are (thankfully) long gone.  
 We've got a vast array of tools that allow us to build well organized, 
-scalable web applications.  
+scalable web applications by abstracting out many of the complexities and automating repetitive tasks.
+
 In this post I shall give an overview of the tools that I currently use in my
 front-end workflow.  
 
-This is a highly opinionated overview of what works well for me, it's highly likely there are even better ways of doing things, and I encourage you to share your thoughts in the comments below.
+**N.B.** This is a **highly** opinionated overview of what works well for me, it's likely there are better ways of doing things, and I encourage you to share your thoughts in the comments below.
+This is a continuous learning process for all of us.
 
 &nbsp;
 
@@ -23,13 +25,15 @@ This is a highly opinionated overview of what works well for me, it's highly lik
 Sass is a CSS preprocessor. A CSS preprocessor allows you to write your CSS in  
 a more programmatic manner, it allows for things like variables, mixins,
 functions, loops and other features you typically get from a programming
-language.  One of it's best features is the ability to structure your code into separate files which are then imported into the master file upon compilation.  The fact we can now have modularity, mixins and variables allows us to keep our code much dryer, more modular than was possible with plain CSS.  This leads to few bugs and code that can easily scale.
+language.  One of it's best features is the ability to structure your code into separate files which can then be imported into a single file upon compilation.  The fact we can now have modularity, mixins and variables allows us to keep our code much dryer, more modular than was possible with plain CSS.  This leads to a reduction in bugs and CSS that can easily scale.
 
 Your Sass code is compiled into CSS using a Ruby compiler (Although there's alternatives now such as Libsass written in C++) [Hugo Giraudel's blog](http://hugogiraudel.com/blog/) is a great place to see the full capabilities of Sass.
 
+I also encourage you to read through the [Sass guidelines](http://sass-guidelin.es/).  It's important that we follow a style guide, especially if working as part of a team.
+
 In my workflow I have my Sass compilation handled by my task runner (Gulp) which I shall talk about later in this post.
 
-Another point is post-processors as a part of the build process.  A post processor will parse a and process a CSS file and perform tasks.  
+In addition to pre-processors we also have post-processors, which also form a critical part of the build process.  A post processor will process a CSS file and perform a particular task.  
 I use [Autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) to handle all my vendor prefixes it's something that I no longer even have to think about.  I also use a CSS minifier as part of my post-processing.  I will talk more about how all this fits together when I talk about [Automated task runners](#task-runners)
 
 &nbsp;
@@ -156,12 +160,12 @@ I've been spending most of my time playing with webpack but I'm yet to fully get
 ##Test driven development
 Firstly I'll admit to not having tested much of my code, it's only recently that I came across TDD libraries such as [Mocha](https://mochajs.org/) but I can see the importance of testing - Especially for a project that is making use of Scrum and continuous delivery.
 
-TDD is something I'm actively working at to make a part of my workflow, the general thought process is that you write your tests from the outset.  They will all fail because you have no code.  
-You then write your application gradually passing the tests.  Writing testable code in itself is a challenge and a big reason that I am studying functional programming  - In true functional programming functions are very small and have a single responsibility.  This makes them easy to test, reason about and are highly reusable.
+TDD is something I'm actively working at to make a part of my workflow, the general thought process is that you write a test for a function before you actually write that function.  It will all fail because you have no code.  
+Then to write the function and (hopefully) the test passes.  Writing testable code in itself is a challenge and a big reason that I am studying functional programming  - In true functional programming functions are very small and should have a single responsibility.  This makes them easy to test, reason about and are highly reusable.
 
-[Here](http://build-podcast.com/mocha/) is a great podcast covering the basics of Mocha.
+[Here](http://build-podcast.com/mocha/) is a great podcast covering the basics of Mocha which is a JavaScript test library.
 
-I plan to write a lot more about TDD in Javascript and the Front-end.
+I plan to write a lot more about TDD in Javascript and the Front-end as I learn more.
 
 &nbsp;
 
@@ -170,4 +174,22 @@ Version control is a now critical part of a developers (and even designers) work
 Using a remote repository hosted somewhere like [Github](https://github.com/) will allow for remote collaboration and of course - code sharing across the globe.
 I cannot stress enough the importance of learning Git if you are to be an effective developer, even if working alone.  CodeSchool have a great [free course](https://www.codeschool.com/courses/try-git) to help teach you the basics of Git, it's highly recommended.
 
+&nbsp;
 
+##Chrome developer tools
+The major reason why I develop in Chrome is because of their excellent developer tools you can:  
+* Debug and edit your CSS and JavaScript - even when minified using sourcemaps.
+* log variables, values, objects etc to the console.
+* View timelines such as the page render and asset loading to quickly find bottlenecks.
+* throttle the network connection to simulate things like 3G.
+* You can also record timelines in real time to see the framerate, locate and eliminate page jank.
+
+This, like other areas in this post this is only really scratching the surface of the features that the Chome dev tools offer.  CodeSchool released an [in-depth course](https://www.codeschool.com/courses/discover-devtools) on the Chrome dev tools.  I recommend you take it.
+
+&nbsp;
+
+##Final words
+As this post illustrates, there's a huge amount of useful tools available in the front-end and it can be extremely difficult to choose the right tools for you - and then learn how to use it properly.  
+I hope this overview can help you improve your workflow.  My workflow is continually evolving and I have no doubt if I were to re-write this post in a years time it would be quite different.
+
+Thanks for reading!
