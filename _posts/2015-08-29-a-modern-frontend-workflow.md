@@ -74,6 +74,7 @@ And my [user preferences JSON file](https://github.com/rbrtsmith/Sublime-prefere
 When I'm working in terminal - I use VIM, which is installed by default on every Mac & Unix based machine.  My skills with VIM are limited at best, but over time they'll improve.
 
 Ultimately use the text editor / IDE that you feel most comfortable with, but don't be afraid to try alternatives once in a while!
+
 &nbsp;
 
 ##Terminal
@@ -178,7 +179,7 @@ I cannot stress enough the importance of learning Git if you are to be an effect
 
 ##Chrome developer tools
 The major reason why I develop in Chrome is because of their excellent developer tools you can:  
-  
+
 * Debug and edit your CSS and JavaScript - even when minified using sourcemaps.
 * log variables, values, objects etc to the console.
 * View timelines such as the page render and asset loading to quickly find bottlenecks.
