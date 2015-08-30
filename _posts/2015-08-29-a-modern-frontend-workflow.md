@@ -178,6 +178,7 @@ I cannot stress enough the importance of learning Git if you are to be an effect
 
 ##Chrome developer tools
 The major reason why I develop in Chrome is because of their excellent developer tools you can:  
+  
 * Debug and edit your CSS and JavaScript - even when minified using sourcemaps.
 * log variables, values, objects etc to the console.
 * View timelines such as the page render and asset loading to quickly find bottlenecks.
