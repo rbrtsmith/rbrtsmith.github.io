@@ -25,7 +25,7 @@ Before we go any further into Browserify we need to do a little ground work to e
 This post won't go into great detail about Node, but two important aspects of Node that can really help us with code organisation are [NPM](https://docs.npmjs.com/getting-started/what-is-npm) and Modules.
 
 ###NPM
-NPM is a synonym for **Node Package Manager**, it is now the world's most popular programming ecosystem, allowing developers to publish and share code and manage project dependencies.
+NPM is a synonym for **Node Package Manager**, it is now the world's most popular programming ecosystem, allowing developers to publish, share code and manage project dependencies.
 Assuming you have Node installed on your machine, you must initialise NPM in your project's root using the command:
 
 {% highlight text %}
@@ -34,7 +34,7 @@ Assuming you have Node installed on your machine, you must initialise NPM in you
 
 You should then follow the instructions as you are prompted, giving your project a name, license, linking to a GIT repository and so forth.  
 This process will generate a **package.json** file &ndash; you can think of it like a global settings file that NPM is able to reference.
-As you install dependencies they will stored inside of a folder named **node_modules** Your dependencies will likely contain their own node_modules folder too, containing their dependencies.  Node will cleverly recurse down the tree and load in all of the required assets to run a module.  It's not something you ever have to worry about, and is one of NPM's best features.
+As you install dependencies they will stored inside of a folder named **node_modules** Your dependencies will likely contain their own node_modules folder too, containing their dependencies.  NPM will cleverly recurse down the tree and load in all of the required assets to run a module.  It's not something you ever have to worry about, and is one of NPM's best features.
 
 You can install dependences and publish modules via the command line.
 An example to install [Lodash](https://lodash.com/) as a dependency would be:
@@ -64,18 +64,18 @@ Note that Lodash has now been added as a dependency - The numbers represent the 
 
 *So what is the reason we add our modules as project dependencies?*
 The reason is to allow us to publish our projects to remote repositories which will allow for collaboration and sharing without polluting the environment with all of our dependencies.  
-The package.json file can be read by NPM to download all of the required packages from NPM with the following command.
+The package.json file can be read by NPM to fetch all of the required packages from NPM with the following command.
 
 {% highlight javascript %}
     npm i
 {% endhighlight %}
 
 Pretty neat huh?
-That's NPM in a nutshell.  We will come back to package.json a little later as it has a few more tricks up it's sleeve that happen to be especially useful for running tools like Browserify.
+That's NPM in a (brief) nutshell.  We will come back to package.json a little later as it has a few more tricks up it's sleeve that happen to be especially useful for running tools like Browserify.
 
 ###Modules
 Node ships with a module system known as *Common JS*
-Common JS modules allow us to import both modules downloaded from NPM and our own locally created modules into our project.  We can import files via the require statement:
+Common JS modules allow us to import both modules fetched from NPM and our own locally created modules into our project.  We can import files via the require statement:
 
 {% highlight javascript %}
 //main.js
@@ -85,7 +85,7 @@ Common JS modules allow us to import both modules downloaded from NPM and our ow
 The lodash function will then be assigned to the underscore character.  **Note - the `_` character has no special meaning, it is a valid variable name just like `$` is.**
 There's no need to specify a path for the module as Node instinctively knows to look inside the node_modules folder for the module.  
 Our module is likely to have it's own require statements to pull in it's own dependencies from it's own node_modules folder.  
-This who process completes recursively - it's not something you need to ever concern yourself with, such is the brilliance of NPM.
+This whole process completes recursively - it's not something you need to ever concern yourself with, such is the brilliance of NPM.
 
 The require method is slightly different if we are to pull in our own local dependencies, say we had a function named multiply that we wanted to pull in we could do so with the following:
 
