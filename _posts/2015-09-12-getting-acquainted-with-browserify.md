@@ -2,7 +2,7 @@
 title: "Getting acquainted with Browserify"
 meta: "An introduction Browserify, a tool that bundles up Node-style modules for the browser."
 date: 2015-09-12
-layout: drafts
+layout: posts
 pageClass: posts
 category: javascript
 ---
