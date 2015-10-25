@@ -9,7 +9,7 @@ category: javascript
 
 This is a short post or even a slight rant about the issue of coding speed and
 the perception that a 10 x developer who closes tickets super fast is somehow
-better than those that take their time to do things right properly testing,
+better than those that take their time to do things right&mdash;properly testing,
 documenting and reasoning about their work.
 
 I was recently queried by a client (who shall remain anonymous) regarding the 
