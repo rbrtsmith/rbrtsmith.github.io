@@ -24,9 +24,7 @@ and make hacks.
 * Requires a wrapping element to prevent the right side of the grid going 
 off-screen.
 * A fixed number of columns: 12 - how do we do a 5 column grid? Hack.
-
-The three biggest problems for me is the equal heights bloat and fixed
-columns, because I really care about performance&mdash;And so should you.  
+ 
 Adding in JavaScript to create equal heights adds to the size of your JS file, 
 but worst of all DOM manipulation in JavaScript is extremely 
 expensive&mdash;especially on events like a screen resize.  
@@ -36,8 +34,8 @@ The issue of a bloated CSS file is the fact we're serving up styles to our
 users that will never be used.  All those width classes at every breakpoint,
 the same for push, pull and offset classes&mdash; it all adds up!
 
-Having a 12 column grid becomes a problem when a client now wants 5 equally 
-spaced boxes, the only way around this is to hack.  The `col-sm-{n}` API
+Having a 12 column grid becomes a problem when a client decides the want five
+equally spaced boxes, the only way around this is to hack.  The `col-sm-{n}` API
 just won't work here, so your class name will make little sense.  
 
 ##We need a more flexible solution.
@@ -102,6 +100,10 @@ To keep bloat even lower rwsmith grid comes with a large `feature toggle` list
 that can be overridden to turn off width, push, pull classes and grid modifiers
 too.  It might take a **little** more time to get things setup, but your 
 resulting CSS will contain very little bloat.
+
+After reading Harry's recent articles regarding CSS namespacing and responsive 
+suffixes I decided to base my API upon this system Harry has called BEMIT.
+
 
 To read more about rwsmith grid, see the API and download please check out the
 [GitHub Repository](https://github.com/rbrtsmith/rbrtsmith-grid)  
