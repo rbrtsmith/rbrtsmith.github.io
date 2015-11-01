@@ -12,6 +12,7 @@ to the one Bootstrap uses, with an almost identical API.  In the majority
 of cases this grid system is suffice and works pretty well.
 
 However it does have some major shortcomings
+
 * No ability for equal heights, you must use JavaScript to set the heights of
 the columns
 * When you have tiling rows of columns all must be the same height otherwise
@@ -59,6 +60,7 @@ container with padding to stop page overflow, when elements overflow to the left
 wont generate scrollbars.
 
 Harry's grid also adds in some pretty nifty features
+
 * Ability to reverse the horizontal order of columns - made possible thanks
 to inline blocks.
 * Inline blocks can also be vertically aligned&hellip;
@@ -80,6 +82,7 @@ took the lazy option and just named it after my blog - and my own name.
 This grid does in fact offer equal heights using flexbox.  It has the drawback
 of equal heights only working in IE10+.  I did experiment with using 
 `display:table` and that does give equal heights, but that itself has drawbacks:
+
 * Guttering has to be done using borders, which do not render subpixel unlike
 margins and padding.
 * Grid items cannot tile into rows.
