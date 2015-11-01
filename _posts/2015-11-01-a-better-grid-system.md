@@ -1,7 +1,7 @@
 ---
 title: "A better grid system"
 meta: "A grid system that offers equal heights, vertical alignment, no bloat."
-date: 2015-10-25
+date: 2015-11-01
 layout: posts
 pageClass: posts
 category: css
