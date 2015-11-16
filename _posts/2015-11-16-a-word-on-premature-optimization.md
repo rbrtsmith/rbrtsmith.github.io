@@ -98,8 +98,6 @@ doubleAllTotal([1,2,3,4,5]); // 30
 
 {% endhighlight %}
 
-console.log(doubleAll([1,2,3,4,5]));
-
 However there's an argument against these abstractions.  The argument being that
 the second example is considerably slower than the first.  The reason for this
 is that function calls are more costly than loops.  
