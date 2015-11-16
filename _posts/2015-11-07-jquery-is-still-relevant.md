@@ -1,6 +1,6 @@
 ---
 title: "jQuery is still relevant"
-meta: "I disagree with the current trend of 'jQuery no longer relevant'""
+meta: "I disagree with the current trend of 'jQuery no longer relevant'"
 date: 2015-11-07
 layout: posts
 pageClass: posts
