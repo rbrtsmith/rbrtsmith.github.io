@@ -183,7 +183,7 @@ console.log("The loop function is " + (funcSpeed - loopSpeed) + " milliseconds f
 Here are the results of the above test: 
 
 
-{% highlight %}
+{% highlight html %}
 
 "Call to doubleAllLoop took 0.008329998468980193 milliseconds."  
 
