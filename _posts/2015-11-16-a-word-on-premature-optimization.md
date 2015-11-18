@@ -91,8 +91,8 @@ developers to reason about.
 const doubleAllTotal = (arr) => 
   arr.map((val) => 
   val * 2)
-  .reduce((acc, val) => {
-  acc + val}, 0);
+  .reduce((acc, val) => 
+    acc + val, 0);
 
 doubleAllTotal([1,2,3,4,5]); // 30
 
