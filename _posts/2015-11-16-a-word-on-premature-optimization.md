@@ -182,9 +182,16 @@ console.log("The loop function is " + (funcSpeed - loopSpeed) + " milliseconds f
 
 Here are the results of the above test: 
 
+
+{% highlight %}
+
 "Call to doubleAllLoop took 0.008329998468980193 milliseconds."  
+
 "Call to doubleAllFunc took 0.018706100853160025 milliseconds."  
+
 "The loop function is 0.010376102384179832 milliseconds faster when iterating over 1000 items."  
+
+{% endhighlight %}
 
 We create a test array that contains 1000 items.  We then loop over it 10,000 times
 for each test in order to gain a more accurate average.
