@@ -192,4 +192,6 @@ for each test in order to gain a more accurate average.
 As the results show loops are clearly faster, but the numbers are so minuscule
 that we'd need to be iterating over huge data sets to make any real-world difference.
 
+You can see the test for yourself here: [http://jsbin.com/hizemizeda/edit?js,console](http://jsbin.com/hizemizeda/edit?js,console)
+
 
