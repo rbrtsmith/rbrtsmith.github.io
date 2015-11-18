@@ -125,7 +125,71 @@ vs performance.  We need to be smart about our decisions when it comes to
 finding the right balance.  A lot of time and money is wasted trying to work
 with and reason about code that has been prematurely optimized.
 
+###Update
+It was rightly pointed out to me that there was no data to back up my claim that
+loops are indeed faster than function calls.  So I created a test:
+
+{% highlight javascript %}
+
+var array = [],
+  arrayLength = 1000,
+  loopSpeed = 0,
+  funcSpeed = 0;
+
+var doubleAllLoop = function doubleAll(arr) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i += 1) {
+    newArr.push(arr[i] * 2);
+  }
+  return newArr;
+};
+
+var doubleAllFunc = function doubleAll(arr) {
+  return arr.map(function (val) {
+    return val * 2;
+  });
+};
 
 
+for (var i=0; i < arrayLength; i++) {
+  array.push(i);
+}
+
+
+function testSpeed(func, iterations) {
+  function getTime() {
+    var t0 = performance.now();
+    func(array);
+    var t1 = performance.now();
+    totalTime += (t1 - t0);
+  }
+  
+  var totalTime = 0;
+  for (var i=0; i<iterations; i++) {
+    getTime();
+  }
+  return totalTime / iterations;
+}
+
+loopSpeed = testSpeed(doubleAllLoop, 10000);
+funcSpeed = testSpeed(doubleAllFunc, 10000);
+
+console.log("Call to doubleAllLoop took " + loopSpeed + " milliseconds.");
+console.log("Call to doubleAllFunc took " + funcSpeed + " milliseconds.");
+console.log("The loop function is " + (funcSpeed - loopSpeed) + " milliseconds faster when iterating over " + arrayLength + " items.");
+
+{% endhighlight %}
+
+Here are the results of the above test: 
+
+"Call to doubleAllLoop took 0.008329998468980193 milliseconds."
+"Call to doubleAllFunc took 0.018706100853160025 milliseconds."
+"The loop function is 0.010376102384179832 milliseconds faster when iterating over 1000 items."
+
+We create a test array that contains 1000 items.  We then loop over it 10,000 times
+for each test in order to gain a more accurate average.
+
+As the results show loops are clearly faster, but the numbers are so minuscule
+that we'd need to be iterating over huge data sets to make any real-world difference.
 
 
