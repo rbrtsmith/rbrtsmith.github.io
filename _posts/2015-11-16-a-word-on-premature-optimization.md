@@ -28,7 +28,7 @@ we most often see premature optimization.
 I am a big believer in building out abstractions for common patterns, many of
 these have become a part of the JavaScript language.  Examples being the array
 methods such as `.map()`, `.reduce()` and `.filter()` each of them abstract out
-common task that we perform on arrays, such as reducing it down to a single
+common tasks that we perform on arrays, such as reducing it down to a single
 value.  
 They are much preferred to manually coding out the loop and all of it's logic as
 we're only really concerned with the function that is performed on each item.
