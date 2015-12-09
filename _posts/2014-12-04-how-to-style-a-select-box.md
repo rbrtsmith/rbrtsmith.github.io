@@ -28,8 +28,8 @@ the native UI of the touch devices.
 
 Then this thought crossed my mind: What if we were to set the opacity of the select-box to zero, then
 style a label underneath to look like the select-box we intend. I was pessimistic as I assumed that
-the select-box would remain translucent even once open.  But I was wrong, the container itself remains
-translucent but the options are visible.
+the select-box would remain transparent even once open.  But I was wrong, the container itself remains
+transparent but the options are visible.
 
 Now because the select-box is invisible we wouldn't be able to see what selection had been made,
 but that's a simple fix with JavaScript.  We can just extract the selected option into a variable and inject
