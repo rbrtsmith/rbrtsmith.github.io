@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .box-link {
+	display: block;
 	padding: 5px $base-margin-width;
 	border: 2px solid transparent;
 	@include font-size($txt-md);
